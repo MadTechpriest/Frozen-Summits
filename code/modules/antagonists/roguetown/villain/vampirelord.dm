@@ -318,7 +318,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	V.update_body()
 	V.update_hair()
 	V.update_body_parts(redraw = TRUE)
-	V.mob_biotypes = MOB_UNDEAD
 	if(isspawn)
 		V.vampire_disguise(src)
 

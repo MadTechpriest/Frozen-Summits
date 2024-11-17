@@ -116,11 +116,12 @@
 	var/breast_size = DEFAULT_BREASTS_SIZE
 	var/lactating = FALSE
 	var/milk_stored = 0
-	var/milk_max = 75
+	var/milk_max = 250
+	var/last_milked
 
 /obj/item/organ/breasts/New()
 	..()
-	milk_max = max(75, breast_size * 100)
+	milk_max = max(250 , breast_size * 100)
 
 /obj/item/organ/belly
 	name = "belly"
