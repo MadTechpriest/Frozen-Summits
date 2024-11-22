@@ -105,7 +105,7 @@
 	"THE SPIDER QUEEN DEMANDS FEAR!",
 	"BETRAYAL IS MY BLESSING!")
 
-	t1 = /obj/item/book/granter/spell/blackstone/sicknessray,
+	t1 = /obj/effect/proc_holder/spell/invoked/projectile/sickness
 	t2 = /obj/effect/proc_holder/spell/invoked/invisibility
 	t3 = /obj/effect/proc_holder/spell/targeted/spiderconjur
 
