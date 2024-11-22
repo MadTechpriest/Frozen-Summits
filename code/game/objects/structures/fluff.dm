@@ -1000,7 +1000,7 @@
 
 /obj/structure/fluff/statue/evil
 	name = "idol"
-	desc = "A statue built to the robber-god, Mask. It is said that they grants the wishes of those pagan bandits (free folk) who feed him money and valuable metals."
+	desc = "A statue built to the robber-god, Mask. It is said that they grant the wishes of those pagan bandits (free folk) who feed him money and valuable metals."
 	icon_state = "evilidol"
 	icon = 'icons/roguetown/misc/structure.dmi'
 // What items the idol will accept
