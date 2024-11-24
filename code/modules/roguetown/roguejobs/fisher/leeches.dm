@@ -34,7 +34,6 @@
 	var/mob/living/host
 	// Completely silent, no do_after and no visible_message
 	var/completely_silent = FALSE
-	possible_potion = "endpot"
 
 
 /obj/item/natural/worms/leech/Initialize()

@@ -108,7 +108,6 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/beer/cider
 	var/equippedloc = null
 	var/list/bitten_names = list()
-	possible_potion = "endpot"
 
 /obj/item/reagent_containers/food/snacks/produce/apple/On_Consume(mob/living/eater)
 	..()
@@ -158,7 +157,6 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/beer/jackberrywine
 	rotprocess = SHELFLIFE_SHORT
 	var/poisonous = FALSE
-	possible_potion = "antidote"
 
 /obj/item/reagent_containers/food/snacks/produce/berries/rogue/Initialize()
 	if(GLOB.berrycolors[color_index])
@@ -206,7 +204,6 @@
 	grind_results = list(/datum/reagent/berrypoison = 5)
 	color_index = "bad"
 	poisonous = TRUE
-	possible_potion = "poison"
 
 /*	..................   Swamp weed   ................... */
 /obj/item/reagent_containers/food/snacks/produce/rogue/swampweed
@@ -221,7 +218,6 @@
 	tastes = list("sweet" = 1,"bitterness" = 1)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = SHELFLIFE_LONG
-	possible_potion = "poison"
 	dust_result = /obj/item/alch/swampdust
 
 /obj/item/reagent_containers/food/snacks/produce/rogue/swampweed_dried
@@ -234,7 +230,7 @@
 	list_reagents = list(/datum/reagent/drug/space_drugs = 2,/datum/reagent/consumable/nutriment = 1)
 	grind_results = list(/datum/reagent/drug/space_drugs = 5)
 	eat_effect = /datum/status_effect/debuff/badmeal
-	possible_potion = "poison"
+	rotprocess = null
 	dust_result = /obj/item/alch/swampdust
 
 
@@ -252,7 +248,6 @@
 	grind_results = list(/datum/reagent/drug/nicotine = 5)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = SHELFLIFE_LONG
-	possible_potion = "poison"
 	dust_result = /obj/item/alch/tobaccodust
 
 /obj/item/reagent_containers/food/snacks/produce/rogue/pipeweed_dried
@@ -265,7 +260,7 @@
 	eat_effect = /datum/status_effect/debuff/badmeal
 	list_reagents = list(/datum/reagent/drug/nicotine = 5, /datum/reagent/consumable/nutriment = 1)
 	grind_results = list(/datum/reagent/drug/nicotine = 10)
-	possible_potion = "poison"
+	rotprocess = null
 	dust_result = /obj/item/alch/tobaccodust
 
 

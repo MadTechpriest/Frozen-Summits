@@ -210,6 +210,9 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	//is it an improvised weapon?
 	var/improvised = FALSE
 
+	// Takes an item path. What it turns into after being grinded by a mortar and pestle.
+	var/dust_result
+
 /obj/item/Initialize()
 	. = ..()
 	if(!pixel_x && !pixel_y && !bigboy)
