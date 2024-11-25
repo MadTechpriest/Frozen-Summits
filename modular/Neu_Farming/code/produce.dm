@@ -218,7 +218,7 @@
 	tastes = list("sweet" = 1,"bitterness" = 1)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = SHELFLIFE_LONG
-	dust_result = /obj/item/alch/swampdust
+	sellprice = 0 // only dried has value
 
 /obj/item/reagent_containers/food/snacks/produce/rogue/swampweed_dried
 	seed = null
@@ -231,7 +231,7 @@
 	grind_results = list(/datum/reagent/drug/space_drugs = 5)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = null
-	dust_result = /obj/item/alch/swampdust
+	sellprice = 2
 
 
 /*	..................   Pipe weed   ................... */
@@ -248,7 +248,7 @@
 	grind_results = list(/datum/reagent/drug/nicotine = 5)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = SHELFLIFE_LONG
-	dust_result = /obj/item/alch/tobaccodust
+	sellprice = 0 // only dried has value
 
 /obj/item/reagent_containers/food/snacks/produce/rogue/pipeweed_dried
 	seed = null
@@ -261,7 +261,7 @@
 	list_reagents = list(/datum/reagent/drug/nicotine = 5, /datum/reagent/consumable/nutriment = 1)
 	grind_results = list(/datum/reagent/drug/nicotine = 10)
 	rotprocess = null
-	dust_result = /obj/item/alch/tobaccodust
+	sellprice = 1
 
 
 /*	..................   Cabbage   ................... */
@@ -380,6 +380,43 @@
 	chopping_sound = TRUE
 	dropshrink = 0.9
 	rotprocess = SHELFLIFE_EXTREME
+
+/*	..................   Sunflower   ................... */
+/obj/item/reagent_containers/food/snacks/produce/sunflower
+	seed = /obj/item/neuFarm/seed/sunflower
+	name = "sunflower"
+	desc = ""
+	icon_state = "sunflower"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
+	seed = /obj/item/neuFarm/seed/sunflower
+	slot_flags = ITEM_SLOT_HEAD
+	throwforce = 0
+	w_class = WEIGHT_CLASS_TINY
+	throw_speed = 1
+	throw_range = 3
+	list_reagents = list(/datum/reagent/consumable/nutriment = 0)
+	dropshrink = 0.8
+	rotprocess = null
+	fried_type = /obj/item/reagent_containers/food/snacks/rogue/roastseeds
+	cooked_smell = /datum/pollutant/food/roasted_seeds
+
+
+
+
+/* .......... Poppies ........ */
+/obj/item/reagent_containers/food/snacks/produce/poppy
+	seed = /obj/item/neuFarm/seed/sunflower
+	name = "poppy"
+	desc = "For their crimson beauty and the sedating effect of their crushed seeds, these flowers are considered a symbol of Eora."
+	icon_state = "poppy"
+	seed = /obj/item/neuFarm/seed/poppy
+	throwforce = 0
+	w_class = WEIGHT_CLASS_TINY
+	throw_speed = 1
+	throw_range = 3
+	list_reagents = list(/datum/reagent/consumable/nutriment = 0)
+	dropshrink = 0.5
+	rotprocess = null
 
 /*
 /obj/item/reagent_containers/food/snacks/produce/garlic
