@@ -145,7 +145,7 @@
 	description = "Quickly regenerates all types of damage."
 	color = "#820000be"
 	taste_description = "rich lifeblood"
-	metabolization_rate = REAGENTS_METABOLISM * 10
+	metabolization_rate = REAGENTS_METABOLISM * 9
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
 	M.blood_volume = min(M.blood_volume+5, BLOOD_VOLUME_MAXIMUM)
@@ -162,14 +162,15 @@
 	name = "Mana Potion"
 	description = "Gradually regenerates stamina."
 	reagent_state = LIQUID
-	color = "#0000ff"
-	taste_description = "manna"
-	overdose_threshold = 45
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	color = "#000042"
+	taste_description = "sweet mana"
+	overdose_threshold = 0
+	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
 /datum/reagent/medicine/manapot/on_mob_life(mob/living/carbon/M)
-	M.rogstam_add(10)
+	if(volume > 0.99)
+		M.rogstam_add(10)
 	..()
 	. = 1
 
@@ -215,10 +216,11 @@
 	name = "Strong Mana Potion"
 	description = "Gradually regenerates stamina."
 	color = "#0000ff"
-	metabolization_rate = REAGENTS_METABOLISM * 10
+	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
-	M.rogstam_add(200)
+	if(volume > 0.99)
+		M.rogstam_add(50)
 	..()
 	. = 1
 
@@ -242,10 +244,11 @@
 	reagent_state = LIQUID
 	color = "#004200"
 	taste_description = "dirt"
-	metabolization_rate = 30 * REAGENTS_METABOLISM
+	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/diseasecure/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(-6, 0)
+	if(volume > 0.99)
+		M.adjustToxLoss(-16, 0)
 	..()
 	. = 1
 
@@ -262,7 +265,11 @@
 
 /datum/reagent/buff/strength/on_mob_add(mob/living/carbon/M)
 	testing("str pot in system")
-	M.apply_status_effect(/datum/status_effect/buff/alch/strengthpot)
+	if(M.has_status_effect(/datum/status_effect/buff/alch/strengthpot))
+		return ..()
+	if(M.reagents.has_reagent(/datum/status_effect/buff/alch/strengthpot,4))
+		M.apply_status_effect(/datum/status_effect/buff/alch/strengthpot)
+		M.reagents.remove_reagent(/datum/reagent/buff/strength, M.reagents.get_reagent_amount(/datum/reagent/buff/strength))
 	..()
 
 /datum/reagent/buff/perception
