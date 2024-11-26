@@ -170,8 +170,8 @@
 
 //GOLD
 /obj/item/roguecoin/gold
-	name = "zenar"
-	desc = "A gold coin bearing the symbol of the Taurus and the pre-kingdom psycross. These were in the best condition of the provincial gold mints, the rest were melted down."
+	name = "Gold Coin"
+	desc = "A golden piece of gold More worth than Electrum."
 	icon_state = "g1"
 	sellprice = 10
 	base_type = CTYPE_GOLD
@@ -180,8 +180,8 @@
 
 // SILVER
 /obj/item/roguecoin/silver
-	name = "ziliqua"
-	desc = "An ancient silver coin still in use due to their remarkable ability to last the ages."
+	name = "Silver Coin"
+	desc = "A triangle shaped silver coin. Worth less than Electrum, or so they say."
 	icon_state = "s1"
 	sellprice = 5
 	base_type = CTYPE_SILV
@@ -189,8 +189,8 @@
 
 // COPPER
 /obj/item/roguecoin/copper
-	name = "zenny"
-	desc = "A brand-new bronze coin minted by the capital in an effort to be rid of the financial use of silver."
+	name = "Copper Coin"
+	desc = "A square copper coin, usable all over faerun."
 	icon_state = "c1"
 	sellprice = 1
 	base_type = CTYPE_COPP

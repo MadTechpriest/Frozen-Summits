@@ -62,8 +62,8 @@
 /obj/item/reagent_containers/food/snacks/rogue/bun_grenz
 	list_reagents = list(/datum/reagent/consumable/nutriment = SAUSAGE_NUTRITION+SMALLDOUGH_NUTRITION)
 	tastes = list("savory sausage" = 1, "bread" = 1)
-	name = "grenzelbun"
-	desc = "Originally an elven cuisine composed of mortal races flesh and bread, the classic wiener in a bun, now modified and staple food of Grenzelhoft cuisine."
+	name = "Sausage Bun"
+	desc = "Popular snack at Dwarven brewfestivals."
 	icon_state = "grenzbun"
 	foodtype = GRAIN | MEAT
 	faretype = FARE_NEUTRAL

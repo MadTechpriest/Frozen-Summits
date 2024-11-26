@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/mossback
 	icon = 'icons/roguetown/mob/monster/boglobster.dmi'
-	name = "mossback"
+	name = "Giant Crab"
 	icon_state = "mossback"
 	icon_living = "mossback"
 	icon_dead = "mossback_dead"
