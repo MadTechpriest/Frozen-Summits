@@ -148,12 +148,13 @@
 	metabolization_rate = REAGENTS_METABOLISM * 9
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
-	M.blood_volume = min(M.blood_volume+5, BLOOD_VOLUME_MAXIMUM)
-	M.adjustBruteLoss(-8*REM, 0)
-	M.adjustFireLoss(-8*REM, 0)
-	M.adjustOxyLoss(-5, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -5*REM)
-	M.adjustCloneLoss(-5*REM, 0)
+	if(volume > 0.99)
+		M.blood_volume = min(M.blood_volume+80, BLOOD_VOLUME_MAXIMUM)
+		M.adjustBruteLoss(-15*REM, 0)
+		M.adjustFireLoss(-15*REM, 0)
+		M.adjustOxyLoss(-6, 0)
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -5*REM)
+		M.adjustCloneLoss(-5*REM, 0)
 	..()
 	. = 1
 
@@ -422,7 +423,7 @@
 
 /datum/reagent/stampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-15) //Slowly leech stamina
+		M.rogstam_add(-25) //Slowly leech stamina
 	return ..()
 
 /datum/reagent/strongstampoison
@@ -431,11 +432,11 @@
 	reagent_state = LIQUID
 	color = "#041d0e"
 	taste_description = "frozen air"
-	metabolization_rate = REAGENTS_SLOW_METABOLISM
+	metabolization_rate = REAGENTS_SLOW_METABOLISM * 3
 
 /datum/reagent/strongstampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-35) //Rapidly leech stamina
+		M.rogstam_add(-150) //Rapidly leech stamina
 	return ..()
 
 

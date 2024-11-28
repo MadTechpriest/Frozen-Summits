@@ -3329,6 +3329,7 @@
 #include "code\modules\roguetown\roguecrafting\alchemy\recipes.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\container.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\herb_flora.dm"
+#include "code\modules\roguetown\roguejobs\alchemist\herb_seeds.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\powders.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\reagents.dm"
 #include "code\modules\roguetown\roguejobs\alchemist\recipe\reagents.dm"

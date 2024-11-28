@@ -21,6 +21,7 @@
 							/obj/structure/flora/roguegrass/maneater = 13,
 							/obj/item/natural/stone = 23,
 							/obj/item/natural/rock = 6,
+							/obj/structure/flora/roguegrass/herb/random = 65,
 							/obj/item/grown/log/tree/stick = 16,
 							/obj/structure/flora/roguetree/stump/log = 3,
 							/obj/structure/flora/roguetree/stump = 4,

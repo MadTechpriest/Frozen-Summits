@@ -19,6 +19,7 @@
 							/obj/structure/flora/roguegrass/bush = 25,
 							/obj/structure/flora/roguegrass = 26,
 							/obj/structure/flora/roguegrass/maneater = 13,
+							/obj/structure/flora/roguegrass/herb/random = 65,
 							/obj/structure/flora/roguegrass/swampweed = 15,
 							/obj/structure/flora/roguegrass/pyroclasticflowers = 3,
 							/obj/item/natural/stone = 23,
