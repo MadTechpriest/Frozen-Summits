@@ -60,9 +60,9 @@
 	description = "Gradually regenerates all types of damage."
 	reagent_state = LIQUID
 	color = "#ff0000"
-	taste_description = "red"
-	overdose_threshold = 45
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	taste_description = "lifeblood"
+	overdose_threshold = 0
+	metabolization_rate = REAGENTS_METABOLISM * 3
 	alpha = 173
 
 /datum/reagent/medicine/healthpotnew/on_mob_life(mob/living/carbon/M)
@@ -157,7 +157,7 @@
 	..()
 	. = 1
 
-//
+//Someone please remember to change this to actually do mana at some point?
 /datum/reagent/medicine/manapot
 	name = "Mana Potion"
 	description = "Gradually regenerates stamina."
@@ -170,7 +170,7 @@
 
 /datum/reagent/medicine/manapot/on_mob_life(mob/living/carbon/M)
 	if(volume > 0.99)
-		M.rogstam_add(10)
+		M.rogstam_add(50)
 	..()
 	. = 1
 
@@ -220,10 +220,35 @@
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
 	if(volume > 0.99)
-		M.rogstam_add(50)
+		M.rogstam_add(200)
 	..()
 	. = 1
 
+/datum/reagent/medicine/stampot
+	name = "Stamina Potion"
+	description = "Gradually regenerates stamina."
+	reagent_state = LIQUID
+	color = "#129c00"
+	taste_description = "sweet tea"
+	overdose_threshold = 0
+	metabolization_rate = REAGENTS_METABOLISM
+	alpha = 173
+
+/datum/reagent/medicine/manapot/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
+		M.rogstam_add(50)
+	..()
+
+/datum/reagent/medicine/strongstam
+	name = "Strong Stamina Potion"
+	description = "Rapidly regenerates stamina."
+	color = "#13df00"
+	metabolization_rate = REAGENTS_METABOLISM * 3
+
+/datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
+		M.rogstam_add(200)
+	..()
 
 /datum/reagent/medicine/antidote
 	name = "Poison Antidote"
@@ -270,7 +295,7 @@
 	if(M.reagents.has_reagent(/datum/status_effect/buff/alch/strengthpot,4))
 		M.apply_status_effect(/datum/status_effect/buff/alch/strengthpot)
 		M.reagents.remove_reagent(/datum/reagent/buff/strength, M.reagents.get_reagent_amount(/datum/reagent/buff/strength))
-	..()
+	return ..()
 
 /datum/reagent/buff/perception
 	name = "Perception"
@@ -385,26 +410,85 @@
 	M.adjustToxLoss(12, 0)
 	return ..()
 
+
+
+/datum/reagent/stampoison
+	name = "Stamina Poison"
+	description = ""
+	reagent_state = LIQUID
+	color = "#083b1c"
+	taste_description = "breathlessness"
+	metabolization_rate = REAGENTS_SLOW_METABOLISM
+
+/datum/reagent/stampoison/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
+		M.rogstam_add(-15) //Slowly leech stamina
+	return ..()
+
+/datum/reagent/strongstampoison
+	name = "Strong Stamina Poison"
+	description = ""
+	reagent_state = LIQUID
+	color = "#041d0e"
+	taste_description = "frozen air"
+	metabolization_rate = REAGENTS_SLOW_METABOLISM
+
+/datum/reagent/strongstampoison/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
+		M.rogstam_add(-35) //Rapidly leech stamina
+	return ..()
+
+
+/datum/reagent/killersice
+	name = "Killer's Ice"
+	description = ""
+	reagent_state = LIQUID
+	color = "#c8c9e9"
+	taste_description = "cold needles"
+	metabolization_rate = REAGENTS_SLOW_METABOLISM
+
+/datum/reagent/killersice/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M, TRAIT_NASTY_EATER) && !HAS_TRAIT(M, TRAIT_ORGAN_EATER))
+		M.adjustToxLoss(5)
+	return ..()
+
+
 //Potion reactions
 /datum/chemical_reaction/alch/stronghealth
 	name = "Strong Health Potion"
 	id = /datum/reagent/medicine/stronghealth
-	results = list(/datum/reagent/medicine/stronghealth = 5)
-	required_reagents = list(/datum/reagent/medicine/healthpot = 5, /datum/reagent/additive = 5)
+	results = list(/datum/reagent/medicine/stronghealth = 1)
+	required_reagents = list(/datum/reagent/medicine/healthpot = 1, /datum/reagent/additive = 1)
 	mix_message = "The cauldron glows for a moment."
+
 /datum/chemical_reaction/alch/strongmana
 	name = "Strong Mana Potion"
 	id = /datum/reagent/medicine/strongmana
-	results = list(/datum/reagent/medicine/strongmana = 5)
-	required_reagents = list(/datum/reagent/medicine/manapot = 5, /datum/reagent/additive = 5)
+	results = list(/datum/reagent/medicine/strongmana = 1)
+	required_reagents = list(/datum/reagent/medicine/manapot = 1, /datum/reagent/additive = 1)
+	mix_message = "The cauldron glows for a moment."
+
+/datum/chemical_reaction/alch/strongstam
+	name = "Strong Stamina Potion"
+	id = /datum/reagent/medicine/strongstam
+	results = list(/datum/reagent/medicine/strongstam = 1)
+	required_reagents = list(/datum/reagent/medicine/stampot = 1, /datum/reagent/additive = 1)
 	mix_message = "The cauldron glows for a moment."
 
 /datum/chemical_reaction/alch/strongpoison
-	name = "Strong Health Potion"
+	name = "Strong Health Poison"
 	id = /datum/reagent/strongpoison
-	results = list(/datum/reagent/strongpoison = 5)
-	required_reagents = list(/datum/reagent/berrypoison = 5, /datum/reagent/additive = 5)
+	results = list(/datum/reagent/strongpoison = 1)
+	required_reagents = list(/datum/reagent/berrypoison = 1, /datum/reagent/additive = 1)
 	mix_message = "The cauldron glows for a moment."
+
+/datum/chemical_reaction/alch/strongstampoison
+	name = "Strong Stamina Leech Potion"
+	id = /datum/reagent/strongstampoison
+	results = list(/datum/reagent/strongstampoison = 1)
+	required_reagents = list(/datum/reagent/stampoison = 1, /datum/reagent/additive = 1)
+	mix_message = "The cauldron glows for a moment."
+
 
 
 /*----------\
@@ -426,7 +510,7 @@
 	metabolization_rate = 0.5
 
 /datum/reagent/toxin/fyritiusnectar/on_mob_life(mob/living/carbon/M)
-	if(volume > 0.99)
+	if(volume > 0.49)
 		M.add_nausea(9)
 		M.adjustFireLoss(2, 0)
 		M.adjust_fire_stacks(1)
