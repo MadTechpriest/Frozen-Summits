@@ -361,7 +361,7 @@
 	var/bloodiness = 20
 	var/obj/structure/closet/dirthole/holie
 	var/dirt_amt = 3
-
+	var/obj/machinery/crop/planted_crop
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)
 	var/returned = slowdown
 	var/negate_slowdown = FALSE

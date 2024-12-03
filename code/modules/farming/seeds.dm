@@ -8,6 +8,21 @@
 	var/plant_def_type
 	var/seed_identity = "some seed"
 
+	var/watersucc = 1
+	var/foodsucc = 1
+	var/growthrate = 1 //0.5, 1.3, etc its multilpeid
+	var/maxphp = 100
+	var/obscura = FALSE
+	var/delonharvest = TRUE
+	var/timesharvested = 0
+
+	var/weed_rate = 20 //If the chance below passes, then this many weeds sprout during growth
+	var/weed_chance = 5 //Percentage chance per tray update to grow weeds
+
+	var/yield = 3
+
+	var/species = ""
+
 /obj/item/seeds/Initialize()
 	. = ..()
 	if(plant_def_type)

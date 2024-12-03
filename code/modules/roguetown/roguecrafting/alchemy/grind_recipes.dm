@@ -57,41 +57,6 @@
 	valid_outputs = list(/obj/item/alch/waterdust = 1)
 	bonus_chance_outputs = list(/obj/item/alch/bonemeal = 50)
 
-/datum/alch_grind_recipe/swampweed
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/swampweed
-	valid_outputs = list(/obj/item/alch/swampdust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/earthdust = 33)
-
-/datum/alch_grind_recipe/swampweed_dried
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/swampweed_dried
-	valid_outputs = list(/obj/item/alch/swampdust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/earthdust = 50,/obj/item/alch/swampdust = 50)
-
-/datum/alch_grind_recipe/westleach
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/westleach
-	valid_outputs = list(/obj/item/alch/tobaccodust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/airdust = 33)
-
-/datum/alch_grind_recipe/dry_westleach
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/dry_westleach
-	valid_outputs = list(/obj/item/alch/tobaccodust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/airdust = 50,/obj/item/alch/tobaccodust = 50)
-
-/datum/alch_grind_recipe/fyritius
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/fyritius
-	valid_outputs = list(/obj/item/alch/firedust = 1)
-
-/datum/alch_grind_recipe/poppy
-	valid_input = /obj/item/reagent_containers/food/snacks/produce/poppy
-	valid_outputs = list(/obj/item/reagent_containers/powder/ozium = 1)
-	bonus_chance_outputs = list(/obj/item/alch/airdust =33,/obj/item/alch/earthdust = 33)
-
-/datum/alch_grind_recipe/seeds
-	picky = FALSE
-	valid_input = /obj/item/neuFarm/seed
-	valid_outputs = list(/obj/item/alch/seeddust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/airdust =25,/obj/item/alch/earthdust = 25)
-
 /datum/alch_grind_recipe/ozium
 	valid_input = /obj/item/reagent_containers/powder/ozium
 	valid_outputs = list(/obj/item/alch/ozium = 1)
