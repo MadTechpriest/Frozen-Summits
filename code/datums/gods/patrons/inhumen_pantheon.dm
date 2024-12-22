@@ -170,7 +170,7 @@
 	domain = "Nature , Savagery"
 	desc = "Malar is a lesser deity of hunting, stalking, bloodlust, and bestial savagery. In his more favorable aspects, he is worshiped by those who identify with the wild natures, as well as the grace and amorality of predators."
 	worshippers = "Druids, Werebeasts, Rangers, Barbarians"
-	mob_traits = list(TRAIT_KNEESTINGER_IMMUNITY)
+	mob_traits = list(TRAIT_KNEESTINGER_IMMUNITY, TRAIT_ORGAN_EATER)
 	t1 = /obj/effect/proc_holder/spell/targeted/blesscrop
 	t2 = /obj/effect/proc_holder/spell/targeted/beasttame
 	t3 = /obj/effect/proc_holder/spell/targeted/conjure_glowshroom
