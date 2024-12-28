@@ -2,13 +2,9 @@
 	race = /datum/species/anthromorph
 
 /datum/species/anthromorph
-	name = "Beast-Kin"
+	name = "Custom Race"
 	id = "anthromorph"
-	desc = "A product of many gods enigmatic meddling in mortals races. The average beast-kin suffers from animalistic urges that vary in severity, \
-	from simply avoiding certain foods to smoldering desires to howl at the moon or chase prey. Usually these urges are tied to the animal that the beast-kin is melded with, \
-	making them rather predictable. Despite this, the way each beast-kin approaches their bizarre physiology and psychology varies, \
-	creating a diverse race of people who may not even empathise with one another. And whilst Silvanus is considered the main culprit for beast-kin, there are those created through other means, \
-	akin to Mystra's stolen knowledge that created lupians and other abstract experimentation or circumstance. "
+	desc = "There are many bestial humanoids like Minotaurs, Aarakocra or Tortles. "
 	default_color = "444"
 	inherent_traits = list(
 		TRAIT_STRONGBITE,

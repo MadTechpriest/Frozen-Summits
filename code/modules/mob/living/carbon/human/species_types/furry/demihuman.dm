@@ -2,9 +2,9 @@
 	race = /datum/species/demihuman
 
 /datum/species/demihuman
-	name = "Half-Kin"
+	name = "Custom race (Demi-Human)"
 	id = "demihuman"
-	desc = "The inevitable union between wildkin and some form of humanity or another, and while they also experience animalistic tendencies akin to their full-blooded ancestors, their intermingling with others has stemmed the intensity."
+	desc = "There are plenty of so called demi-humans. Fauns, Satyrs and various plane-touched humans like Genasi."
 	inherent_traits = list(
 		TRAIT_STRONGBITE,
 		TRAIT_WILD_EATER,

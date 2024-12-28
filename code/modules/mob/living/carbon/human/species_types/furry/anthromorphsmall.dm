@@ -2,13 +2,11 @@
 	race = /datum/species/anthromorphsmall
 
 /datum/species/anthromorphsmall
-	name = "Verminvolk"
+	name = "Custom Race (Small)"
 	id = "anthromorphsmall"
-	desc = "A race akin to beast-kin, except afflicted with significantly smaller stature. A bit less respected than their kin due to their closer resemblance to vermin, like the dichotomy between Kobold and Lizardkin."
+	desc = "There are countless small sized species in Faerun and other planes. Aside from Gnomes and halflings, there are species like Wererats and simliar small sized beast-creatures."
 	default_color = "444"
 	inherent_traits = list(
-		TRAIT_STRONGBITE,
-		TRAIT_NASTY_EATER,
 		TRAIT_LEAPER,
 		TRAIT_PERFECT_TRACKER,
 		TRAIT_NOCSIGHT,
