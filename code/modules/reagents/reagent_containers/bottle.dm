@@ -56,11 +56,13 @@
 		reagents.flags = reagent_flags
 		desc = initial(desc)
 		playsound(user.loc,'sound/items/uncork.ogg', 50, TRUE)
+		to_chat(user, span_notice("You carefully press the cork back into the mouth of the [src]."))
 		spillable = FALSE
 	else
 		reagent_flags = OPENCONTAINER
 		reagents.flags = reagent_flags
 		playsound(user.loc,'sound/items/uncork.ogg', 100, TRUE)
+		to_chat(user, span_notice("You thumb off the cork from [src]."))
 		desc = desc_uncorked
 		spillable = TRUE
 	update_icon()
