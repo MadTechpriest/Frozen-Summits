@@ -84,7 +84,7 @@
 
 /obj/item/clothing/head/roguetown/roguehood/astrata
 	name = "sun hood"
-	desc = "A hood worn by those who favor Astrata. Praise the firstborn sun!"
+	desc = "A hood worn by those who favor Lathander. Praise the Dawn"
 	color = null
 	icon_state = "astratahood"
 	item_state = "astratahood"
@@ -99,7 +99,7 @@
 
 /obj/item/clothing/head/roguetown/nochood
 	name = "moon hood"
-	desc = "A hood worn by those who favor Mystra with a mask in the shape of a crescent."
+	desc = "A hood worn by those who favor Selune with a mask in the shape of a crescent."
 	color = null
 	icon_state = "nochood"
 	item_state = "nochood"
@@ -118,7 +118,7 @@
 
 /obj/item/clothing/head/roguetown/roguehood/abyssor
 	name = "depths hood"
-	desc = "A hood worn by the followers of Abyssor, with a unique, coral-shaped mask. How do they even see out of this?"
+	desc = "A hood worn by the followers of Umberlee, with a unique, coral-shaped mask. How do they even see out of this?"
 	color = null
 	icon_state = "abyssorhood"
 	item_state = "abyssorhood"
@@ -133,7 +133,7 @@
 
 /obj/item/clothing/head/roguetown/necramask
 	name = "death mask"
-	desc = "A hood with a decorated jaw bone at the chin,normally worn by some followers of Necra as a form of devotion"
+	desc = "A hood with a decorated jaw bone at the chin,normally worn by some followers of Kelemvor as a form of devotion"
 	color = null
 	icon_state = "deathface"
 	item_state = "deathface"
