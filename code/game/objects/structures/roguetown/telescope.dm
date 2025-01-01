@@ -11,7 +11,7 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	var/random_message = pick("Selune is beautiful tonight.", "Looking at the Sun blinds you!", "The stars smile at you.", "Just the endless Astral Sea.", "You see a spelljammer!", "You see a star!", "You see a strange vortex!" , "Something looks back at you!")
+	var/random_message = pick("Selune is beautiful tonight.", "Looking at the Sun blinds you!", "The stars smile at you.", "Just the endless Astral Sea.", "You see a spelljammer!", "You see a star!", "You see a strange vortex!" , "Something looks back at you!", "A Dragon circles in the distance!")
 	to_chat(H, span_notice("[random_message]"))
 
 	if(random_message == "Looking at the Sun blinds you!")
@@ -35,5 +35,5 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	var/random_message = pick("you spin the globe!", "You land on Frozen Summit!", "You land on Beregost!", "You land on Waterdeep!" , "You land on Thay!" , "You land in the trackless Sea..", "You land on Baldurs Gate!!", "You land on Neverwinter!", "You land on Elturel.. Ohno!", "You land on Luskan!", "You land on Bryn Shander.", "You land on Easthaven.", "You land on Daggerford.")
+	var/random_message = pick("you spin the globe!", "You land on Frozen Summit!", "You land on Beregost!", "You land on Waterdeep!" , "You land on Thay!" , "You land in the trackless Sea..", "You land on Baldurs Gate!!", "You land on Neverwinter!", "You land on Elturel.. Ohno!", "You land on Luskan!", "You land on Bryn Shander.", "You land on Easthaven.", "You land on Daggerford.", "You land on Calimshan!", "You land on Zazesspur.", "You land on Amn.")
 	to_chat(H, span_notice("[random_message]"))
