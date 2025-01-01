@@ -21,6 +21,8 @@
 	baseturfs = /turf/open/water
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	slowdown = 5
+
+	turf_flags = NONE
 	var/obj/effect/overlay/water/water_overlay
 	var/obj/effect/overlay/water/top/water_top_overlay
 	bullet_sizzle = TRUE

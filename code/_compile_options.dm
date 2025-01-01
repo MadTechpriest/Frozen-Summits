@@ -45,6 +45,8 @@
 #endif								//	1 to use the default behaviour;
 									//	2 for preloading absolutely everything;
 
+#define LOWMEMORYMODE //uncomment this to load centcom and roguetest and thats it.
+
 #ifdef LOWMEMORYMODE
 #define FORCE_MAP "_maps/runtimestation.json"
 #endif

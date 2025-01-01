@@ -258,6 +258,11 @@
 	var/datum/gas_mixture/environment
 	if(loc)
 		environment = loc.return_air()
+	var/turf/snow_turf = get_turf(src)
+	if(snow_shiver > world.time)
+		breath_effect_prob += 50
+	else if(snow_turf.snow)
+		breath_effect_prob += 50
 
 	var/datum/gas_mixture/breath
 
