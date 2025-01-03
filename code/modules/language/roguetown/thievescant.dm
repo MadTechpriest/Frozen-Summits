@@ -1,5 +1,5 @@
 /datum/language/thievescant
-	name = "Trickster's Tongue"
+	name = "Thieves Cant"
 	desc = ""
 	speech_verb = "murmurs"
 	ask_verb = "questions"

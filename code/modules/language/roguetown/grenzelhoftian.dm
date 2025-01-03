@@ -1,5 +1,5 @@
 /datum/language/grenzelhoftian
-	name = "Grenzelhoftian Imperial"
+	name = "Northern Common"
 	desc = "The primary language of the Grenzelhoft Emperiate, a robust language filled with hearty words and enthusiastic enunciation. Often said to be similar to the Lupians Canilunzt."
 	speech_verb = "remarks"
 	ask_verb = "inquires"

@@ -298,7 +298,7 @@
 	color = "#b98ae3"
 
 /obj/item/clothing/under/roguetown/grenzelpants
-	name = "grenzelhoftian paumpers"
+	name = "mercenary paumpers"
 	desc = "Padded pants for extra comfort and protection, adorned in vibrant colors."
 	icon_state = "grenzelpants"
 	item_state = "grenzelpants"

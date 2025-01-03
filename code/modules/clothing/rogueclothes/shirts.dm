@@ -334,7 +334,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "grenzelhoftian hip-shirt"
+	name = "mercenary hip-shirt"
 	desc = "Padded shirt for extra comfort and protection, adorned in vibrant colors."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "grenzelshirt"

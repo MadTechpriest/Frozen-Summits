@@ -135,7 +135,7 @@
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/gloves/roguetown/grenzelgloves
-	name = "grenzelhoft gloves"
+	name = "mercenary gloves"
 	desc = ""
 	icon_state = "grenzelgloves"
 	item_state = "grenzelgloves"
