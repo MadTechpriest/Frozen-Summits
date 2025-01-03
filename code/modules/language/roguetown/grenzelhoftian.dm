@@ -1,6 +1,6 @@
 /datum/language/grenzelhoftian
 	name = "Northern Common"
-	desc = "The primary language of the Grenzelhoft Emperiate, a robust language filled with hearty words and enthusiastic enunciation. Often said to be similar to the Lupians Canilunzt."
+	desc = "A dialect of common used in the north of faerun, related to the giant language."
 	speech_verb = "remarks"
 	ask_verb = "inquires"
 	exclaim_verb = "asserts"
