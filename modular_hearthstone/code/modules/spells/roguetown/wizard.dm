@@ -239,6 +239,7 @@
 		/obj/effect/proc_holder/spell/invoked/gravity,
 		/obj/effect/proc_holder/spell/targeted/touch/summonrogueweapon/bladeofpsydon,
 		/obj/effect/proc_holder/spell/invoked/projectile/repel,
+		/obj/effect/proc_holder/spell/invoked/mending5e,
 	)
 
 	for(var/i = 1, i <= spell_choices.len, i++)

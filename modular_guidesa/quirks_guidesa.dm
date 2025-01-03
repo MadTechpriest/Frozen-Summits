@@ -57,7 +57,14 @@
 
 
 
+/datum/quirk/elemental_acid
+	name = "Elemental Breath (Acid)"
+	desc = "You can breath acid. Ouch."
+	value = 5
 
+/datum/quirk/elemental_acid/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/acidsplash5e)
 
 
 
@@ -142,6 +149,16 @@
 /datum/quirk/one_eye_r/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	ADD_TRAIT(H, TRAIT_CYCLOPS_RIGHT, TRAIT_GENERIC)
+
+
+/datum/quirk/one_eye_both
+	name = "Bad Eye (Both)"
+	desc = "My both eyes are bad. My vision is really limited."
+	value = -5
+
+/datum/quirk/one_eye_both/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	ADD_TRAIT(H, TRAIT_CYCLOPS_BOTH_EYES, TRAIT_GENERIC)
 
 
 /datum/quirk/immune_eletricity
@@ -252,3 +269,171 @@
 /datum/quirk/weird_weapons/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.mind.special_items["Bone Scythe"] = /obj/item/rogueweapon/sword/iron/scythe
+	H.mind.special_items["Enchanted Iron Sword"] = /obj/item/rogueweapon/sword/iron/cultist_Sword
+	H.mind.special_items["Giant Cleaver"] = /obj/item/rogueweapon/sword/iron/cleaver
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------
+
+////////////////////////
+///  STRENGTH QUIRKS ///
+////////////////////////
+
+/datum/quirk/strong
+	name = "Stats: Strong"
+	desc = "I possess exceptional strength, making heavy lifting and physical tasks much easier for me. (+2 Strenght)"
+	value = 2
+
+/datum/quirk/strong/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("strength", 2)
+
+/datum/quirk/weak
+	name = "Stats: Weak"
+	desc = "I lack physical strength, struggling with tasks requiring brute force. (-2 Strenght)"
+	value = -2
+
+/datum/quirk/weak/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("strength", -2)
+
+////////////////////////////
+///  PERCEPTION QUIRKS   ///
+////////////////////////////
+
+/datum/quirk/keen_eyes
+	name = "Stats: Keen Eyes"
+	desc = "I have sharp eyesight and a heightened sense of awareness. (+ 2 Perception)"
+	value = 2
+
+/datum/quirk/keen_eyes/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("perception", 2)
+
+/datum/quirk/unobservant
+	name = "Stats: Unobservant"
+	desc = "I struggle to notice things around me, often missing important details. (- 2 Perception)"
+	value = -2
+
+/datum/quirk/unobservant/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("perception", -2)
+
+///////////////////////////////
+///  INTELLIGENCE QUIRKS    ///
+///////////////////////////////
+
+/datum/quirk/genius
+	name = "Stats: Genius"
+	desc = "I have an extraordinary intellect, excelling at problem-solving and learning. (+ 2 Intelligence)"
+	value = 2
+
+/datum/quirk/genius/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("intelligence", 2)
+
+/datum/quirk/dimwitted
+	name = "Stats: Dimwitted"
+	desc = "I struggle with intellectual challenges and learning new things. (- 2 Intelligence)"
+	value = -2
+
+/datum/quirk/dimwitted/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("intelligence", -2)
+
+///////////////////////////////
+///  CONSTITUTION QUIRKS    ///
+///////////////////////////////
+
+/datum/quirk/resilient
+	name = "Stats: Resilient"
+	desc = "I have an incredibly tough constitution, allowing me to endure harsh conditions. (+ 2 Constitution)"
+	value = 2
+
+/datum/quirk/resilient/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("constitution", 2)
+
+/datum/quirk/frail
+	name = "Stats: Frail"
+	desc = "My constitution is weak, making me susceptible to injuries and illnesses. (- 2 Constitution)"
+	value = -2
+
+/datum/quirk/frail/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("constitution", -2)
+
+/////////////////////////////
+///  ENDURANCE QUIRKS    ///
+/////////////////////////////
+
+/datum/quirk/stamina_boost
+	name = "Stats: Enduring"
+	desc = "I can keep going when others would give up, rarely tiring. (+ 2 Endurance)"
+	value = 2
+
+/datum/quirk/stamina_boost/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("endurance", 2)
+
+/datum/quirk/exhausted
+	name = "Stats: Exhausted"
+	desc = "I tire easily, unable to keep up with physically demanding tasks for long. (- 2 Endurance)"
+	value = -2
+
+/datum/quirk/exhausted/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("endurance", -2)
+
+////////////////////////
+///  SPEED QUIRKS   ///
+////////////////////////
+
+/datum/quirk/quick
+	name = "Stats: Quick"
+	desc = "I am faster than average, able to move swiftly when needed. (+ 2 Speed)"
+	value = 2
+
+/datum/quirk/quick/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("speed", 2)
+
+/datum/quirk/slow
+	name = "Stats: Slow"
+	desc = "I move slower than most, often lagging behind. (- 2 Speed)"
+	value = -2
+
+/datum/quirk/slow/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("speed", -2)
+
+///////////////////////////////
+///  FORTUNE (LUCK) QUIRKS  ///
+///////////////////////////////
+
+/datum/quirk/lucky
+	name = "Stats: Lucky"
+	desc = "Fortune seems to smile upon me, with good outcomes happening more often. (+ 2 Fortune)"
+	value = 2
+
+/datum/quirk/lucky/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("fortune", 2)
+
+/datum/quirk/unlucky
+	name = "Stats: Unlucky"
+	desc = "Bad luck seems to follow me wherever I go, with things going wrong unexpectedly. (- 2 Fortune)"
+	value = -2
+
+/datum/quirk/unlucky/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("fortune", -2)

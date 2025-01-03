@@ -1423,6 +1423,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			if(HAS_TRAIT(user, TRAIT_MARTIALARTIST))
 				damage *= 1.5
 			var/armor_block = target.run_armor_check(selzone, "blunt", blade_dulling = BCLASS_BLUNT, damage = damage)
+			var/balance = 10
 			target.next_attack_msg.Cut()
 			var/nodmg = FALSE
 			if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
@@ -1430,13 +1431,24 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 			else
 				if(affecting)
-					affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, user.zone_selected, crit_message = TRUE)
-			target.visible_message(span_danger("[user] stomps [target]![target.next_attack_msg.Join()]"), \
-							span_danger("I'm stomped by [user]![target.next_attack_msg.Join()]"), span_hear("I hear a sickening kick!"), COMBAT_MESSAGE_RANGE, user)
-			to_chat(user, span_danger("I stomp on [target]![target.next_attack_msg.Join()]"))
+					if(selzone == BODY_ZONE_PRECISE_NECK)
+						to_chat(user, "<span class='danger'>I put my foot on [target]'s neck!</span>")
+						nodmg = TRUE
+						target.emote("gasp")
+						target.adjustOxyLoss(25)
+						target.Immobilize(5)
+						balance += 15
+						target.visible_message("<span class='danger'>[user] puts their foot on [target]'s neck!</span>", \
+										"<span class='danger'>I'm get my throat stepped on by [user]! I can't breathe!</span>", "<span class='hear'>I hear a sickening sound of pugilism!</span>", COMBAT_MESSAGE_RANGE, user)
+					else
+						affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, user.zone_selected, crit_message = TRUE)
+						target.visible_message("<span class='danger'>[user] stomps [target]![target.next_attack_msg.Join()]</span>", \
+										"<span class='danger'>I'm stomped by [user]![target.next_attack_msg.Join()]</span>", "<span class='hear'>I hear a sickening kick!</span>", COMBAT_MESSAGE_RANGE, user)
+						to_chat(user, "<span class='danger'>I stomp on [target]![target.next_attack_msg.Join()]</span>")
 			target.next_attack_msg.Cut()
 			log_combat(user, target, "kicked")
 			user.do_attack_animation(target, ATTACK_EFFECT_DISARM)
+			user.OffBalance(balance)
 			if(!nodmg)
 				playsound(target, 'sound/combat/hits/kick/stomp.ogg', 100, TRUE, -1)
 			return TRUE
@@ -1526,6 +1538,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(target.mind)
 			target.mind.attackedme[user.real_name] = world.time
 		user.rogfat_add(15)
+		user.OffBalance(15)
 		target.forcesay(GLOB.hit_appends)
 
 /datum/species/proc/spec_hitby(atom/movable/AM, mob/living/carbon/human/H)

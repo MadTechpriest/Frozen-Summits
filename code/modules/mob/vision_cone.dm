@@ -279,6 +279,10 @@
 				fovangle |= FOV_LEFT
 			if(HAS_TRAIT(src, TRAIT_CYCLOPS_RIGHT))
 				fovangle |= FOV_RIGHT
+			if(HAS_TRAIT(src, TRAIT_CYCLOPS_BOTH_EYES))
+				fovangle |= FOV_LEFT
+				fovangle |= FOV_RIGHT
+
 
 	if(!hud_used)
 		return

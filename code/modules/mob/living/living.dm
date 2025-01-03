@@ -1179,6 +1179,8 @@
 
 /mob/living/carbon/human/resist_grab(moving_resist)
 	var/mob/living/L = pulledby
+	if(hostagetaker)
+		attackhostage()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(HAS_TRAIT(H, TRAIT_NOSEGRAB) && !HAS_TRAIT(src, TRAIT_MISSING_NOSE))

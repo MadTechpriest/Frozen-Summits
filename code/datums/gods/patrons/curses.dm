@@ -36,6 +36,11 @@
 		var/datum/curse/C = curse
 		C.on_life(src)
 
+
+/mob/living/carbon/human/Life()
+	..()
+	handle_curses()
+
 /mob/living/carbon/human/proc/add_curse(datum/curse/C)
 	if(is_cursed(C))
 		return FALSE
@@ -206,34 +211,34 @@
 /datum/curse/baotha/on_life(mob/living/carbon/human/owner)
 	. = ..()
 	if(owner.mob_timers["baotha_curse_passive"])
-		if(world.time < owner.mob_timers["baotha_curse"] + rand(2,10)SECONDS)
+		if(world.time < owner.mob_timers["baotha_curse"] + rand(5,30)SECONDS)
 			return
 	owner.mob_timers["baotha_curse_passive"] = world.time
-	owner.sexcon.arousal += 1
+	owner.sexcon.arousal += 0.1 // Very minor increase
 	if(owner.mob_timers["baotha_curse"])
-		if(world.time < owner.mob_timers["baotha_curse"] + rand(15,90)SECONDS)
+		if(world.time < owner.mob_timers["baotha_curse"] + rand(60,300)SECONDS)
 			return
 	owner.mob_timers["baotha_curse"] = world.time
-	owner.sexcon.arousal += rand(-20,50)
+	owner.sexcon.arousal += rand(-1,1) // Much smaller range to avoid major shifts
 
 /datum/curse/nympho/on_life(mob/living/carbon/human/owner)
 	. = ..()
 	if(owner.mob_timers["nympho_curse_passive"])
-		if(world.time < owner.mob_timers["nympho_curse"] + rand(2,10)SECONDS)
+		if(world.time < owner.mob_timers["nympho_curse"] + rand(5,30)SECONDS)
 			return
 	owner.mob_timers["nympho_curse_passive"] = world.time
 	if(owner.wear_pants)
 		if(owner.wear_pants.flags_inv & HIDECROTCH && !owner.wear_pants)
-			owner.sexcon.arousal += 1
+			owner.sexcon.arousal += 0.1 // Extremely minor increase
 	if(owner.mob_timers["nympho_curse"])
-		if(world.time < owner.mob_timers["nympho_curse"] + rand(15,90)SECONDS)
+		if(world.time < owner.mob_timers["nympho_curse"] + rand(60,300)SECONDS)
 			return
 	owner.mob_timers["nympho_curse"] = world.time
 	if(owner.wear_pants)
 		if(owner.wear_pants.flags_inv & HIDECROTCH && !owner.wear_pants)
 			if(rand(5))
 				to_chat(owner, span_love("I feel my [owner.wear_pants] rub against me..."))
-			owner.sexcon.arousal += rand(5,50)
+			owner.sexcon.arousal += rand(0.3,0.5) // Smaller range for gradual buildup
 
 
 

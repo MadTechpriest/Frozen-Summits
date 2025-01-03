@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(noble_positions, list(
 ))
 
 GLOBAL_LIST_INIT(courtier_positions, list(
-	"Court Magician",
+	"Hamlet Magician",
 	"Court Physician",
 	"Jester",
 	"Seneschal",
@@ -152,7 +152,7 @@ GLOBAL_LIST_INIT(youngfolk_positions, list(
 	"Smithy Apprentice",
 	"Magicians Apprentice",
 	"Churchling",
-	"Servant",
+	"Hamlet Servant",
 	"Shophand",
 	"Vagabond",
 ))

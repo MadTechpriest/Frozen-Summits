@@ -177,7 +177,7 @@
 /datum/crafting_recipe/roguetown/structure/forge
 	name = "forge"
 	result = /obj/machinery/light/rogue/forge
-	reqs = list(/obj/item/natural/stoneblock = 4,,
+	reqs = list(/obj/item/natural/stoneblock = 4,
 				/obj/item/rogueore/coal = 1)
 	verbage_simple = "build"
 	verbage = "builds"

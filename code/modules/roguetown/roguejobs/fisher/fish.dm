@@ -114,6 +114,7 @@
 	fried_type = /obj/item/reagent_containers/food/snacks/rogue/fryfish/eel
 	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/fryfish/eel
 
+
 /obj/item/reagent_containers/food/snacks/rogue/fryfish
 	icon = 'icons/roguetown/misc/fish.dmi'
 	trash = null

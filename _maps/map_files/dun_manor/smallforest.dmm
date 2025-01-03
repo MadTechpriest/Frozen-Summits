@@ -138,6 +138,12 @@
 "bp" = (
 /turf/closed/mineral/rogue/salt,
 /area/rogue/outdoors/woods)
+"cm" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free11"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "cL" = (
 /obj/effect/landmark/mapGenerator/sunlights{
 	endTurfX = 128;
@@ -155,6 +161,10 @@
 "di" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"dB" = (
+/obj/structure/flora/roguetree/normal,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "dI" = (
 /turf/closed/mineral/rogue/bedrock,
@@ -178,12 +188,24 @@
 /obj/structure/flora/newtree,
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/woods)
+"gP" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free3"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "hb" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "hD" = (
 /turf/open/water/swamp,
+/area/rogue/outdoors/woods)
+"ic" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free8"
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "jC" = (
 /obj/structure/fluff/signage,
@@ -194,16 +216,46 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
+"kp" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free3"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"kS" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free6"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "lj" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"lP" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free10"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "mJ" = (
 /turf/closed/mineral/rogue/coal,
+/area/rogue/outdoors/woods)
+"nq" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free7"
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "om" = (
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
+"po" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free9"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "pt" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/dirt,
@@ -230,6 +282,12 @@
 "sN" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
+"sP" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free11"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "tM" = (
 /obj/structure/flora/newtree,
 /obj/structure/flora/newtree,
@@ -248,6 +306,18 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
+"xo" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free5"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"xJ" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free2"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "yH" = (
 /turf/open/water/river{
 	icon_state = "rockwd";
@@ -261,6 +331,12 @@
 "Bm" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
+"Cd" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free5"
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 "CD" = (
 /obj/effect/landmark/mapGenerator/rogue/forest{
@@ -313,6 +389,12 @@
 "HH" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/woods)
+"HU" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free4"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "Jc" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -327,18 +409,48 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
+"Li" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free7"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "Lu" = (
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/woods)
 "My" = (
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/woods)
+"MH" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free4"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "Nk" = (
 /obj/structure/roguerock,
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/woods)
+"NO" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free2"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
+"On" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free9"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "Ou" = (
 /obj/machinery/light/rogue/campfire/densefire,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"OK" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free10"
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "PA" = (
@@ -352,6 +464,12 @@
 	aportalid = "forestin"
 	},
 /turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/woods)
+"Tj" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free3"
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "Ul" = (
 /obj/effect/landmark/start/adventurerlate{
@@ -367,8 +485,26 @@
 "Vh" = (
 /turf/open/water/river,
 /area/rogue/outdoors/woods)
+"WM" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free9"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods)
+"Yl" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free10"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "Zm" = (
 /obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
+"Zp" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free8"
+	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods)
 
@@ -644,14 +780,14 @@ Lg
 sN
 sN
 sN
-sN
+Cd
 sN
 sN
 sN
 Jc
 ub
 Jc
-sN
+gP
 sN
 Lg
 sN
@@ -772,7 +908,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 sN
 sN
@@ -815,7 +951,7 @@ ub
 sN
 sN
 sN
-sN
+lP
 Bm
 Lg
 Lg
@@ -831,8 +967,8 @@ sN
 Jc
 ub
 sN
+lP
 sN
-sN
 Lg
 Lg
 Lg
@@ -843,7 +979,7 @@ Lg
 Lg
 Lg
 sN
-sN
+xJ
 Jc
 ub
 sN
@@ -934,7 +1070,7 @@ sN
 sN
 sN
 sN
-sN
+xJ
 sN
 sN
 ub
@@ -943,7 +1079,7 @@ HH
 HH
 ub
 sN
-sN
+lP
 sN
 sN
 Jc
@@ -962,7 +1098,7 @@ Jc
 ub
 sN
 sN
-sN
+lP
 Lg
 Lg
 Lg
@@ -1087,7 +1223,7 @@ sN
 sN
 sN
 sN
-sN
+gP
 Jc
 ub
 sN
@@ -1157,7 +1293,7 @@ Jc
 sN
 sN
 sN
-sN
+gP
 sN
 Jc
 Jc
@@ -1190,7 +1326,7 @@ Lg
 Lg
 sN
 sN
-sN
+gP
 sN
 sN
 sN
@@ -1239,7 +1375,7 @@ ub
 sN
 sN
 sN
-sN
+Zp
 sN
 Jc
 Lu
@@ -1452,7 +1588,7 @@ sN
 sN
 sN
 sN
-sN
+Cd
 sN
 sN
 sN
@@ -1468,7 +1604,7 @@ sN
 sN
 sN
 sN
-sN
+lP
 Jc
 ub
 Jc
@@ -1497,7 +1633,7 @@ Jc
 ub
 ub
 sN
-sN
+lP
 sN
 sN
 Jc
@@ -1615,14 +1751,14 @@ Jc
 Jc
 Jc
 Jc
+sP
 sN
 sN
 sN
 sN
 sN
 sN
-sN
-sN
+MH
 Jc
 ub
 ub
@@ -1733,7 +1869,7 @@ Jc
 ub
 Jc
 Jc
-sN
+gP
 sN
 sN
 sN
@@ -1873,7 +2009,7 @@ sN
 sN
 sN
 sN
-sN
+gP
 sN
 sN
 sN
@@ -2153,7 +2289,7 @@ Jc
 Jc
 sN
 sN
-sN
+Cd
 Jc
 Jc
 Jc
@@ -2196,7 +2332,7 @@ dI
 ru
 ub
 ub
-ub
+OK
 ub
 Lu
 Vh
@@ -2328,7 +2464,7 @@ Jc
 Jc
 Jc
 Jc
-Jc
+Yl
 Lu
 Nk
 Lu
@@ -2378,7 +2514,7 @@ Lg
 sN
 sN
 sN
-sN
+lP
 Jc
 ub
 Jc
@@ -2501,7 +2637,7 @@ ub
 HH
 HH
 ub
-ub
+kp
 sN
 sN
 sN
@@ -2990,7 +3126,7 @@ Lg
 Lg
 sN
 sN
-sN
+gP
 sN
 sN
 sN
@@ -3226,7 +3362,7 @@ hD
 hD
 hD
 Jc
-Jc
+HU
 Jc
 Bm
 ub
@@ -3238,7 +3374,7 @@ Lg
 Lg
 Lg
 sN
-sN
+lP
 sN
 sN
 sN
@@ -3358,7 +3494,7 @@ hD
 hD
 Jc
 Jc
-ub
+xo
 ub
 dI
 "}
@@ -3393,7 +3529,7 @@ Jc
 Jc
 Jc
 Jc
-Jc
+nq
 Jc
 Bm
 Bm
@@ -4255,7 +4391,7 @@ ah
 HH
 ub
 Jc
-sN
+MH
 sN
 Jc
 Jc
@@ -4291,7 +4427,7 @@ sN
 sN
 sN
 sN
-sN
+po
 sN
 sN
 sN
@@ -4320,7 +4456,7 @@ Lg
 Jc
 Jc
 ub
-sN
+gP
 sN
 Lg
 Lg
@@ -4412,7 +4548,7 @@ sN
 sN
 sN
 sN
-sN
+po
 sN
 Lg
 sN
@@ -4423,7 +4559,7 @@ sN
 sN
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -4437,7 +4573,7 @@ sN
 sN
 sN
 sN
-sN
+Li
 sN
 Lg
 Lg
@@ -4538,7 +4674,7 @@ Lg
 Lg
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -4569,7 +4705,7 @@ aH
 sN
 sN
 sN
-sN
+kS
 sN
 Lg
 sN
@@ -4698,7 +4834,7 @@ aH
 aH
 sN
 sN
-sN
+Cd
 sN
 Lg
 Lg
@@ -4826,7 +4962,7 @@ sN
 sN
 sN
 sN
-sN
+Li
 sN
 sN
 Lg
@@ -4885,7 +5021,7 @@ sN
 Jc
 sN
 sN
-sN
+Cd
 sN
 sN
 Lg
@@ -5025,7 +5161,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 Lg
 Jc
@@ -5039,7 +5175,7 @@ hD
 hD
 Jc
 Jc
-Jc
+Tj
 Jc
 Jc
 Bm
@@ -5196,7 +5332,7 @@ Lg
 Bm
 Jc
 Jc
-ub
+WM
 Jc
 Jc
 Jc
@@ -5458,7 +5594,7 @@ Jc
 Bm
 Jc
 Jc
-Jc
+NO
 ub
 ub
 ub
@@ -5589,7 +5725,7 @@ Bm
 Jc
 Jc
 Jc
-ub
+xo
 Jc
 Jc
 Jc
@@ -5751,7 +5887,7 @@ Bm
 Jc
 ub
 Jc
-Jc
+HU
 dI
 dI
 dI
@@ -6431,7 +6567,7 @@ sN
 sN
 sN
 sN
-sN
+gP
 sN
 sN
 Lg
@@ -6911,7 +7047,7 @@ Jc
 Jc
 sN
 sN
-Jc
+cm
 Jc
 Jc
 Bm
@@ -7051,7 +7187,7 @@ Jc
 Jc
 ub
 Jc
-Jc
+NO
 Jc
 Jc
 Jc
@@ -7079,7 +7215,7 @@ sN
 Jc
 Jc
 Jc
-Jc
+Yl
 Jc
 Bm
 Bm
@@ -7448,7 +7584,7 @@ sN
 Lg
 sN
 sN
-sN
+lP
 sN
 Jc
 Jc
@@ -7498,7 +7634,7 @@ Lg
 Lg
 sN
 sN
-sN
+Cd
 sN
 ah
 ah
@@ -8056,7 +8192,7 @@ Jc
 ub
 ub
 ub
-Jc
+HU
 Jc
 Jc
 ub
@@ -8108,7 +8244,7 @@ Jc
 sN
 ub
 sN
-sN
+lP
 sN
 Lg
 Lg
@@ -8145,7 +8281,7 @@ aF
 hD
 sN
 sN
-sN
+MH
 sN
 sN
 sN
@@ -8739,7 +8875,7 @@ Jc
 aH
 Jc
 Jc
-Jc
+Yl
 Jc
 Jc
 Jc
@@ -8812,7 +8948,7 @@ ub
 ub
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -8934,7 +9070,7 @@ ah
 ah
 sN
 sN
-sN
+MH
 sN
 Jc
 Bm
@@ -9059,7 +9195,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 ah
 ah
 sN
@@ -9181,7 +9317,7 @@ hD
 hD
 hD
 sN
-sN
+gP
 sN
 sN
 sN
@@ -9264,7 +9400,7 @@ aA
 Jc
 Jc
 ub
-Jc
+NO
 Jc
 Jc
 Jc
@@ -9397,7 +9533,7 @@ ub
 Jc
 Jc
 Jc
-Jc
+Yl
 sN
 ab
 Jc
@@ -9445,7 +9581,7 @@ sN
 sN
 sN
 sN
-sN
+lP
 sN
 sN
 sN
@@ -9468,7 +9604,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 Jc
 dI
 "}
@@ -9563,7 +9699,7 @@ Jc
 Bm
 sN
 sN
-sN
+Cd
 sN
 hD
 hD
@@ -9576,7 +9712,7 @@ sN
 sN
 sN
 sN
-sN
+Li
 sN
 sN
 sN
@@ -9843,7 +9979,7 @@ sN
 ah
 ah
 sN
-sN
+Li
 sN
 sN
 Bm
@@ -10057,7 +10193,7 @@ Jc
 Bm
 Jc
 ub
-sN
+lP
 sN
 Lg
 Lg
@@ -10444,7 +10580,7 @@ Jc
 Jc
 Bm
 Jc
-Jc
+Yl
 Jc
 ub
 sN
@@ -10479,7 +10615,7 @@ sN
 sN
 sN
 sN
-sN
+lP
 sN
 sN
 sN
@@ -10602,7 +10738,7 @@ ub
 sN
 hb
 sN
-sN
+lP
 sN
 sN
 sN
@@ -11003,7 +11139,7 @@ ab
 sN
 sN
 sN
-sN
+gP
 sN
 sN
 sN
@@ -11385,7 +11521,7 @@ sN
 sN
 sN
 sN
-sN
+po
 sN
 sN
 sN
@@ -11407,7 +11543,7 @@ sN
 sN
 sN
 sN
-sN
+gP
 Lg
 Lg
 sN
@@ -11658,7 +11794,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 ah
 ah
@@ -11828,7 +11964,7 @@ ub
 Jc
 Jc
 Jc
-Jc
+On
 Jc
 Bm
 Jc
@@ -11846,7 +11982,7 @@ sN
 sN
 sN
 Jc
-sN
+Zp
 sN
 sN
 sN
@@ -11955,7 +12091,7 @@ Bm
 Jc
 Jc
 ub
-Jc
+nq
 Jc
 Jc
 Jc
@@ -12034,7 +12170,7 @@ sN
 sN
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -12217,7 +12353,7 @@ Jc
 ub
 Jc
 Jc
-Jc
+ic
 Jc
 Jc
 Jc
@@ -12396,6 +12532,7 @@ sN
 sN
 sN
 sN
+Cd
 sN
 sN
 sN
@@ -12405,8 +12542,7 @@ sN
 sN
 sN
 sN
-sN
-sN
+gP
 sN
 sN
 sN
@@ -12549,7 +12685,7 @@ sN
 aM
 sN
 sN
-sN
+xJ
 sN
 sN
 sN
@@ -12572,7 +12708,7 @@ sN
 sN
 ah
 ah
-sN
+dB
 sN
 sN
 sN
@@ -12686,7 +12822,7 @@ sN
 sN
 sN
 sN
-sN
+po
 sN
 sN
 ab
@@ -12836,7 +12972,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 Lg
 sN
@@ -12923,7 +13059,7 @@ Lg
 Lg
 sN
 sN
-sN
+gP
 sN
 sN
 sN
@@ -12956,14 +13092,14 @@ ab
 sN
 sN
 sN
-sN
+lP
 sN
 sN
 sN
 aq
 ap
 sN
-sN
+gP
 sN
 sN
 sN
@@ -13485,7 +13621,7 @@ ah
 sN
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -13522,7 +13658,7 @@ Bm
 Bm
 Jc
 Jc
-Jc
+nq
 Jc
 Jc
 Jc
@@ -13613,7 +13749,7 @@ Lg
 ah
 ah
 sN
-sN
+po
 sN
 sN
 sN
@@ -13755,7 +13891,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 sN
 sN
@@ -14008,10 +14144,10 @@ Jc
 Jc
 Jc
 sN
+po
 sN
 sN
-sN
-sN
+MH
 sN
 sN
 sN
@@ -14703,7 +14839,7 @@ sN
 sN
 sN
 sN
-sN
+Cd
 sN
 Lg
 Lg
@@ -14776,7 +14912,7 @@ sN
 sN
 sN
 sN
-sN
+lP
 ub
 ub
 ub
@@ -14858,7 +14994,7 @@ sN
 sN
 sN
 sN
-sN
+sP
 sN
 Lg
 Lg
@@ -15294,7 +15430,7 @@ Lg
 sN
 sN
 sN
-sN
+lP
 sN
 sN
 di
@@ -15314,7 +15450,7 @@ sN
 sN
 sN
 sN
-sN
+xJ
 sN
 sN
 Lg
@@ -15388,7 +15524,7 @@ Lg
 sN
 sN
 sN
-sN
+sP
 sN
 Lg
 Lg
@@ -15410,7 +15546,7 @@ aH
 sN
 sN
 sN
-sN
+xJ
 sN
 sN
 sN
@@ -15572,7 +15708,7 @@ Bm
 Bm
 sN
 sN
-sN
+xJ
 sN
 sN
 sN
@@ -15634,7 +15770,7 @@ Bm
 Bm
 sN
 sN
-sN
+sP
 sN
 sN
 sN
@@ -15836,7 +15972,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 Jc
 Jc
@@ -16050,7 +16186,7 @@ aH
 aH
 sN
 sN
-sN
+Zp
 sN
 sN
 sN
@@ -16709,7 +16845,7 @@ sN
 sN
 sN
 sN
-sN
+MH
 sN
 sN
 sN

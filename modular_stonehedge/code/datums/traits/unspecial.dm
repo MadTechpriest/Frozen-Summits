@@ -284,14 +284,15 @@
 
 /datum/quirk/mtraining1
 	name = "Medical Training"
-	desc = "I have basic medical training and stashed some med supplies."
+	desc = "I have basic medical training and stashed some med supplies alongside a broom to clean some blood."
 	value = 2
 
 /datum/quirk/mtraining1/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.mind.adjust_skillrank_up_to(/datum/skill/misc/medicine, 3, TRUE)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
-	H.mind.special_items["Surgery Kit"] = /obj/item/storage/belt/rogue/surgery_bag
+	H.mind.special_items["Surgery Kit"] = /obj/item/storage/belt/rogue/surgery_bag/full
+	H.mind.special_items["Broom"] = /obj/item/broom
 
 /datum/quirk/eagle_eyed
 	name = "Eagle Eyed"
@@ -513,6 +514,18 @@
 	H.update_transform()
 
 
+/datum/quirk/backproblems_2
+	name = "Giant (Eyes slightly better)"
+	desc = "I've always been called a giant (atleast among my kin). I am valued for my stature, but, this world made for smaller folk has forced me to move cautiously."
+	value = 0
+
+/datum/quirk/backproblems_2/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("strength", 3)
+	H.change_stat("constitution", 2)
+	H.change_stat("speed", -2)
+	H.transform = H.transform.Scale(1.15, 1.25)
+	H.update_transform()
 
 //negative
 /datum/quirk/nimrod

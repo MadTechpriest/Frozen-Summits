@@ -5,7 +5,7 @@
 	icon_state = "anklets"
 	item_state = "anklets"
 	anvilrepair = /datum/skill/craft/blacksmithing
-
+	is_barefoot = TRUE
 
 /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
 	name = "Exotic Silks"

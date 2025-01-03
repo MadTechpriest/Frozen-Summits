@@ -2769,6 +2769,12 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/stepbelow)
+"Ko" = (
+/obj/structure/flora/roguetree/normal{
+	icon_state = "free5"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/mountains/decap)
 "Kp" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/outdoors/mountains/decap/stepbelow)
@@ -19243,7 +19249,7 @@ JG
 JG
 Ry
 TW
-Ry
+Ko
 Ry
 tL
 tL

@@ -204,8 +204,8 @@
 	qdel(src)
 
 /obj/item/reagent_containers/powder/ozium
-	name = "powder"
-	desc = ""
+	name = "ozium"
+	desc = "A potent drug that causes a state of euphoria, but can also arrest breathing."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "ozium"
 	possible_transfer_amounts = list()

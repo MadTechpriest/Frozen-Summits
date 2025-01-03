@@ -5,7 +5,6 @@
 	icon_state = "chaff1"
 	desc = "Grain that has not yet been made suitable for grinding and baking."
 	var/canthresh = TRUE
-	//dropshrink = 0.75
 	possible_potion = "healthpot"
 
 /obj/item/natural/chaff/attack_right(mob/user)

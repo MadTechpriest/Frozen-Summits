@@ -115,6 +115,26 @@
 	user.play_priomusic('sound/music/tree.ogg', MUSIC_PRIO_DEFAULT)
 */
 
+/obj/structure/flora/roguetree/snow
+	name = "snow covered temperate tree"
+	desc = "An standard looking tree found throughout the swordcoast though snow weighs it down."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "tree1"
+
+/obj/structure/flora/roguetree/snow/Initialize()
+	. = ..()
+	icon_state = "tree[rand(1,11)]"
+
+/obj/structure/flora/roguetree/normal
+	name = "temperate tree"
+	desc = "An standard looking tree found throughout the swordcoast, beauty in the likeness of such."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "free1"
+
+/obj/structure/flora/roguetree/normal/Initialize()
+	. = ..()
+	icon_state = "free[rand(1,11)]"
+
 /obj/structure/flora/roguetree/burnt
 	name = "burnt tree"
 	desc = "Maybe lightning, maybe war took the life of this once lively tree."
@@ -537,7 +557,7 @@
 
 /obj/structure/flora/roguegrass/pyroclasticflowers/update_icon()
 	icon_state = "pyroflower[rand(1,3)]"
-	
+
 /obj/structure/flora/roguegrass/pyroclasticflowers/Initialize()
 	. = ..()
 	if(prob(88))
