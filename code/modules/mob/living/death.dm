@@ -155,7 +155,7 @@
 		if ("bog", "dense bog")
 			locale = "a wretched, fetid bog"
 		if ("coast", "coastforest")
-			locale = "somewhere betwixt Abyssor's realm and Silvanus's bounty"
+			locale = "somewhere betwixt Umberlee's realm and Silvanus's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
 			locale = "the city of Frozen Summit and all its bustling souls"
 		if ("church")
