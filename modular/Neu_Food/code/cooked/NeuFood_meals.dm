@@ -298,7 +298,7 @@
 /*	.................   Plated fryfish   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "The River's bounty, make sure to eat the eyes!"
 	icon_state = "carpcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -313,7 +313,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/clownfish/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "The Sea's bounty, make sure to eat the eyes!"
 	icon_state = "clownfishcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -328,7 +328,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/angler/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "The deep sea's bounty, make sure to eat the eyes!"
 	icon_state = "anglercooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -343,7 +343,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/eel/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "The river's bounty, make sure to eat the eyes!"
 	icon_state = "eelcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
