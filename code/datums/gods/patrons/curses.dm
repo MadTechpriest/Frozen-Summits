@@ -37,9 +37,6 @@
 		C.on_life(src)
 
 
-/mob/living/carbon/human/Life()
-	..()
-	handle_curses()
 
 /mob/living/carbon/human/proc/add_curse(datum/curse/C)
 	if(is_cursed(C))
