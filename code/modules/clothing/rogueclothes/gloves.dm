@@ -175,6 +175,6 @@
 
 /obj/item/clothing/gloves/roguetown/angle/pontifex
 	name = "rune-scrybed wrappings"
-	desc = "Paper and cloth bandages enscrybed with powerful naledian runes. They do an ample job of protecting their user's hands in combat."
+	desc = "Paper and cloth bandages enscrybed with powerful arcane runes. They do an ample job of protecting their user's hands in combat."
 	icon_state = "clothwraps"
 	item_state = "clothwraps"

@@ -252,7 +252,7 @@
 	name = "war scholar's mask"
 	item_state = "naledimask"
 	icon_state = "naledimask"
-	desc = "Runes and wards, meant for daemons; the gold has somehow rusted in unnatural, impossible agony. The most prominent of these etchings is in the shape of the Naledian psycross."
+	desc = "A light ,gold plated mask covered in protective runes."
 	sellprice = 0
 
 
