@@ -13,6 +13,7 @@
 
 	outfit = /datum/outfit/job/roguetown/artificer
 	display_order = JDO_ARTIFICER
+	cmode_music = 'sound/music/combat_vaquero.ogg'
 	give_bank_account = 8
 	min_pq = 0
 	max_pq = null
