@@ -38,6 +38,8 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/hatfur
 	if(prob(50))
