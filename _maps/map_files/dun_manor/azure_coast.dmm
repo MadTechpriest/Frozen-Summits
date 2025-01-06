@@ -742,7 +742,7 @@
 "dQ" = (
 /turf/open/water/pond{
 	name = "hotspring";
-	desc = "comfortable hot water ,heated by underground volcanic vents."
+	desc = "Comfortable hot water, heated by underground volcanic vents."
 	},
 /area/rogue/outdoors/beach/forest)
 "dR" = (
