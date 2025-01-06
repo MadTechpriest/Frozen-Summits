@@ -3,8 +3,8 @@
 	icon_state = "ggrass"
 
 /obj/effect/wisp/tree
-	name = "Tree-Gem of Feywild"
-	desc = "A fey tree that has a small portion of the energy from feywild."
+	name = "Crystal Tree"
+	desc = "A strange tree touched by fey magic. It is said to be directly connected to the feywild."
 	icon = 'icons/roguetown/misc/special_tree.dmi'
 	icon_state = "gem"
 	pixel_x = 0
