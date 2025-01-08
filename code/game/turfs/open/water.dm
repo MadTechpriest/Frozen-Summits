@@ -230,13 +230,13 @@
 
 /turf/open/water/bath
 	name = "water"
-	desc = "Soothing water, although don't drink the soap."
+	desc = "Soothing water, with soapy bubbles on the surface."
 	icon = 'icons/turf/roguefloor.dmi'
 	icon_state = "bathtileW"
 	water_level = 2
 	water_color = "#FFFFFF"
 	slowdown = 3
-	water_reagent = /datum/reagent/water/gross
+	water_reagent = /datum/reagent/water/bathwater
 
 /turf/open/water/bath/Initialize()
 	.  = ..()
@@ -387,7 +387,7 @@
 	slowdown = 4
 	swim_skill = TRUE
 	wash_in = TRUE
-	water_reagent = /datum/reagent/water/gross
+	water_reagent = /datum/reagent/water/salty
 
 /turf/open/water/ocean/deep
 	name = "salt water"
@@ -398,7 +398,7 @@
 	water_color = "#3e7459"
 	slowdown = 8
 	swim_skill = TRUE
-	wash_in = FALSE
+	wash_in = TRUE
 
 /turf/open/water/pond
 	name = "pond"

@@ -21,7 +21,7 @@
 	confess_lines = list(
 		"THE DEAD SHALL RISE TO RULE!",
 		"IN DEATH, WE ARE ETERNAL!",
-		"ZMYRKUL BRINGS THE END!",
+		"MYRKUL BRINGS THE END!",
 	)
 
 /datum/patron/inhumen/graggar
@@ -127,7 +127,7 @@
 	t3 = /obj/effect/proc_holder/spell/invoked/avert
 
 /datum/patron/inhumen/gruumsh  
-	name = "Gruumsh"  
+	name = "Gruumsh"
 	domain = "God of War, Conquest, and Orcs"  
 	desc = "Gruumsh, the One-Eye, is the warlike patron of orcs and the embodiment of brutal conquest and victory at all costs. His eternal hatred for the elven pantheon drives his followers to ceaseless conflict, with no room for mercy or compromise. To worship Gruumsh is to embrace strength through savagery and to live for the glory of battle."  
 	worshippers = "Orcs, Barbarians, Raiders, and Conquerors"  

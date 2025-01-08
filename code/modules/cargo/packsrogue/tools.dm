@@ -41,7 +41,7 @@
 /datum/supply_pack/rogue/tools/handsaw
 	name = "handsaw"
 	cost = 12
-	contains = /obj/item/rogueweapon/handsaw
+	contains = list(/obj/item/rogueweapon/handsaw)
 
 /datum/supply_pack/rogue/tools/chisel
 	name = "chisel"

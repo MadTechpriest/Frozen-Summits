@@ -53,7 +53,7 @@
 			if(P.armor_penetration >= 80)
 				owner.visible_message("<span class='danger'>The [hitby] pierces [owner]'s [src]!</span>")
 				return 0
-		if(owner.client?.chargedprog == 100 && owner.used_intent?.tranged)
+		if(owner.used_intent?.tranged)
 			owner.visible_message(span_danger("[owner] blocks [hitby] with [src]!"))
 			return 1
 		else
