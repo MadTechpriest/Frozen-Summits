@@ -10,7 +10,7 @@
 	greet_text = "The Circus of the Last Days itself is an extraplanar circus which moves from plane to plane. The people here look like they could do with a good show, give them one they'll remember!"
 
 /datum/migrant_wave/fablefield_down_one
-	name = "The Fablefield Troupe"
+	name = "The Circus of the Last Days"
 	shared_wave_type = /datum/migrant_wave/fablefield
 	downgrade_wave = /datum/migrant_wave/fablefield_down_two
 	can_roll = FALSE
