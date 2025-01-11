@@ -27,7 +27,7 @@
 	wander = TRUE
 
 /mob/living/carbon/human/species/goblin/hell
-	name = "hell goblin"
+	name = "Imp"
 	race = /datum/species/goblin/hell
 /mob/living/carbon/human/species/goblin/npc/hell
 	race = /datum/species/goblin/hell
@@ -35,7 +35,7 @@
 	race = /datum/species/goblin/hell
 /datum/species/goblin/hell
 	id = "goblin_hell"
-	name = "hell goblin"
+	name = "Imp"
 	raceicon = "goblin_hell"
 
 /mob/living/carbon/human/species/goblin/cave
@@ -61,7 +61,7 @@
 	raceicon = "goblin_sea"
 
 /mob/living/carbon/human/species/goblin/moon
-	name = "moon goblin"
+	name = "Quasit"
 	race = /datum/species/goblin/moon
 /mob/living/carbon/human/species/goblin/npc/moon
 	race = /datum/species/goblin/moon
