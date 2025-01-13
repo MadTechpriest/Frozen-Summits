@@ -93,6 +93,7 @@
 		"LIVE, LAUGH, LOVE!",
 		"SHARESS IS MY JOY!",
 	)
+	t0 = /obj/effect/proc_holder/spell/invoked/projectile/profane/miracle
 	t1 = /obj/effect/proc_holder/spell/invoked/projectile/fetch
 	t2 = /obj/effect/proc_holder/spell/invoked/bud
 	t3 = /obj/effect/proc_holder/spell/invoked/eoracurse
