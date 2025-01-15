@@ -488,7 +488,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/cheesebun
 	name = "fresh cheese bun"
-	desc = "A treat from the Grenzelhoft kitchen."
+	desc = "A treat from the Baldurian kitchen."
 	faretype = FARE_FINE
 	icon_state = "cheesebun"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION+FRESHCHEESE_NUTRITION)
@@ -701,8 +701,8 @@
 	rotprocess = SHELFLIFE_DECENT
 
 /obj/item/reagent_containers/food/snacks/rogue/hcake
-	name = "zybantine cake"
-	desc = "Cake glazed with honey, in the famous Zybantu fashion, a delicious sweet treat."
+	name = "Calimshan cake"
+	desc = "Cake glazed with honey, in the famous Calimshan fashion, a delicious sweet treat."
 	icon_state = "honeycake"
 	slices_num = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
@@ -718,7 +718,7 @@
 	bitesize = 16
 
 /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
-	name = "zybantine cake slice"
+	name = "Calimshan cake slice"
 	icon_state = "honeycakeslice"
 	slices_num = 0
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
@@ -751,7 +751,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/ccake
 	name = "cheesecake"
-	desc = "Humenity's favored creation."
+	desc = "The greatest invention of the Halfling people."
 	icon_state = "cheesecake"
 	slices_num = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/ccakeslice
