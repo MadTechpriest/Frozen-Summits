@@ -50,6 +50,7 @@
 #define TRAIT_GOODTRAINER "Good Trainer"
 #define TRAIT_SEA_DRINKER "Denizen of the Deep"
 #define TRAIT_STUDENT		"Student"
+#define TRAIT_INTELLECTUAL "Intellectual"
 
 //Hearthstone port (Tracking)
 #define TRAIT_PERFECT_TRACKER "Perfect Tracker" //Will always find any tracks and analyzes them perfectly.
@@ -212,6 +213,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_STUDENT =  span_info("I am overwhelmed by all this knowledge!"),
 	TRAIT_BIGGUY = span_info("My immense frame and size allows me to smash through wooden walls, and into people with more effectiveness."),
 	TRAIT_SLOPPYSLEEPER = span_info("I can sleep anywhere."),
+	TRAIT_INTELLECTUAL = span_info("I have a keen eye and can assess a person's prowess in wit and blade."),
 ))
 
 // trait accessor defines
