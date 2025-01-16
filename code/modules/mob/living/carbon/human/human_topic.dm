@@ -356,6 +356,9 @@
 				to_chat(usr, span_notice("Successfully added comment."))
 				return
 
+	return ..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that.
+			to_chat(src, "<span class='warning'>I feel your [pocket_side] pocket being fumbled with!</span>")
+
 	if(href_list["task"] == "assess")
 		if(!ismob(usr))
 			return
@@ -365,27 +368,16 @@
 		var/mob/user = usr
 		user.visible_message("[user] begins assessing [src].")
 		if(do_after(user, 30))
-			var/is_guarded = HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS)
 			var/list/dat = list()
 			dat +="<center>"
-			if(!is_guarded)
-				dat +=("STR: \Roman [H.STASTR]<br>")
-				dat +=("PER: \Roman [H.STAPER]<br>")
-				dat +=("INT: \Roman [H.STAINT]<br>")
-				dat +=("CON: \Roman [H.STACON]<br>")
-				dat +=("END: \Roman [H.STAEND]<br>")
-				dat +=("SPD: \Roman [H.STASPD]<br>")
-			else
-				dat +=("STR: \Roman [rand(1,20)]<br>")
-				dat +=("PER: \Roman [rand(1,20)]<br>")
-				dat +=("INT: \Roman [rand(1,20)]<br>")
-				dat +=("CON: \Roman [rand(1,20)]<br>")
-				dat +=("END: \Roman [rand(1,20)]<br>")
-				dat +=("SPD: \Roman [rand(1,20)]<br>")
-			if(is_guarded || job == "Jester")
-				dat += "Something feels off..."
+			dat +=("STR: \Roman [H.STASTR]<br>")
+			dat +=("PER: \Roman [H.STAPER]<br>")
+			dat +=("INT: \Roman [H.STAINT]<br>")
+			dat +=("CON: \Roman [H.STACON]<br>")
+			dat +=("END: \Roman [H.STAEND]<br>")
+			dat +=("SPD: \Roman [H.STASPD]<br>")
 			dat +="</center>"
-			var/datum/browser/popup = new(user, "assess", ntitle = "[src] Assesment", nwidth = 140, nheight = 290)
+			var/datum/browser/popup = new(user, "assess" ntitle = "[src] Assesment", nwidth = 120, nheight = 190)
 			popup.set_content(dat.Join())
 			popup.open(FALSE)
 			return

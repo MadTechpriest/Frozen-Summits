@@ -525,8 +525,9 @@
 	if((HAS_TRAIT(user,TRAIT_INTELLECTUAL)))
 		var/mob/living/L = user
 		var/final_int = STAINT
+		var/addition
 		if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
-			final_int = L.STAINT
+			addition = " [t_He] tries to hide it."
 		var/int_diff = final_int - L.STAINT
 		switch(int_diff)
 			if(5 to INFINITY)
@@ -539,6 +540,8 @@
 				. += span_revennotice("[t_He] look[p_s()] dumber than I.")
 			if(-INFINITY to -5)
 				. += span_revennotice("[t_He] look[p_s()] as blunt-minded as a rock.")
+		if(addition)
+			. += addition
 
 		//The Nymphomaniac Underground
 		if((!appears_dead) && stat == CONSCIOUS && src.has_flaw(/datum/charflaw/addiction/lovefiend))
