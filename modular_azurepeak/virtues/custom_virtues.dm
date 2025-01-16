@@ -31,7 +31,7 @@
 /datum/virtue/size/lycan_male
 	name = "Lycanthropic Lineage (Male)"
 	desc = "Born of the feral bloodline, my frame is broad, my strength immense, and my constitution unmatched. However, my mind is often clouded, a reflection of the wild instincts within. The sharpness of my claws and the deep, resonant howl that escapes my throat speak of the beast that stirs in my soul. The moon calls to me, drawing me closer to my true form, where man and wolf converge in a primal dance of power and fury. Through the gift of transformation and a name that marks my rebirth, I stride between civilization and the wilds, embodying both"
-	added_stats = list(STAT_STRENGTH = 3, STAT_CONSTITUTION = 3, STAT_SPEED = -4)
+	added_stats = list(STAT_STRENGTH = 3, STAT_CONSTITUTION = 3, STAT_SPEED = -2)
 
 /datum/virtue/size/lycan_male/apply_to_human(mob/living/carbon/human/recipient)
 	recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/claws)
@@ -42,7 +42,7 @@
 /datum/virtue/size/lycan_female
 	name = "Lycanthropic Lineage (Female)"
 	desc = "Born of the feral bloodline, my frame is broad, my strength immense, and my constitution unmatched. However, my mind is often clouded, a reflection of the wild instincts within. The sharpness of my claws and the deep, resonant howl that escapes my throat speak of the beast that stirs in my soul. The moon calls to me, drawing me closer to my true form, where man and wolf converge in a primal dance of power and fury. Through the gift of transformation and a name that marks my rebirth, I stride between civilization and the wilds, embodying both"
-	added_stats = list(STAT_STRENGTH = 3, STAT_CONSTITUTION = 3, STAT_SPEED = -4)
+	added_stats = list(STAT_STRENGTH = 3, STAT_CONSTITUTION = 3, STAT_SPEED = -2)
 
 /datum/virtue/size/lycan_female/apply_to_human(mob/living/carbon/human/recipient)
 	recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/claws)
