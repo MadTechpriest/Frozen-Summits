@@ -2132,7 +2132,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/beer/zagul
 	name = "Moon Mountain Dark"
 	boozepwr = 15
-	taste_description = "cheap pisswater"
+	taste_description = "mild brew"
 	color = "#DBD77F"
 	quality = DRINK_NICE
 
