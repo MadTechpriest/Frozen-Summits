@@ -68,7 +68,7 @@
 
 /datum/weather_effect/snow
 	name = "snow effect"
-	probability = 40
+	probability = 100
 
 /datum/weather_effect/snow/effect_affect(turf/target_turf)
 	if(!target_turf.snow)
@@ -81,12 +81,10 @@
 	L.adjust_bodytemperature(-rand(5,10))
 	L.adjust_fire_stacks(-100)
 	L.SoakMob(FULL_BODY)
-	L.apply_status_effect(/datum/status_effect/buff/frostbite5e)
-/mob/living/var/snow_shiver
+
 
 /datum/particle_weather/snow_storm/weather_act(mob/living/L)
 	L.adjust_bodytemperature(-rand(5,15))
-	L.snow_shiver = world.time + 10 SECONDS
 
 
 /datum/weather_effect/snow_storm/effect_affect(turf/target_turf)
