@@ -84,11 +84,11 @@
 
 //-----------------------------
 /mob/living/simple_animal/hostile/retaliate/rogue/dragon/broodmother/whelp
-	health = 760
-	maxHealth = 760
+	health = 350
+	maxHealth = 350
 	name = "dragon whelp"
-	projectiletype = /obj/projectile/magic/aoe/dragon_breath
+	projectiletype = /obj/projectile/magic/aoe/fireball/rogue/great
 	projectilesound = 'sound/blank.ogg'
 	ranged = 1
 	ranged_message = "breathes fire"
-	ranged_cooldown_time = 20 SECONDS
+	ranged_cooldown_time = 45 SECONDS
