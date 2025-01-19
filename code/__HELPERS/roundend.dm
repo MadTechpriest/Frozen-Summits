@@ -196,16 +196,16 @@
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	set waitfor = FALSE
 
-	log_game("The round has ended.")
+	log_game("The session has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Frozen Summit.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>So it ends the week on the Frozen Summit.</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			C.mob.playsound_local(C.mob, 'sound/music/credits.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/music/credits.ogg', 65, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
