@@ -86,7 +86,7 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/dragon/broodmother/whelp
 	health = 350
 	maxHealth = 350
-	name = "dragon whelp"
+	name = "dragon youngling"
 	projectiletype = /obj/projectile/magic/aoe/fireball/rogue/great
 	projectilesound = 'sound/blank.ogg'
 	ranged = 1
