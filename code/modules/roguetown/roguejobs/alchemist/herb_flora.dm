@@ -1,6 +1,6 @@
 /obj/structure/flora/roguegrass/herb
 	name = "herbbush"
-	desc = "A bush,for an herb. This shouldn't show up."
+	desc = "A bush, for an herb."
 	icon = 'icons/roguetown/misc/herbfoliage.dmi'
 	icon_state = "spritemeplz"
 	var/res_replenish
