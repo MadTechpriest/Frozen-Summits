@@ -155,7 +155,7 @@
 	t2 = /obj/effect/proc_holder/spell/invoked/heal
 	t3 = /obj/effect/proc_holder/spell/invoked/shepherd
 
-/datum/patron/inhumen/Dagon
+/datum/patron/inhumen/dagon
 	name = "Dagon"
 	domain = "The Deep Sea , The Abyss , Dreams"
 	desc = "The Primordial Demon Lord Dagon dwells in the 89th level of the Abyss. His true motives are a mystery, even to the ones that worship him."

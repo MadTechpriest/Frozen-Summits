@@ -160,6 +160,186 @@
 						situational_bonus = 2.5
 			if(/datum/patron/godless)
 				target.visible_message(span_info("Without any particular cause or reason, [target] is healed!"), span_notice("My wounds close without cause."))
+
+			if(/datum/patron/divine/lathander)
+				target.visible_message(span_info("A warm radiance dawns over [target]!"), span_notice("I am embraced by the renewing light of dawn!"))
+				// Similar to Astrata: healing bonus during the day to symbolize Lathander's association with dawn
+				if (GLOB.tod == "day")
+					conditional_buff = TRUE
+					situational_bonus = 2
+
+			if(/datum/patron/divine/selune)
+				target.visible_message(span_info("A calming moonlit aura surrounds [target]!"), span_notice("The light of Selûne soothes my wounds!"))
+				// Similar to Noc: healing bonus during the night, as Selûne is tied to the moon
+				if (GLOB.tod == "night")
+					conditional_buff = TRUE
+					situational_bonus = 2
+
+			if(/datum/patron/divine/chauntea)
+				target.visible_message(span_info("A nurturing energy flows from [target]!"), span_notice("I am restored by the bounty of nature!"))
+				// Similar to Dendor: healing is enhanced by natural elements nearby
+				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
+				situational_bonus = 0
+				for (var/obj/O in oview(5, user))
+					if (O in natural_stuff)
+						situational_bonus = min(situational_bonus + 0.1, 2)
+				for (var/obj/structure/flora/roguetree/wise/O in oview(5, user))
+					situational_bonus += 1.5
+				if (situational_bonus > 0)
+					conditional_buff = TRUE
+
+			if(/datum/patron/divine/bahamut)
+				target.visible_message(span_info("A majestic aura of justice and protection surrounds [target]!"), span_notice("I feel renewed by the presence of Bahamut's wisdom!"))
+				// Similar to Ravox: bonus healing in areas where justice or righteousness is represented (e.g., blood-soaked areas as a sign of battle)
+				situational_bonus = 0
+				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
+					situational_bonus = min(situational_bonus + 0.1, 2)
+				conditional_buff = TRUE
+
+
+			if(/datum/patron/inhumen/bane)
+				target.visible_message(span_info("A suffocating pressure emanates from [target]!"), span_notice("I feel an iron will strengthening my body!"))
+				// Similar to Ravox: healing increases in battle-heavy areas, reflecting Bane's dominion over tyranny and conflict
+				situational_bonus = 0
+				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
+					situational_bonus = min(situational_bonus + 0.1, 2)
+				conditional_buff = TRUE
+
+			if(/datum/patron/inhumen/lolth)
+				target.visible_message(span_info("Web-like shadows spiral around [target]!"), span_notice("I am shrouded in the dark weave of the Spider Queen!"))
+				// Similar to Xylix: healing has a probabilistic element to reflect Lolth's chaotic and deceptive nature
+				if (prob(50))
+					conditional_buff = TRUE
+					situational_bonus = rand(1, 2.5)
+
+			if(/datum/patron/inhumen/shar)
+				target.visible_message(span_info("An oppressive darkness radiates from [target]!"), span_notice("The void calls to me, granting solace in its depths."))
+				// Similar to Selûne/Noc: healing is amplified at night but with a sinister undertone
+				if (GLOB.tod == "night")
+					conditional_buff = TRUE
+					situational_bonus = 2
+
+			if(/datum/patron/inhumen/gruumsh)
+				target.visible_message(span_info("A savage energy flares from [target]!"), span_notice("I am emboldened by unyielding rage!"))
+				// Similar to Ravox: healing increases in blood-soaked areas, emphasizing Gruumsh's chaotic and warlike aspects
+				situational_bonus = 0
+				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
+					situational_bonus = min(situational_bonus + 0.1, 2)
+				conditional_buff = TRUE
+
+			if(/datum/patron/inhumen/maglubiyet)
+				target.visible_message(span_info("A cunning energy rises from [target]!"), span_notice("The craft of conquest invigorates me!"))
+				// Similar to Zizo: healing is enhanced by surrounding bones, symbolizing goblin warcraft and sacrifice
+				situational_bonus = 0
+				for (var/obj/item/natural/bone/O in oview(5, user))
+					situational_bonus += (0.5)
+				for (var/obj/item/natural/bundle/bone/S in oview(5, user))
+					situational_bonus += (S.amount * 0.5)
+				if (situational_bonus > 0)
+					conditional_buff = TRUE
+					situational_bonus = min(situational_bonus, 5)
+
+			if(/datum/patron/inhumen/tiamat)
+				target.visible_message(span_info("A tempest of chromatic energy surrounds [target]!"), span_notice("The draconic queen restores my strength!"))
+				// Similar to Bahamut but with a chaotic edge: random healing boost based on her chromatic chaos
+				conditional_buff = TRUE
+				situational_bonus = rand(1, 2.5)
+
+			if(/datum/patron/inhumen/dagon)
+				target.visible_message(span_info("An eerie aquatic presence emanates from [target]!"), span_notice("I feel the deep waters of Dagon restoring me!"))
+				// Similar to Abyssor: healing is amplified when standing in water
+				if (istype(get_turf(target), /turf/open/water))
+					conditional_buff = TRUE
+					situational_bonus = 1.5
+
+			if(/datum/patron/inhumen/malar)
+				target.visible_message(span_info("A primal, predatory aura surrounds [target]!"), span_notice("The hunt fills me with vitality!"))
+				// Similar to Dendor: healing increases in natural surroundings but with a predatory emphasis
+				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
+				situational_bonus = 0
+				for (var/obj/O in oview(5, user))
+					if (O in natural_stuff)
+						situational_bonus = min(situational_bonus + 0.1, 2)
+				for (var/obj/structure/flora/roguetree/wise/O in oview(5, user))
+					situational_bonus += 1.5
+				if (situational_bonus > 0)
+					conditional_buff = TRUE
+
+			if(/datum/patron/neutral/semuanya)
+				target.visible_message(span_info("A primal, reptilian stillness radiates from [target]!"), span_notice("The survival instinct of Semuanya sustains me!"))
+				// Inspired by natural surroundings and Dendor, focusing on areas with vegetation or water
+				var/list/natural_elements = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /turf/open/water, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/soil)
+				situational_bonus = 0
+				for (var/obj/O in oview(5, target))
+					if (O in natural_elements)
+						situational_bonus = min(situational_bonus + 0.1, 2)
+				if (situational_bonus > 0)
+					conditional_buff = TRUE
+
+			if(/datum/patron/neutral/mielikki)
+				target.visible_message(span_info("An aura of peace and flourishing nature surrounds [target]!"), span_notice("Mielikki's touch rejuvenates me in her favored glades."))
+				// Similar to Dendor but tied to forests specifically, with a focus on balance and harmony
+				var/list/forest_items = list(/obj/structure/flora/tree, /obj/structure/flora/newtree, /obj/structure/soil, /obj/structure/flora/roguegrass)
+				situational_bonus = 0
+				for (var/obj/O in oview(5, target))
+					if (O in forest_items)
+						situational_bonus = min(situational_bonus + 0.2, 3)
+				if (situational_bonus > 0)
+					conditional_buff = TRUE
+
+			if(/datum/patron/neutral/tymora)
+				target.visible_message(span_info("An aura of daring chance and fortune sparks around [target]!"), span_notice("The Lady Luck's favor graces me!"))
+				// A probabilistic healing boost, emphasizing Tymora's domain of chance and luck
+				if (prob(75)) // High probability to align with "good luck"
+					conditional_buff = TRUE
+					situational_bonus = rand(1.5, 3)
+
+			if(/datum/patron/neutral/talos)
+				target.visible_message(span_info("The storm's fury courses through [target]!"), span_notice("The Storm Lord's wrath fuels my resilience!"))
+				// Similar to Abyssor but tied to storms; enhances healing in rainy or stormy conditions
+
+
+			if(/datum/patron/neutral/elistraee)
+				target.visible_message(span_info("A gentle melody surrounds [target], filled with grace and longing."), span_notice("Eilistraee's soothing song fills me with peace!"))
+
+			if(/datum/patron/neutral/yondalla)
+				target.visible_message(span_info("A nurturing warmth envelops [target], reminiscent of hearth and home."), span_notice("Yondalla's protective embrace heals my wounds!"))
+
+			if(/datum/patron/neutral/garl)
+				target.visible_message(span_info("A spark of humor and mischief dances around [target]."), span_notice("Garl Glittergold's playful magic restores my vigor!"))
+
+			if(/datum/patron/neutral/corellon)
+				target.visible_message(span_info("An ethereal radiance shines upon [target], infused with divine artistry."), span_notice("Corellon's grace renews me with inspiration!"))
+
+			if(/datum/patron/neutral/oghma)
+				target.visible_message(span_info("A wave of knowledge and understanding flows into [target]."), span_notice("Oghma's wisdom mends my soul and body!"))
+
+			if(/datum/patron/neutral/talona)
+				target.visible_message(span_info("A shadow of noxious energy surrounds [target], yet it seems oddly soothing."), span_notice("Talona's touch both poisons and purges, leaving me healed!"))
+
+			if(/datum/patron/neutral/helm)
+				target.visible_message(span_info("A steadfast presence manifests around [target], unyielding and protective."), span_notice("Helm's vigilance restores my strength!"))
+
+			if(/datum/patron/neutral/tempus)
+				target.visible_message(span_info("A roar of battle echoes around [target], filled with martial vigor."), span_notice("Tempus' martial fury renews my resolve!"))
+
+
+			if(/datum/patron/forces/baphomet)
+				target.visible_message(span_info("A primal roar reverberates through [target], and their eyes flash with savage fury."), span_notice("Baphomet's bestial rage empowers me!"))
+
+			if(/datum/patron/forces/asmodeus)
+				target.visible_message(span_info("A crimson glow envelops [target], resonating with the authority of infernal power."), span_notice("Asmodeus' dominion fills me with unstoppable might!"))
+
+			if(/datum/patron/forces/caelthar)
+				target.visible_message(span_info("An intense flame blazes around [target], flickering between destruction and creation."), span_notice("Caelthar's infernal balance strengthens my resolve!"))
+
+			if(/datum/patron/forces/titania)
+				target.visible_message(span_info("A shimmering, fey light dances around [target], infused with the vitality of the wild."), span_notice("Titania's enchanting power revitalizes me!"))
+
+			if(/datum/patron/forces/oberon)
+				target.visible_message(span_info("An ancient, commanding presence surrounds [target], filled with fey authority."), span_notice("Oberon's regal influence sharpens my focus!"))
+
+
 			else
 				target.visible_message(span_info("A choral sound comes from above and [target] is healed!"), span_notice("I am bathed in healing choral hymns!"))
 
