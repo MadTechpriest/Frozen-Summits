@@ -493,7 +493,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/frostbite5e
 	duration = 60 SECONDS
 	var/static/mutable_appearance/frost = mutable_appearance('icons/roguetown/mob/coldbreath.dmi', "breath_m", ABOVE_ALL_MOB_LAYER)
-	effectedstats = list("speed" = -1)
+	effectedstats = list("speed" = -3)
 
 /atom/movable/screen/alert/status_effect/buff/frostbite5e
 	name = "Coldness"
@@ -505,13 +505,12 @@
 	var/mob/living/target = owner
 	target.add_overlay(frost)
 	target.update_vision_cone()
-	target.add_movespeed_modifier(MOVESPEED_ID_ADMIN_VAREDIT, update=TRUE, priority=100, multiplicative_slowdown=1.5, movetypes=GROUND)
+
 
 /datum/status_effect/buff/frostbite5e/on_remove()
 	var/mob/living/target = owner
 	target.cut_overlay(frost)
 	target.update_vision_cone()
-	target.remove_movespeed_modifier(MOVESPEED_ID_ADMIN_VAREDIT, TRUE)
 	. = ..()
 
 //==============================================
