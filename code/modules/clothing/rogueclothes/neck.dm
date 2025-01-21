@@ -337,8 +337,8 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 
 /obj/item/clothing/neck/roguetown/shalal
-	name = "Zhentarim Medal"
-	desc = "A Medal identifying the wearer as a member of the Zhentarim."
+	name = "Mercenaries Medal"
+	desc = "A Medal identifying the wearer as a member of the Calishite mercenary guilds."
 	icon_state = "shalal"
 	//dropshrink = 0.75
 	resistance_flags = FIRE_PROOF

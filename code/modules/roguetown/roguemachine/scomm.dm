@@ -450,9 +450,9 @@
 // MATTHIAN SCOMCOIN
 
 /obj/item/mattcoin
-	name = "Whispering Coin"
+	name = "Zhentarim Medal"
 	icon_state = "mattcoin"
-	desc = "A faded coin, a ruby laid into its center."
+	desc = "A Medal identifying the wearer as a member of the Zhentarim."
 	gripped_intents = null
 	dropshrink = 0.75
 	possible_item_intents = list(INTENT_GENERIC)
