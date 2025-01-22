@@ -30,7 +30,7 @@
 	H.adjust_blindness(-3)
 	detailcolor = input("Choose a color.", "NALEDIAN COLORPLEX") as anything in naledicolors
 	detailcolor = naledicolors[detailcolor]
-	var/classes = list("Enchanter","Spellblade","Healer")
+	var/classes = list("Enchanter","Hexblade","Healer")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	mask = /obj/item/clothing/mask/rogue/lordmask/naledi
@@ -81,9 +81,9 @@
 			pants = /obj/item/clothing/under/roguetown/trou/leather
 			backpack_contents = list(/obj/item/roguekey/mercenary,/obj/item/rogueweapon/huntingknife)
 
-		if("Spellblade")
+		if("Hexblade")
 			H.set_blindness(0)
-			to_chat(H, span_warning("You are a Spellblade, a warrior trained into a hybridized style of movement-controlling magic and hand-to-hand combat. Though your abilities in magical fields are lacking, you are far more dangerous than other magi in a straight fight. You manifest your calm, practiced skill into a killing intent that takes the shape of an arcane blade."))
+			to_chat(H, span_warning("A hexblade was an arcane spellcaster who combined magical power with martial skill. A hexblade's power could manifest itself spontaneously, similarly to a sorcerer's magic, or be granted via a warlock pact."))
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)

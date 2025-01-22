@@ -1,6 +1,6 @@
 /datum/advclass/mercenary/desert_rider
-	name = "Zhentarim Mercenary"
-	tutorial = "The Zhentarim , also known as the Black Network is a mercenary company and greater mercantile organization in Faerun, who over 200 years of existence, had a storied history as a cadre of self-serving thieves, spies, assassins, and malevolent wizards.	"
+	name = "Calimshan Mercenary"
+	tutorial = "Calimshan is a nation that covers the southern corner of west Faerûn, including the Calim Desert. Calimshan's capital is the sprawling port-city of Calimport.	"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/desert_rider
@@ -13,13 +13,13 @@
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
-	var/classes = list("Bruiser","Blade Dancer")
+	var/classes = list("Mameluks","Blade Dancer","Spellblade")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
-		if("Bruiser")
+		if("Mameluks")
 			H.set_blindness(0)
-			to_chat(H, span_warning("Hired elite infantry units, wielding mace and shield. We do not break."))
+			to_chat(H, span_warning("Hired elite infantry units, wielding mace and shield. They guard the pashas, sultans and sorceror kings of Calimshan. They are named after the legendary slave-soldiers that once overthrew their wizard-king masters of the Shoon-Imperium."))
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -50,7 +50,7 @@
 
 		if("Blade Dancer")
 			H.set_blindness(0)
-			to_chat(H, span_warning("Zhentarim 'Blade Dancers' are famed and feared the world over. Their expertise in blades both long and short is well known..."))
+			to_chat(H, span_warning("Blade dancers are rangers, typically of the two-blade, though not necessarily, whose combat style mimics dance in its grace and its refinement. To a blade dancer, their dual weapons, often blades of some sort, are as two dance partners with whom they train and choreograph constantly. Masters of footwork as well as fencing, blade dancers are as deadly as they are elegant."))
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE) //they have literally nothing else going for them and swords suck ass, do not use this as an excuse to powercreep
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
@@ -77,9 +77,9 @@
 			pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 			H.grant_language(/datum/language/celestial)
 
-		if("Blade Caster")
+		if("Spellblade")
 			H.set_blindness(0)
-			to_chat(H, span_warning("Blade Casters are those skilled in both magyck and swordsmanship, but excelling in nothing."))
+			to_chat(H, span_warning("The spellblade is a magical warrior that infuses magic into his fighting style. In his hands, any weapon can be a magic weapon, and the spellblade supplements that with a few arcane spells as well. Spellblades are prized soldiers, as their spell knowledge, while useful in its own right, also indicates a high degree of intelligence."))
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
