@@ -175,3 +175,58 @@
 	slot_flags = ITEM_SLOT_CLOAK
 	nodismemsleeves = TRUE
 	slot_flags = ITEM_SLOT_CLOAK
+
+
+
+
+
+
+
+
+/datum/crafting_recipe/roguetown/sewing/royal_dress
+	name = "royal gown"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal)
+	reqs = list(/obj/item/natural/cloth = 5)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/princess_dress
+	name = "pristine dress"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal/princess)
+	reqs = list(/obj/item/natural/cloth = 4)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/winter_dress
+	name = "winter dress"
+	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/winterdress)
+	reqs = list(/obj/item/natural/cloth = 6, /obj/item/natural/hide = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/tribal_cloak
+	name = "tribal pelt"
+	result = list(/obj/item/clothing/cloak/tribal)
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/wolf_mantle
+	name = "wolf mantle"
+	result = list(/obj/item/clothing/cloak/volfmantle)
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/wicker_cloak
+	name = "wicker cloak"
+	result = list(/obj/item/clothing/cloak/wickercloak)
+	reqs = list(/obj/item/natural/fiber = 3)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/ladycloak
+	name = "ladylike shortcloak"
+	result = list(/obj/item/clothing/cloak/lordcloak/ladycloak)
+	reqs = list(/obj/item/natural/cloth = 4)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/sewing/matron_cloak
+	name = "matron cloak"
+	result = list(/obj/item/clothing/cloak/matron)
+	reqs = list(/obj/item/natural/cloth = 5, /obj/item/natural/hide = 1)
+	craftdiff = 0
