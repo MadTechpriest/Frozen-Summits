@@ -21,7 +21,7 @@
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
 	name = "royal gown"
-	desc = "An elaborate ball gown, a favoured fashion of queens and elevated nobility in Enigma."
+	desc = "An elaborate ball gown, a favoured fashion of queens and elevated nobility in Faerûn."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "royaldress"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts_royalty.dmi'
@@ -59,7 +59,7 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "pristine dress"
-	desc = "A flowy, intricate dress made by the finest tailors in the land for the monarch's children."
+	desc = "A flowy, intricate dress made by the finest tailors in the land for the Faerûn's children."
 	icon_state = "princess"
 	boobed = TRUE
 	detail_color = CLOTHING_BERRY_BLUE
@@ -69,7 +69,7 @@
 	name = "winter dress"
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
-	desc = "A thick, padded, and comfortable dress to maintain both temperature and safety when leaving the keep."
+	desc = "A thick, padded, and comfortable dress to maintain both temperature and safety when leaving the house."
 	icon_state = "winterdress"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts_royalty.dmi'
 	boobed = TRUE
@@ -102,3 +102,76 @@
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/winterdress/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+
+
+
+//................ Cloak ............... //
+/obj/item/clothing/cloak/tribal
+	name = "tribal pelt"
+	desc = "A haphazardly cured pelt of a creecher, thrown on top of one's body or armor, to serve as additional protection against the cold. Itchy."
+	icon_state = "tribal"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	body_parts_covered = CHEST|GROIN|VITALS
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	nodismemsleeves = TRUE
+	boobed = FALSE
+	sellprice = 10
+
+
+
+
+/obj/item/clothing/cloak/volfmantle
+	name = "wolf mantle"
+	desc = "A warm cloak made using the hide and head of a slain wolf. A status symbol if ever there was one."
+	color = null
+	icon_state = "volfpelt"
+	item_state = "volfpelt"
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = FALSE
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+
+
+/obj/item/clothing/cloak/wickercloak
+	name = "wicker cloak"
+	desc = "A makeshift cloak constructed with mud, sticks and fibers."
+	icon_state = "wicker_cloak"
+	item_state = "wicker_cloak"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+
+
+/obj/item/clothing/cloak/lordcloak/ladycloak
+	name = "ladylike shortcloak"
+	desc = "Ermine trimmed, handed down."
+	color = null
+	icon_state = "shortcloak"
+	item_state = "shortcloak"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	detail_tag = "_detail"
+	detail_color = CLOTHING_SOOT_BLACK
+
+/obj/item/clothing/cloak/matron
+	name = "matron cloak"
+	desc = "A cloak that only the meanest of old crones bother to wear."
+	icon_state = "matroncloak"
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	mob_overlay_icon ='icons/roguetown/clothing/onmob/cloaks.dmi'
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	slot_flags = ITEM_SLOT_CLOAK
+	nodismemsleeves = TRUE
+	slot_flags = ITEM_SLOT_CLOAK
