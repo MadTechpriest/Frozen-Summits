@@ -356,9 +356,6 @@
 				to_chat(usr, span_notice("Successfully added comment."))
 				return
 
-	return ..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that.
-			to_chat(src, "<span class='warning'>I feel your [pocket_side] pocket being fumbled with!</span>")
-
 	if(href_list["task"] == "assess")
 		if(!ismob(usr))
 			return
