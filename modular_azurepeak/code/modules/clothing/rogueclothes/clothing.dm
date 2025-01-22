@@ -216,7 +216,7 @@
 /datum/crafting_recipe/roguetown/sewing/wicker_cloak
 	name = "wicker cloak"
 	result = list(/obj/item/clothing/cloak/wickercloak)
-	reqs = list(/obj/item/natural/fiber = 3)
+	reqs = list(/obj/item/natural/fibers = 3)
 	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/sewing/ladycloak
