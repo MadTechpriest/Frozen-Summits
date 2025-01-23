@@ -57,6 +57,47 @@
 	valid_outputs = list(/obj/item/alch/waterdust = 1)
 	bonus_chance_outputs = list(/obj/item/alch/bonemeal = 50)
 
+/datum/alch_grind_recipe/swampweed
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/sweetleaf
+	valid_outputs = list(/obj/item/alch/swampdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/earthdust = 33)
+
+/datum/alch_grind_recipe/swampweed_dried
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry
+	valid_outputs = list(/obj/item/alch/swampdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/earthdust = 50,/obj/item/alch/swampdust = 50)
+
+/datum/alch_grind_recipe/westleach
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/pipeweed
+	valid_outputs = list(/obj/item/alch/tobaccodust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust = 33)
+
+/datum/alch_grind_recipe/dry_westleach
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/sweetleafdry
+	valid_outputs = list(/obj/item/alch/tobaccodust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust = 50,/obj/item/alch/tobaccodust = 50)
+
+/datum/alch_grind_recipe/fyritius
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius
+	valid_outputs = list(/obj/item/alch/firedust = 1)
+
+/datum/alch_grind_recipe/poppy
+	valid_input = /obj/item/reagent_containers/food/snacks/grown/rogue/poppy
+	valid_outputs = list(/obj/item/reagent_containers/powder/ozium = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust =33,/obj/item/alch/earthdust = 33)
+
+/datum/alch_grind_recipe/seeds
+	picky = FALSE
+	valid_input = /obj/item/seeds
+	valid_outputs = list(/obj/item/alch/seeddust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust =25,/obj/item/alch/earthdust = 25)
+
+/datum/alch_grind_recipe/seedsherb
+	picky = FALSE
+	valid_input = /obj/item/herbseed
+	valid_outputs = list(/obj/item/alch/seeddust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust =25,/obj/item/alch/earthdust = 25)
+
 /datum/alch_grind_recipe/ozium
 	valid_input = /obj/item/reagent_containers/powder/ozium
 	valid_outputs = list(/obj/item/alch/ozium = 1)
@@ -154,3 +195,7 @@
 /datum/alch_grind_recipe/artemisia_seed
 	valid_input = /obj/item/alch/artemisia
 	valid_outputs = list(/obj/item/herbseed/artemisia = 1)
+
+/datum/alch_grind_recipe/transistus
+	valid_input = list(/obj/item/alch/artemisia,/obj/item/alch/benedictus,/obj/item/alch/hypericum,/obj/item/alch/salvia,/obj/item/alch/atropa,/obj/item/alch/taraxacum)
+	valid_outputs = list(/obj/item/alch/transisdust = 1)
