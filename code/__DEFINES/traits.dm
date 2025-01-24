@@ -217,6 +217,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_BIGGUY = span_info("My immense frame and size allows me to smash through wooden walls, and into people with more effectiveness."),
 	TRAIT_SLOPPYSLEEPER = span_info("I can sleep anywhere."),
 	TRAIT_INTELLECTUAL = span_info("I have a keen eye and can assess a person's prowess in wit and blade."),
+	TRAIT_KAIZOKU = "Whether by birth or by learning, I've inherited the Islander ways instead of Imperial culture.",
 	TRAIT_DARKLING = span_info("I am a creature of the dark and am sensitive to the light. The hateful sun is especially harsh on my eyes, and I prefer to sleep during the dae."),
 ))
 
