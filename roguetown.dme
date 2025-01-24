@@ -3708,6 +3708,7 @@
 #include "modular_guidesa\new_mobs\slimes.dm"
 #include "modular_guidesa\sex_folder\milking.dm"
 #include "modular_guidesa\sex_folder\spanking.dm"
+#include "modular_guidesa\structures\dragon_statues.dm"
 #include "modular_hearthstone\code\datums\accents.dm"
 #include "modular_hearthstone\code\datums\skills\misc.dm"
 #include "modular_hearthstone\code\game\objects\effects\track.dm"
