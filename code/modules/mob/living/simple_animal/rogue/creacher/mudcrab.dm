@@ -10,7 +10,8 @@
 	emote_see = list("clacks.")
 	speak_chance = 1
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/crab = 2)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/crab = 2, /obj/alch/viscera = 2)
+	food_type = list(/obj/item/reagent_containers/food/snacks)
 	faction = list("crabs")
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
