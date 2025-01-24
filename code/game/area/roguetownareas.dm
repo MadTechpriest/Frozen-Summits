@@ -196,9 +196,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientnight = AMB_FORESTNIGHT
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_FOREST
-	droning_sound = 'sound/music/area/forest.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound = 'sound/ambience/grove.ogg'
+	droning_sound_dusk = null
+	droning_sound_night = 'sound/ambience/grove_night.ogg'
 	soundenv = 15
 	warden_area = TRUE
 	ambush_times = list("night","dawn","dusk","day")
@@ -211,6 +211,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/ambush = 30)
 	first_time_text = "THE FROZEN SUMMIT GROVE"
 	converted_type = /area/rogue/indoors/shelter/woods
+
 /area/rogue/indoors/shelter/woods
 	icon_state = "woods"
 	droning_sound = 'sound/music/area/forest.ogg'
