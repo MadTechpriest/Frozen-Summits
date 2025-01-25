@@ -144,7 +144,7 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/kgunsake
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/kgunsake = 48)
-	desc = "This dark, almost pitch-black beer is aggressively bitter and unpalatable to most non-orcs. Its sinister appearance and bitter taste made most folk think that Black Orc Grog was, indeed, an evil brew."
+	desc = "An eastern beverage brewed from rice."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/kgunplum
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/kgunplum = 48)

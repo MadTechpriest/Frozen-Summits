@@ -130,7 +130,7 @@
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/kgunlager)
 
 /datum/supply_pack/rogue/alcohol/kgunsake
-	name = "Black Orc Grog"
+	name = "Sake"
 	cost = 250
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/kgunsake)
 
