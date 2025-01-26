@@ -2309,9 +2309,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#d7dbbc"
 
 /datum/reagent/consumable/ethanol/beer/kgunsake
-	name = "Black Orc Grog"
+	name = "Sake"
 	boozepwr = 50
-	taste_description = "bitter licorice and malt"
+	taste_description = "sweet ricewine with a sharp aftertaste"
 	color = "#38240a"
 	quality = DRINK_GOOD
 
