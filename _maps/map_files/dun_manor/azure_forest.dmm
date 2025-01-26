@@ -203,8 +203,12 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "bO" = (
-/obj/effect/wisp,
-/turf/open/floor/rogue/grass/green,
+/obj/structure/fluff/railing/wood{
+	dir = 4;
+	icon_state = "woodrailing";
+	pixel_x = 8
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "bP" = (
 /turf/open/floor/rogue/grass/green,
@@ -212,6 +216,12 @@
 "bR" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors/woods)
+"bS" = (
+/obj/effect/landmark/start/adventurerlate{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "bU" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
@@ -1180,6 +1190,12 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
+"kf" = (
+/obj/effect/landmark/start/adventurerlate{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "kg" = (
 /obj/structure/spacevine{
@@ -2798,6 +2814,12 @@
 /obj/structure/fermenting_barrel/blackgoat,
 /turf/open/floor/rogue/wood/herringbone,
 /area/rogue/outdoors/woods)
+"yE" = (
+/obj/effect/landmark/start/adventurerlate{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass/green,
+/area/rogue/outdoors/woods)
 "yH" = (
 /obj/machinery/light/rogue/torchholder{
 	dir = 1;
@@ -3495,6 +3517,10 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/woods)
+"Du" = (
+/obj/effect/wisp,
+/turf/open/floor/rogue/grass/green,
 /area/rogue/outdoors/woods)
 "Dx" = (
 /obj/structure/flora/roguetree/stump/log,
@@ -4659,14 +4685,6 @@
 	pixel_x = -8
 	},
 /turf/open/transparent/openspace,
-/area/rogue/outdoors/woods)
-"Nc" = (
-/obj/structure/fluff/railing/wood{
-	dir = 4;
-	icon_state = "woodrailing";
-	pixel_x = 8
-	},
-/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "Nh" = (
 /obj/structure/flora/roguegrass/water/reeds,
@@ -44967,8 +44985,8 @@ bP
 Yi
 bP
 jW
-Nc
-Nc
+bO
+bO
 jW
 jW
 jW
@@ -47511,7 +47529,7 @@ HM
 HM
 MK
 MK
-MK
+kf
 MK
 HM
 HM
@@ -48437,7 +48455,7 @@ jW
 bP
 bP
 bP
-bP
+yE
 jW
 jW
 jW
@@ -50765,7 +50783,7 @@ Ry
 kV
 kV
 kV
-jW
+bS
 jW
 jW
 bP
@@ -50926,7 +50944,7 @@ jW
 cU
 jW
 bP
-bO
+Du
 jW
 By
 jW
@@ -51242,7 +51260,7 @@ jW
 uy
 uy
 uy
-bO
+Du
 bP
 bP
 bP
@@ -51555,7 +51573,7 @@ kV
 cU
 jW
 jW
-bO
+Du
 bP
 bP
 bP
