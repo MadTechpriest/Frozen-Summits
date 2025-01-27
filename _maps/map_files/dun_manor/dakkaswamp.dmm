@@ -19,10 +19,6 @@
 "bc" = (
 /turf/open/floor/rogue/church,
 /area/rogue/outdoors/shadow_fell)
-"cw" = (
-/mob/living/simple_animal/hostile/rogue/dragger,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/shadow_fell)
 "cQ" = (
 /obj/item/cooking/pan,
 /obj/structure/closet/crate/chest/old_crate,
@@ -30,6 +26,17 @@
 /area/rogue/outdoors/shadow_fell)
 "dc" = (
 /turf/closed/mineral/rogue/bedrock,
+/area/rogue/outdoors/shadow_fell)
+"dx" = (
+/obj/effect/wisp{
+	color = "black";
+	desc = "Will-o'-wisps... malicious little creatures that try to lure people into traps or their doom";
+	name = "Shadow Blessed Will-o'-wisp";
+	light_range = 2000;
+	light_color = "black"
+	},
+/obj/structure/crabnest,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/shadow_fell)
 "dX" = (
 /obj/effect/wisp{
@@ -59,6 +66,11 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/shadow_fell)
+"eO" = (
+/obj/structure/flora/roguegrass/water/reeds,
+/obj/structure/crabnest,
+/turf/open/water/swamp/deep,
+/area/rogue/outdoors/shadow_fell)
 "eU" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/water/swamp/deep,
@@ -83,6 +95,10 @@
 "fK" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/shadow_fell)
+"fV" = (
+/obj/structure/crabnest,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/shadow_fell)
 "gR" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider,
@@ -126,10 +142,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/shadow_fell)
-"kA" = (
-/mob/living/simple_animal/hostile/rogue/dragger,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/shadow_fell)
 "kF" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/naturalstone,
@@ -152,6 +164,10 @@
 "mp" = (
 /obj/structure/mineral_door/wood/fancywood,
 /turf/open/floor/rogue/twig,
+/area/rogue/outdoors/shadow_fell)
+"no" = (
+/mob/living/simple_animal/hostile/rogue/dragger,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/shadow_fell)
 "np" = (
 /obj/structure/fluff/railing/wood{
@@ -215,6 +231,10 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/bogtroll,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/shadow_fell)
+"ru" = (
+/obj/structure/crabnest,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/shadow_fell)
 "rz" = (
 /obj/structure/flora/roguetree/wise,
 /turf/open/floor/rogue/dirt,
@@ -257,11 +277,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/shadow_fell)
-"uE" = (
-/obj/structure/flora/roguegrass/water/reeds,
-/obj/structure/crabnest,
-/turf/open/water/swamp/deep,
-/area/rogue/outdoors/shadow_fell)
 "wU" = (
 /obj/structure/bed/rogue,
 /turf/open/floor/rogue/twig,
@@ -276,7 +291,7 @@
 /turf/open/floor/rogue/rooftop/green,
 /area/rogue/outdoors/shadow_fell)
 "yR" = (
-/obj/structure/crabnest,
+/mob/living/simple_animal/hostile/rogue/dragger,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/shadow_fell)
 "zR" = (
@@ -330,6 +345,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/shadow_fell)
+"EK" = (
+/obj/structure/crabnest,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/shadow_fell)
 "FH" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/twig,
@@ -360,7 +379,7 @@
 /area/rogue/outdoors/shadow_fell)
 "Hi" = (
 /obj/structure/crabnest,
-/turf/open/floor/rogue/dirt,
+/turf/open/water/swamp/deep,
 /area/rogue/outdoors/shadow_fell)
 "Hr" = (
 /turf/open/water/river{
@@ -453,15 +472,8 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/shadow_fell)
 "PL" = (
-/obj/effect/wisp{
-	color = "black";
-	desc = "Will-o'-wisps... malicious little creatures that try to lure people into traps or their doom";
-	name = "Shadow Blessed Will-o'-wisp";
-	light_range = 2000;
-	light_color = "black"
-	},
-/obj/structure/crabnest,
-/turf/open/floor/rogue/cobblerock,
+/mob/living/simple_animal/hostile/rogue/dragger,
+/turf/open/floor/rogue/twig,
 /area/rogue/outdoors/shadow_fell)
 "Rc" = (
 /turf/open/floor/rogue/grassred,
@@ -498,10 +510,6 @@
 "Sv" = (
 /turf/closed/wall/mineral/rogue/wooddark/end,
 /area/rogue/outdoors/shadow_fell)
-"SK" = (
-/obj/structure/crabnest,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/shadow_fell)
 "SY" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bogtroll,
 /turf/open/floor/rogue/cobblerock,
@@ -520,10 +528,6 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/shadow_fell)
-"Uf" = (
-/obj/structure/crabnest,
-/turf/open/water/swamp/deep,
-/area/rogue/outdoors/shadow_fell)
 "Up" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -540,16 +544,6 @@
 	light_color = "black"
 	},
 /turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/shadow_fell)
-"Va" = (
-/obj/effect/landmark/start/adventurerlate{
-	dir = 1
-	},
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/shadow_fell)
-"VP" = (
-/mob/living/simple_animal/hostile/rogue/dragger,
-/turf/open/floor/rogue/twig,
 /area/rogue/outdoors/shadow_fell)
 "Wt" = (
 /obj/structure/fluff/traveltile{
@@ -12051,7 +12045,7 @@ Zb
 YB
 YB
 Zb
-Va
+YB
 Zb
 Zb
 Zb
@@ -12938,7 +12932,7 @@ aD
 Xi
 Xi
 dX
-yR
+fV
 hE
 hE
 hE
@@ -13261,7 +13255,7 @@ hE
 hE
 hE
 Xi
-kA
+yR
 Xi
 Xi
 Xi
@@ -13580,7 +13574,7 @@ Xi
 io
 io
 io
-PL
+dx
 iD
 JJ
 JJ
@@ -14191,7 +14185,7 @@ iD
 iD
 iD
 iD
-VP
+PL
 iD
 JJ
 JJ
@@ -14811,7 +14805,7 @@ nH
 iD
 iD
 hE
-SK
+ru
 io
 io
 io
@@ -15026,7 +15020,7 @@ Xi
 Xi
 AH
 eI
-uE
+eO
 eI
 AH
 hE
@@ -15777,7 +15771,7 @@ iD
 hE
 iD
 JJ
-Uf
+Hi
 nH
 eI
 nH
@@ -16285,7 +16279,7 @@ iD
 Su
 AH
 Xi
-kA
+yR
 Xi
 hE
 hE
@@ -16418,7 +16412,7 @@ AH
 AH
 iD
 nH
-Uf
+Hi
 hE
 eI
 iD
@@ -16443,7 +16437,7 @@ AH
 AH
 AH
 Xi
-yR
+fV
 iD
 JJ
 JJ
@@ -16773,7 +16767,7 @@ AH
 Su
 AH
 Xi
-Hi
+EK
 Zb
 Zb
 Zb
@@ -17853,7 +17847,7 @@ eI
 eI
 iD
 Su
-kA
+yR
 hE
 hE
 nH
@@ -18641,7 +18635,7 @@ JJ
 iD
 Su
 AH
-yR
+fV
 AH
 iD
 eI
@@ -18931,7 +18925,7 @@ iD
 iD
 Su
 AH
-Hi
+EK
 AH
 iD
 iD
@@ -20312,7 +20306,7 @@ JJ
 JJ
 Su
 AH
-kA
+yR
 Xi
 iD
 nH
@@ -20332,7 +20326,7 @@ AH
 Su
 AH
 Xi
-kA
+yR
 Xi
 AH
 iD
@@ -20966,7 +20960,7 @@ nH
 nH
 hE
 hE
-VP
+PL
 hE
 AH
 AH
@@ -21774,7 +21768,7 @@ Zb
 Zb
 Zb
 YB
-cw
+no
 Zb
 Zb
 Zb
