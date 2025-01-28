@@ -161,7 +161,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/decap_deeper.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
-	first_time_text = "TARICHEA, VALLEY OF LOSS"
+	first_time_text = "FIRE MOUNTAIN"
 	ambush_times = list("night","dawn","dusk","day")
 	converted_type = /area/rogue/indoors/shelter/mountains/decap
 
@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambush_mobs = list(
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 30,
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 50)
-	first_time_text = "FROZEN SUMMIT BASIN"
+	first_time_text = "FROZEN FIELDS"
 	droning_sound = 'sound/ambience/cityday.ogg'
 	droning_sound_dusk = 'sound/ambience/citydusk.ogg'
 	droning_sound_night = 'sound/ambience/citynight.ogg'
@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 40,
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 10,
 				/mob/living/carbon/human/species/goblin/npc/ambush = 30)
-	first_time_text = "THE FROZEN SUMMIT GROVE"
+	first_time_text = "THE SOUTHERN WOODS"
 	converted_type = /area/rogue/indoors/shelter/woods
 
 
@@ -233,7 +233,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 40,
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 10,
 				/mob/living/carbon/human/species/goblin/npc/ambush = 30)
-	first_time_text = "THE FROZEN SUMMIT CURSED SHADOW LANDS"
+	first_time_text = "THE UNSEELIE SWAMPS"
 
 
 /area/rogue/indoors/shelter/woods
@@ -322,7 +322,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 30,
 				/mob/living/carbon/human/species/human/northern/searaider/ambush = 10,
 				/mob/living/carbon/human/species/goblin/npc/ambush/sea = 40)
-	first_time_text = "THE FROZEN SUMMIT COAST"
+	first_time_text = "THE NORTHERN RIVER"
 	converted_type = /area/rogue/indoors/shelter/woods
 
 //// UNDER AREAS (no indoor rain sound usually)
@@ -392,7 +392,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/caves
 
 /area/rogue/under/cavewet/bogcaves
-	first_time_text = "The Undergrove"
+	first_time_text = "The upper Underdark"
 
 /area/rogue/under/cave/spider
 	icon_state = "spider"
@@ -575,7 +575,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
-	first_time_text = "THE MANOR OF FROZEN SUMMIT"
+	first_time_text = "THE MANOR"
 	keep_area = TRUE
 
 /area/rogue/outdoors/exposed/manorgarri
