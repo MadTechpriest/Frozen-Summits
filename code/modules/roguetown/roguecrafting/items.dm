@@ -135,6 +135,13 @@
 	verbage_simple = "braid"
 	verbage = "braids"
 
+/datum/crafting_recipe/roguetown/oar
+	name = "oar"
+	result = /obj/item/oar
+	reqs = list(/obj/item/natural/plank  = 1)
+	verbage_simple = "carve"
+	verbage = "carves"
+
 /datum/crafting_recipe/roguetown/bowstring
 	name = "fiber bowstring"
 	result = /obj/item/natural/bowstring
