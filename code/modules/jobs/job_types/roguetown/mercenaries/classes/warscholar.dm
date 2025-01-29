@@ -83,7 +83,7 @@
 
 		if("Hexblade")
 			H.set_blindness(0)
-			to_chat(H, span_warning("A hexblade was an arcane spellcaster who combined magical power with martial skill. A hexblade's power could manifest itself spontaneously, similarly to a sorcerer's magic, or be granted via a warlock pact."))
+			to_chat(H, span_warning("A hexblade is an arcane spellcaster who combined magical power with martial skill. A hexblade's power could manifest itself spontaneously, similarly to a sorcerer's magic, or be granted via a warlock pact."))
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
@@ -93,6 +93,7 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 			H.mind.adjust_spellpoints(-6) //The - is intended.
 			H.change_stat("strength", 1)
 			H.change_stat("endurance", 2)
@@ -103,6 +104,7 @@
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/fetch) // In an attempt to make them less Possibly Wildly OP, they can't freely pick their spells. Casts at apprentice level, but doesn't get the spellbuy points it'd provide.
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/slowdown_spell_aoe)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/summonrogueweapon/bladeofpsydon)
+			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/eldritchblast5e)
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
 			head = /obj/item/clothing/head/roguetown/roguehood/pontifex
