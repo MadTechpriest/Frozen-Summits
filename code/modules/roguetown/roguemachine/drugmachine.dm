@@ -6,8 +6,8 @@
 #define DRUGRADE_NOTAX				(1<<5)
 
 /obj/structure/roguemachine/drugmachine
-	name = "PURITY"
-	desc = "You want to destroy your life."
+	name = "Zhentarim Catalogue"
+	desc = "A Catalogue of less than legal items."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "streetvendor1"
 	density = TRUE
@@ -26,7 +26,7 @@
 /obj/structure/roguemachine/drugmachine/attackby(obj/item/P, mob/user, params)
 	if(istype(P, /obj/item/roguekey))
 		var/obj/item/roguekey/K = P
-		if(K.lockid == "nightman")
+		if(K.lockid == "merchant")
 			locked = !locked
 			playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 			update_icon()
@@ -37,7 +37,7 @@
 	if(istype(P, /obj/item/storage/keyring))
 		var/obj/item/storage/keyring/K = P
 		for(var/obj/item/roguekey/KE in K.keys)
-			if(KE.lockid == "nightman")
+			if(KE.lockid == "merchant")
 				locked = !locked
 				playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 				update_icon()
@@ -178,7 +178,7 @@
 
 
 	var/mob/living/carbon/human/H = user
-	if(H.job == "Bathmaster")
+	if(H.job == "merchant")
 		if(canread)
 			contents = "<a href='?src=[REF(src)];secrets=1'>Secrets</a>"
 		else
