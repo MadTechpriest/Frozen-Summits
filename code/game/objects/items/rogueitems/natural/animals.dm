@@ -85,9 +85,9 @@
 
 
 /obj/item/natural/volf_head
-	name = "volf head"
+	name = "wolf head"
 	icon_state = "volf_head"
-	desc = "Dismembered head of a volf."
+	desc = "Dismembered head of a wolf."
 	dropshrink = null
 	force = 0
 	throwforce = 0

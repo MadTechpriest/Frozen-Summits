@@ -13,7 +13,7 @@
 /datum/skill/misc/athletics
 	name = "Athletics"
 	dreams = list(
-		"...your lungs burn and you can no longer feel your breath as the pale volf's howling grows distant. You should have collapsed three times over, but the urge to survive pushes you past your bodily limits...",
+		"...your lungs burn and you can no longer feel your breath as the pale wolf's howling grows distant. You should have collapsed three times over, but the urge to survive pushes you past your bodily limits...",
 		"...the incline before you is steep, and the barrel weighs heavy in your hands but you press on. This is no longer a hill. This is your mountain and with every strained breath, you inch closer to its summit, determined to conquer it..."
 	)
 
@@ -51,7 +51,7 @@
 	name = "Sneaking"
 	dreams = list(
 		"...the four connected, orthogonally facing houses have a small dip at the center of their slanted rooftops. Your crow's nest. Your safe haven. The only light that can reach you here is what Mystra takes from Astrata, and this night is particularly veiled. It's concealing and comforting, safe from the town guard, as you curl up to rest...",
-		"...The pale volf gets on it's hindlegs, and howls unto the moon. It seeks prey, and you happen to be unfortunate enough to be in it's forest. This is the third time it circled you, as you press yourself tighter into the hollow tree, completely still..."
+		"...The pale wolf gets on it's hindlegs, and howls unto the moon. It seeks prey, and you happen to be unfortunate enough to be in it's forest. This is the third time it circled you, as you press yourself tighter into the hollow tree, completely still..."
 	)
 
 /datum/skill/misc/lockpicking
