@@ -1,6 +1,6 @@
 /datum/job/roguetown/druid
-	title = "Druidic Priest"
-	f_title = "Druidic Priestess"
+	title = "Druid"
+	f_title = "Druid"
 	flag = DRUID
 	department_flag = CHURCHMEN
 	faction = "Station"
@@ -27,13 +27,11 @@
 /datum/outfit/job/roguetown/druid/pre_equip(mob/living/carbon/human/H)
 	..()
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
+	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	beltl = /obj/item/rogueweapon/whip //The whip itself is not often associated to many jobs. Druids feel like a thematic choice to have a self-defense whip
 	backl = /obj/item/storage/backpack/rogue/satchel
-	id = /obj/item/clothing/ring/active/nomag
 	backpack_contents = list(
-		/obj/item/needle/pestra = 1,
 		/obj/item/natural/worms/leech/cheele = 1, //little buddy
 	)
 	head = /obj/item/clothing/head/roguetown/dendormask
@@ -55,13 +53,10 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 2, TRUE) //This does nothing, but maybe one day it will.
 		H.mind.adjust_skillrank(/datum/skill/misc/tracking, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE) //Druids know the forest and when it has been disturbed
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE) //To help them defend themselves with parrying
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) //To help them defend themselves with parrying
 		H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 		H.change_stat("intelligence", 1)
 		H.change_stat("endurance", 1)
