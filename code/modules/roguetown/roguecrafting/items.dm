@@ -560,9 +560,16 @@
 	skillcraft = /datum/skill/misc/medicine
 
 /datum/crafting_recipe/roguetown/mortar
-	name = "mortar and pestle"
+	name = "mortar"
 	result = /obj/item/reagent_containers/glass/mortar
-	reqs = list(/obj/item/grown/log/tree/stick = 1, /obj/item/grown/log/tree/small = 1,)
+	reqs = list(/obj/item/natural/stone = 2)
+	craftdiff = 1
+	skillcraft = /datum/skill/craft/crafting
+
+/datum/crafting_recipe/roguetown/pestle
+	name = "pestle"
+	result = /obj/item/pestle
+	reqs = list(/obj/item/natural/stone = 1)
 	craftdiff = 1
 	skillcraft = /datum/skill/craft/crafting
 
