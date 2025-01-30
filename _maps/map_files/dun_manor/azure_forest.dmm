@@ -82,27 +82,12 @@
 /obj/item/clothing/shoes/roguetown/grenzelhoft,
 /obj/item/clothing/gloves/roguetown/fingerless/shadowgloves,
 /obj/machinery/light/rogue/wallfire/candle/l,
-/obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half{
-	desc = "The lower part of a menpo portraying the maws of a ogre's head. It covers only the neck and the mouth, often used by warriors that cares about their sight... this particular one has the initals S.E on it."
-	},
 /obj/item/clothing/suit/roguetown/armor/chainmail/tatami,
-/obj/item/clothing/suit/roguetown/armor/plate/full/nanbando{
-	desc = "A complete set of abyssariad steel armor, refined and with additional auxiliary parts for protection. this one has the initals S.E";
-	name = "Edoma's Chest Armor"
-	},
 /obj/item/clothing/shoes/roguetown/boots/armor,
 /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military,
-/obj/item/clothing/neck/roguetown/psicross/silver,
 /obj/item/clothing/gloves/roguetown/plate/lamellaetekko,
 /obj/item/clothing/under/roguetown/platelegs/weepershanwenkai,
-/obj/item/rogueweapon/shield/tower/metal/abyssal{
-	name = "Edoma's Shield"
-	},
 /obj/item/clothing/wrists/roguetown/bracers/kote,
-/obj/item/rogueweapon/sword/long/oathkeeper,
-/obj/item/clothing/head/roguetown/helmet/otavan{
-	name = "Edoma's Helmet"
-	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/outdoors/woods)
 "aD" = (
@@ -764,10 +749,6 @@
 /area/rogue/outdoors/woods)
 "fL" = (
 /obj/structure/bookcase,
-/obj/item/book/granter/spell_points,
-/obj/item/book/granter/spell_points,
-/obj/item/book/granter/spell_points,
-/obj/item/book/granter/spell/blackstone/fetch,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/woods)
 "fQ" = (
@@ -1832,14 +1813,6 @@
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/woods)
-"oM" = (
-/obj/structure/bookcase,
-/obj/item/book/granter/spell/spells5e/mindsliver5e,
-/obj/item/book/granter/spell/spells5e/firebolt5e,
-/obj/item/book/granter/spell/spells5e/eldritchblast5e,
-/obj/item/book/granter/spell/blackstone/greaterfireball,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/woods)
 "oO" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
 /turf/open/water/sewer,
@@ -2628,7 +2601,6 @@
 /area/rogue/outdoors/woods)
 "vi" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/outdoors/woods)
 "vm" = (
@@ -3327,20 +3299,6 @@
 	dir = 9
 	},
 /obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
 /obj/machinery/light/rogue/wallfire/candle/r,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/outdoors/woods)
@@ -3506,36 +3464,8 @@
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
 /obj/item/reagent_containers/glass/cup/steel,
 /obj/item/reagent_containers/glass/cup/steel,
-/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
-/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
-/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
-/obj/item/reagent_containers/glass/bottle/rogue/elfred,
-/obj/item/reagent_containers/glass/bottle/rogue/elfblue,
 /obj/structure/closet/crate/chest/wicker,
 /obj/structure/closet/crate/chest/wicker,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/tinychocolate,
-/obj/item/reagent_containers/food/snacks/chococornet,
-/obj/item/reagent_containers/food/snacks/chococornet,
-/obj/item/reagent_containers/food/snacks/chococornet,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/woods)
 "Cd" = (
@@ -4061,18 +3991,6 @@
 /area/rogue/outdoors/woods)
 "Gf" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/rogue/pastry,
-/obj/item/reagent_containers/food/snacks/rogue/pastry,
-/obj/item/reagent_containers/food/snacks/rogue/pastry,
-/obj/item/reagent_containers/food/snacks/store/cake/chocolate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/woods)
 "Gg" = (
@@ -4602,19 +4520,6 @@
 /area/rogue/outdoors/woods)
 "KI" = (
 /obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
-/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/pot,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/outdoors/woods)
 "KM" = (
@@ -5470,32 +5375,6 @@
 /area/rogue/outdoors/woods)
 "SC" = (
 /obj/structure/closet/crate/chest/crafted,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/mince,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/mince,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/mince,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/mince,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/handpieraw/berry,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/cheesebun_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/prezzel_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/prezzel_raw,
-/obj/item/reagent_containers/food/snacks/rogue/foodbase/prezzel_raw,
-/obj/item/reagent_containers/food/snacks/rogue/meat/poultry,
-/obj/item/reagent_containers/food/snacks/rogue/meat/poultry,
-/obj/item/reagent_containers/food/snacks/rogue/meat/poultry,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/outdoors/woods)
 "SG" = (
@@ -22522,7 +22401,7 @@ CN
 kV
 kV
 sL
-oM
+fL
 Vh
 Vh
 Vh
