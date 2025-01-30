@@ -809,7 +809,6 @@
 "gh" = (
 /obj/structure/table/wood,
 /obj/machinery/light/rogue/wallfire/candle/r,
-/obj/item/dmusicbox,
 /obj/item/clothing/mask/cigarette/rollie/cannabis,
 /obj/item/clothing/mask/cigarette/rollie/trippy,
 /obj/item/clothing/mask/cigarette/rollie/mindbreaker,

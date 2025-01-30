@@ -3105,14 +3105,6 @@
 /obj/structure/roguerock,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/woods)
-"fGf" = (
-/obj/item/dmusicbox,
-/obj/structure/table/wood{
-	dir = 1;
-	icon_state = "tablewood1"
-	},
-/turf/open/floor/rogue/wood/herringbone,
-/area/rogue/outdoors/rtfield)
 "fHK" = (
 /obj/structure/fluff/railing/border{
 	pixel_y = -6
@@ -7061,13 +7053,6 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
-"pKQ" = (
-/obj/structure/stairs{
-	icon_state = "stairs";
-	dir = 4
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors)
 "pLn" = (
 /obj/structure/mineral_door/swing_door,
 /turf/open/floor/rogue/herringbone,
@@ -8690,6 +8675,13 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave)
+"tBr" = (
+/obj/structure/stairs{
+	icon_state = "stairs";
+	dir = 4
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors)
 "tBy" = (
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -49411,7 +49403,7 @@ bGi
 aaq
 cQd
 lrV
-fGf
+lCz
 bGi
 kzW
 kzW
@@ -69045,7 +69037,7 @@ tXZ
 tXZ
 abV
 acB
-pKQ
+tBr
 bRO
 abV
 acu
