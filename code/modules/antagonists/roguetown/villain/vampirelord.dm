@@ -12,8 +12,8 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	antagpanel_category = "Vampire"
 	job_rank = ROLE_VAMPIRE
 	var/list/inherent_traits = list(TRAIT_STRONGBITE, TRAIT_NOBLE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOPAIN, TRAIT_TOXIMMUNE, TRAIT_STEELHEARTED, TRAIT_NOSLEEP, TRAIT_VAMPMANSION, TRAIT_VAMP_DREAMS, TRAIT_NOROGSTAM, TRAIT_HEAVYARMOR)
-	antag_hud_type = ANTAG_HUD_VAMPIRE
-	antag_hud_name = "Vlord"
+	antag_hud_type = ANTAG_HUD_TRAITOR
+	antag_hud_name = "vampire lord"
 	confess_lines = list(
 		"I AM ANCIENT",
 		"I AM THE LAND",

@@ -34,7 +34,6 @@
 
 	init_subtypes(/datum/anvil_recipe, GLOB.anvil_recipes)
 
-
 	init_subtypes(/datum/alch_grind_recipe, GLOB.alch_grind_recipes)
 
 	init_subtypes(/datum/alch_cauldron_recipe,GLOB.alch_cauldron_recipes)

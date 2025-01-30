@@ -44,33 +44,70 @@
 		recoil(user)
 		return FALSE
 	if(reading)
-		to_chat(user, span_warning("You're already reading this!"))
+		to_chat(user, span_warning("I'm already reading this!"))
 		return FALSE
 	if(!user.can_read(src))
 		return FALSE
 	if(already_known(user))
 		return FALSE
-	if(!user.can_read(src))
-		return FALSE
 /*	AZURE PEAK REMOVAL -- UNUSED ANYWAY
 	if(user.STAINT < 12)
 			to_chat(user, span_warning("You can't make sense of the sprawling runes!"))
 			return FALSE */
-	if(used)
-		if(oneuse)
-			recoil(user)
+	if(used && oneuse)
+		to_chat(user, span_warning("This fount of knowledge was not meant to be sipped from twice!"))
+		recoil(user)
 		return FALSE
 	on_reading_start(user)
 	reading = TRUE
 	for(var/i=1, i<=pages_to_mastery, i++)
 		if(!turn_page(user))
-			on_reading_stopped()
 			reading = FALSE
-			return
-	if(do_after(user,50, user))
-		on_reading_finished(user)
+			on_reading_stopped()
+			return FALSE
+	if(do_after(user, 50, user))
 		reading = FALSE
-	return TRUE
+		on_reading_finished(user)
+		return TRUE
+	reading = FALSE //failsafe
+	return FALSE
+
+/obj/item/book/granter/spell
+	grid_width = 64
+	grid_height = 32
+
+	var/spell
+	var/spellname = "conjure bugs"
+
+/obj/item/book/granter/spell/already_known(mob/user)
+	if(!spell)
+		return TRUE
+	for(var/obj/effect/proc_holder/spell/knownspell in user.mind.spell_list)
+		if(knownspell.type == spell)
+			if(user.mind)
+				to_chat(user,span_warning("You've already read this one!"))
+			return TRUE
+	return FALSE
+
+/obj/item/book/granter/spell/on_reading_start(mob/user)
+	to_chat(user, span_notice("I start reading about casting [spellname]..."))
+
+/obj/item/book/granter/spell/on_reading_finished(mob/user)
+	to_chat(user, span_notice("I feel like you've experienced enough to cast [spellname]!"))
+	var/obj/effect/proc_holder/spell/S = new spell
+	user.mind.AddSpell(S)
+	user.log_message("learned the spell [spellname] ([S])", LOG_ATTACK, color="orange")
+	onlearned(user)
+
+/obj/item/book/granter/spell/random
+	icon_state = "random_book"
+
+/obj/item/book/granter/spell/random/Initialize()
+	. = ..()
+	var/static/banned_spells = list(/obj/item/book/granter/spell/mimery_blockade)
+	var/real_type = pick(subtypesof(/obj/item/book/granter/spell) - banned_spells)
+	new real_type(loc)
+	return INITIALIZE_HINT_QDEL
 
 ///ACTION BUTTONS///
 

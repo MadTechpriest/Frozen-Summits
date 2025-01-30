@@ -205,6 +205,7 @@
 	domain = "Love, Life and Beauty"
 	desc = "Sune is the goddess of beauty and love, her followers cherishing the values of compassion and charm. She inspires the arts and romantic love."
 	worshippers = "Lovers, the romantically inclined, and Doting Grandparents"
+	mob_traits = list(TRAIT_EMPATH, TRAIT_GOODLOVER)
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 	t1 = /obj/effect/proc_holder/spell/invoked/bud
 	t2 = /obj/effect/proc_holder/spell/invoked/eoracurse

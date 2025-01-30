@@ -259,3 +259,14 @@
 	mob_overlay_icon = 'icons/roguetown/kaizoku/clothing/armor.dmi'
 	sleeved = 'icons/roguetown/kaizoku/helpers/sleeves_armor.dmi'
 	sleevetype = "shirt"
+/obj/item/clothing/suit/roguetown/shirt/robe/feld
+	name = "feldsher's robe"
+	desc = "Red to hide the blood."
+	icon_state = "feldrobe"
+	item_state = "feldrobe"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/phys
+	name = "physicker's robe"
+	desc = "Part robe, part butcher's apron."
+	icon_state = "surgrobe"
+	item_state = "surgrobe"

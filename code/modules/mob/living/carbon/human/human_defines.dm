@@ -117,6 +117,7 @@
 	var/flavortext = null
 	var/ooc_notes = null
 	var/custom_race_name = null
+	var/received_resident_key = FALSE
 
 	possible_rmb_intents = list(/datum/rmb_intent/feint,\
 	/datum/rmb_intent/aimed,\

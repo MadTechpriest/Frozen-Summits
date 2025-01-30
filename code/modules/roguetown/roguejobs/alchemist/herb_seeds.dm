@@ -8,20 +8,15 @@
 	var/makes_herb = null
 	var/seed_identity = "unknown"
 
-/obj/item/herbseed/Initialize()
-	. = ..()
-	if(icon_state == "seeds")
-		icon_state = "seeds[rand(1,3)]"
-
 /obj/item/herbseed/examine(mob/user)
 	. = ..()
 	var/show_real_identity = FALSE
 	if(isliving(user))
 		var/mob/living/living = user
-		if(HAS_TRAIT(living, TRAIT_SEEDKNOW))
+		if(HAS_TRAIT(living, TRAIT_SEEDKNOW) || HAS_TRAIT(living,TRAIT_LEGENDARY_ALCHEMIST))
 			show_real_identity = TRUE
 		// Alchemy seeds, so they would know them
-		else if(living.mind.get_skill_level(/datum/skill/misc/alchemy) >= 2 || living.mind.get_skill_level(/datum/skill/labor/farming) >= 2)
+		else if(living.mind.get_skill_level(/datum/skill/craft/alchemy) >= 2 || living.mind.get_skill_level(/datum/skill/labor/farming) >= 2)
 			show_real_identity = TRUE
 	else
 		show_real_identity = TRUE
@@ -60,7 +55,7 @@
 		newplant.pixel_x += rand(-3,3)
 		soil.visible_message(span_info("The [soil] suddenly bursts away to reveal \the [newplant]!"))
 	else
-		soil.visible_message(span_info("The [soil] suddenly collapses,leaving nothing behind..."))
+		soil.visible_message(span_info("The [soil] suddenly collapses, leaving nothing behind..."))
 	qdel(soil)
 	return
 

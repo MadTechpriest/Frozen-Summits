@@ -7,11 +7,11 @@
 	possible_transfer_amounts = list(9)
 	volume = 27
 	fill_icon_thresholds = list(0, 33, 66, 100)
-	dropshrink = 0.5
+	dropshrink = 0.8
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
 	obj_flags = CAN_BE_HIT
 	spillable = FALSE
-	var/closed //Put a cork in it!
+	var/closed = TRUE //Put a cork in it!
 	reagent_flags = TRANSPARENT
 	w_class = WEIGHT_CLASS_SMALL
 	drinksounds = list('sound/items/drink_bottle (1).ogg','sound/items/drink_bottle (2).ogg')
@@ -180,11 +180,13 @@
 	if(closed)
 		reagent_flags = TRANSPARENT
 		reagents.flags = reagent_flags
+		to_chat(user, span_notice("You carefully press the cork back into the mouth of [src]."))
 		spillable = FALSE
 		desc = initial(desc)
 	else
 		reagent_flags = OPENCONTAINER
 		reagents.flags = reagent_flags
+		to_chat(user, span_notice("You thumb off the cork from [src]."))
 		playsound(user.loc,'sound/items/uncork.ogg', 100, TRUE)
 		spillable = TRUE
 		desc += "The cork appears to be off."

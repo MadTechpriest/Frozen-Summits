@@ -1,17 +1,17 @@
 /obj/item/pestle
 	name = "pestle"
-	desc = ""
+	desc = "A small, round-end stone tool oft used by physicians to crush and mix medicine."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "pestle"
 	force = 7
-	dropshrink = 0.5
+	dropshrink = 0.9
 
 /obj/item/mortar
 	name = "alchemical mortar"
-	desc = "An industrial mortar used to grind alchemical ingredients."
+	desc = "A heavy-duty mortar used to grind alchemical ingredients."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "mortar"
-	dropshrink = 0.5
+	dropshrink = 0.9
 	var/obj/item/to_grind
 
 /obj/item/mortar/attack_right(mob/user)
@@ -52,7 +52,7 @@
 				S.start()
 			QDEL_NULL(to_grind)
 			if(user.mind)
-				user.mind.adjust_experience(/datum/skill/misc/alchemy, 25, FALSE)
+				user.mind.adjust_experience(/datum/skill/craft/alchemy, user.STAINT, FALSE)
 		return
 	if(to_grind)
 		to_chat(user, "<span class='warning'>[src] is full!</span>")
