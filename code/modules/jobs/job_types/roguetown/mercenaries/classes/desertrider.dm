@@ -53,7 +53,7 @@
 			to_chat(H, span_warning("Blade dancers are rangers, typically of the two-blade, though not necessarily, whose combat style mimics dance in its grace and its refinement. To a blade dancer, their dual weapons, often blades of some sort, are as two dance partners with whom they train and choreograph constantly. Masters of footwork as well as fencing, blade dancers are as deadly as they are elegant."))
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE) //they have literally nothing else going for them and swords suck ass, do not use this as an excuse to powercreep
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -64,9 +64,10 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+			H.change_stat("strength", 1)
 			H.change_stat("endurance", 2)
 			H.change_stat("intelligence", 1)
 			H.change_stat("speed", 3)
@@ -75,15 +76,6 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 			pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 			H.grant_language(/datum/language/celestial)
-			var/weapons = list("Shamshir","Whips and Knives",)
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
-			H.set_blindness(0)
-			switch(weapon_choice)
-				if("Shamshir")
-					backl = /obj/item/rogueweapon/sword/long/rider
-				if("Whips and Knives")	///They DO enslave people after all
-					r_hand = /obj/item/rogueweapon/whip
-					l_hand = /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
 
 		if("Spellblade")
 			H.set_blindness(0)

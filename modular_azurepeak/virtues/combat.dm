@@ -36,15 +36,6 @@
 		// for devotionists, bump up their maximum 1 tier and give them a TINY amount of passive devo gain
 		var/datum/devotion/our_faith = recipient.devotion
 		our_faith.passive_devotion_gain += 0.15
-		switch (our_faith.max_devotion)
-			if (CLERIC_REQ_0)
-				our_faith.max_devotion = CLERIC_REQ_1
-			if (CLERIC_REQ_1)
-				our_faith.max_devotion = CLERIC_REQ_2
-			if (CLERIC_REQ_2)
-				our_faith.max_devotion = CLERIC_REQ_3
-			if (CLERIC_REQ_3)
-				our_faith.max_devotion = CLERIC_REQ_4
 		switch (our_faith.max_progression)
 			if (CLERIC_REQ_0)
 				our_faith.max_progression = CLERIC_REQ_1
@@ -90,13 +81,6 @@
 		added_skills = list(list(/datum/skill/combat/swords, 1, 4))
 		handle_skills(recipient)
 
-/datum/virtue/combat/duelist/apply_to_human(mob/living/carbon/human/recipient)
-	if(recipient.mind?.get_skill_level(/datum/skill/combat/swords) < SKILL_LEVEL_APPRENTICE)
-		recipient.mind?.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_APPRENTICE, silent = TRUE)
-	else
-		added_skills = list(list(/datum/skill/combat/swords, 1, 4))
-		handle_skills(recipient)
-
 /datum/virtue/combat/bowman
 	name = "Toxophilite"
 	desc = "I have studied underneath a bowman of considerable skill, and always have my trusty bow and a quiver of arrows close at hand. (+1 to Bows, Up to Legendary, Minimum Apprentice)"
@@ -105,11 +89,12 @@
 	)
 
 /datum/virtue/combat/bowman/apply_to_human(mob/living/carbon/human/recipient)
-	if(recipient.mind?.get_skill_level(/datum/skill/combat/bows) < SKILL_LEVEL_APPRENTICE)
+	if(recipient.mind?.get_skill_level(/datum/skill/combat/bows) < SKILL_LEVEL_JOURNEYMAN)
 		recipient.mind?.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_APPRENTICE, silent = TRUE)
 	else
 		added_skills = list(list(/datum/skill/combat/bows, 1, 6))
 		handle_skills(recipient)
+
 /*/datum/virtue/combat/tavern_brawler
 	name = "Tavern Brawler"
 	desc = "I've never met a problem my fists couldn't solve."
@@ -118,7 +103,7 @@
 /*
 /datum/virtue/combat/guarded
 	name = "Guarded"
-	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's lyfe. Such a virtue allows me to avoid and perform feints easier."
+	desc = "I have long kept my true capabilities a secret. Sometimes being deceptively weak can save one's life."
 	added_traits = list(TRAIT_DECEIVING_MEEKNESS)
 
 /datum/virtue/combat/impervious
@@ -126,7 +111,6 @@
 	desc = "I've spent years shoring up my weakspots, and have become difficult to wound with critical blows."
 	added_traits = list(TRAIT_CRITICAL_RESISTANCE)
 */
-
 /datum/virtue/combat/rotcured
 	name = "Rotcured"
 	desc = "I was once afflicted with the accursed rot, and was cured. It has left me changed: my limbs are weaker, but I feel no pain and have no need to breathe..."

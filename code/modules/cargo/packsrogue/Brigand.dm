@@ -93,12 +93,6 @@
 	cost = 30
 	contains = list(/obj/item/clothing/head/roguetown/helmet/sallet/visored)
 
-
-/datum/supply_pack/rogue/Brigand/wolfhelm
-	name = "Volf Plate Helm"
-	cost = 30
-	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/volfplate)
-
 /datum/supply_pack/rogue/Brigand/steelflail
 	name = "Steel Flail"
 	cost = 20
@@ -130,20 +124,10 @@
 	cost = 40
 	contains = list(/obj/item/rogueweapon/mace/goden/steel)
 
-/datum/supply_pack/rogue/Brigand/silverwarhammer
+/datum/supply_pack/rogue/Brigand/warhammer
 	name = "Silver Warhammer"
 	cost = 80
 	contains = list(/obj/item/rogueweapon/mace/silver)
-
-/datum/supply_pack/rogue/Brigand/steelwarhammer
-	name = "Steel Warhammer"
-	cost = 20
-	contains = list(/obj/item/rogueweapon/mace/warhammer/steel)
-
-/datum/supply_pack/rogue/Brigand/Ironwarhammer
-	name = "Iron Warhammer"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/mace/warhammer)
 
 /datum/supply_pack/rogue/Brigand/axe
 	name = "Iron Axe"
@@ -167,7 +151,3 @@
 	cost = 10
 	contains = list(/obj/item/rogueweapon/shield/tower)
 
-/datum/supply_pack/rogue/Brigand/heatshield
-	name = "Heater Shield"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/shield/heater)

@@ -17,14 +17,16 @@
 	max_pq = null
 	round_contrib_points = 3
 
+	cmode_music = 'sound/music/combat_fancy.ogg'
+
 /datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/black
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/black
 		head  = /obj/item/clothing/head/roguetown/roguehood/black
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		head = /obj/item/clothing/head/roguetown/nightman
@@ -39,7 +41,6 @@
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 6, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
@@ -80,30 +81,21 @@
 	. = ..()
 	var/list/choices = list()
 	var/list/datum/skill/skill_choices = list(
-	/datum/skill/misc/reading,
-	/datum/skill/misc/lockpicking,
-	/datum/skill/misc/riding,
-	/datum/skill/misc/music,
-	/datum/skill/misc/medicine,
-	/datum/skill/misc/sneaking,
-	/datum/skill/misc/stealing,
-	/datum/skill/misc/climbing,
-	/datum/skill/misc/swimming,
-	/datum/skill/magic/arcane,
-	/datum/skill/misc/sewing,
-	/datum/skill/labor/farming,
-	/datum/skill/labor/butchering,
-	/datum/skill/craft/weaponsmithing,
-	/datum/skill/craft/armorsmithing,
-	/datum/skill/craft/tanning,
-	/datum/skill/craft/traps,
-	/datum/skill/craft/crafting,
-	/datum/skill/craft/blacksmithing,
-	/datum/skill/craft/carpentry,
-	/datum/skill/craft/masonry,
-	/datum/skill/craft/cooking,
-	/datum/skill/craft/engineering
-	)
+    /datum/skill/misc/reading,
+    /datum/skill/misc/lockpicking,
+    /datum/skill/misc/riding,
+    /datum/skill/misc/music,
+    /datum/skill/misc/medicine,
+    /datum/skill/misc/sewing,
+    /datum/skill/magic/arcane,
+    /datum/skill/labor/farming,
+    /datum/skill/craft/crafting,
+    /datum/skill/craft/blacksmithing,
+    /datum/skill/craft/carpentry,
+    /datum/skill/craft/masonry,
+    /datum/skill/craft/cooking,
+    /datum/skill/craft/engineering
+    )
 	for(var/i = 1, i <= skill_choices.len, i++)
 		choices["[skill_choices[i].name]"] = skill_choices[i]
 

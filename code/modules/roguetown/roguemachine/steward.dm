@@ -27,7 +27,6 @@
 		if(K.lockid == keycontrol || istype(K, /obj/item/roguekey/lord)) //Master key
 			locked = !locked
 			playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-			(locked) ? (icon_state = "steward_machine_off") : (icon_state = "steward_machine")
 			update_icon()
 			return
 		else
@@ -42,7 +41,6 @@
 			if(KE.lockid == keycontrol)
 				locked = !locked
 				playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-				(locked) ? (icon_state = "steward_machine_off") : (icon_state = "steward_machine")
 				update_icon()
 				return
 		to_chat(user, span_warning("Wrong key."))

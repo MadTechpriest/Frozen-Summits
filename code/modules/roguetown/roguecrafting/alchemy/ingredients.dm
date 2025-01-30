@@ -17,51 +17,37 @@
 	var/major_smell
 	var/med_smell
 	var/minor_smell
-	///Same as the smells, just caching what the potion name is
-	var/major_name
-	var/med_name
-	var/minor_name
 
 /obj/item/alch/Initialize()
 	. = ..()
 	if(!isnull(major_pot))
 		var/datum/alch_cauldron_recipe/rec = locate(major_pot) in GLOB.alch_cauldron_recipes
 		major_smell = rec.smells_like
-		major_name = rec.recipe_name
 	if(!isnull(med_pot))
 		var/datum/alch_cauldron_recipe/rec = locate(med_pot) in GLOB.alch_cauldron_recipes
 		med_smell = rec.smells_like
-		med_name = rec.recipe_name
 	if(!isnull(minor_pot))
 		var/datum/alch_cauldron_recipe/rec = locate(minor_pot) in GLOB.alch_cauldron_recipes
 		minor_smell = rec.smells_like
-		minor_name = rec.recipe_name
 
 /obj/item/alch/examine(mob/user)
-	. = ..()
 	if(user.mind)
-		var/alch_skill = user.mind.get_skill_level(/datum/skill/craft/alchemy)
+		var/alch_skill = user.mind.get_skill_level(/datum/skill/misc/alchemy)
 		var/perint = 0
 		if(isliving(user))
 			var/mob/living/lmob = user
 			perint = FLOOR((lmob.STAPER + lmob.STAINT)/2,1)
-		if(HAS_TRAIT(user,TRAIT_LEGENDARY_ALCHEMIST))
-			if(!isnull(major_name))
-				. += span_notice(" Strongly attuned to making [major_name].")
-			if(!isnull(med_name))
-				. += span_notice(" Moderately attuned to making [med_name].")
-			if(!isnull(minor_name))
-				. += span_notice(" Minorly attuned to making [minor_name].")
-		else
-			if(!isnull(major_smell))
-				if(alch_skill >= SKILL_LEVEL_NOVICE || perint >= 6)
-					. += span_notice(" Smells strongly of [major_smell].")
-			if(!isnull(med_smell))
-				if(alch_skill >= SKILL_LEVEL_APPRENTICE || perint >= 10)
-					. += span_notice(" Smells slightly of [med_smell].")
-			if(!isnull(minor_smell))
-				if(alch_skill >= SKILL_LEVEL_EXPERT || perint >= 16)
-					. += span_notice(" Smells weakly of [minor_smell].")
+		desc = initial(desc)
+		if(!isnull(major_smell))
+			if(alch_skill >= SKILL_LEVEL_NOVICE || perint >= 6)
+				desc += span_notice(" Smells strongly of [major_smell].")
+		if(!isnull(med_smell))
+			if(alch_skill >= SKILL_LEVEL_APPRENTICE || perint >= 10)
+				desc += span_notice(" Smells slightly of [med_smell].")
+		if(!isnull(minor_smell))
+			if(alch_skill >= SKILL_LEVEL_EXPERT || perint >= 16)
+				desc += span_notice(" Smells weakly of [minor_smell].")
+	. = ..()
 /obj/item/alch/viscera
 	name = "viscera"
 	icon_state = "viscera"
@@ -70,8 +56,8 @@
 	minor_pot = /datum/alch_cauldron_recipe/antidote
 
 /obj/item/alch/waterdust
-	name = "water essentia"
-	icon_state = "water_runedust"
+	name = "water rune dust"
+	icon_state = "runedust"
 	major_pot = /datum/alch_cauldron_recipe/int_potion
 	med_pot = /datum/alch_cauldron_recipe/big_mana_potion
 	minor_pot = /datum/alch_cauldron_recipe/per_potion
@@ -91,7 +77,7 @@
 	minor_pot = /datum/alch_cauldron_recipe/disease_cure
 
 /obj/item/alch/runedust
-	name = "raw essentia"
+	name = "rune dust"
 	icon_state = "runedust"
 	major_pot = /datum/alch_cauldron_recipe/int_potion
 	med_pot = /datum/alch_cauldron_recipe/big_mana_potion
@@ -112,15 +98,15 @@
 	minor_pot = /datum/alch_cauldron_recipe/big_health_potion
 
 /obj/item/alch/magicdust
-	name = "pure essentia"
-	icon_state = "magic_runedust"
+	name = "magicdust"
+	//icon_state = "magicdust"
 	major_pot = /datum/alch_cauldron_recipe/big_mana_potion
 	med_pot = /datum/alch_cauldron_recipe/end_potion
 	minor_pot = /datum/alch_cauldron_recipe/con_potion
 
 /obj/item/alch/firedust
-	name = "fire essentia"
-	icon_state = "fire_runedust"
+	name = "fire rune dust"
+	icon_state = "runedust"
 	major_pot = /datum/alch_cauldron_recipe/str_potion
 	med_pot = /datum/alch_cauldron_recipe/con_potion
 	minor_pot = /datum/alch_cauldron_recipe/spd_potion
@@ -128,7 +114,7 @@
 /obj/item/alch/sinew
 	name = "sinew"
 	icon_state = "sinew"
-	dropshrink = 0.9
+	dropshrink = 0.5
 	major_pot = /datum/alch_cauldron_recipe/stam_poison
 	med_pot = /datum/alch_cauldron_recipe/end_potion
 	minor_pot = /datum/alch_cauldron_recipe/health_potion
@@ -141,29 +127,29 @@
 	minor_pot = /datum/alch_cauldron_recipe/str_potion
 
 /obj/item/alch/airdust
-	name = "air essentia"
-	icon_state = "air_runedust"
+	name = "air rune dust"
+	icon_state = "runedust"
 	major_pot = /datum/alch_cauldron_recipe/spd_potion
 	med_pot = /datum/alch_cauldron_recipe/stamina_potion
 	minor_pot = /datum/alch_cauldron_recipe/int_potion
 
 /obj/item/alch/swampdust
 	name = "swampweed dust"
-	icon_state = "swampdust"
+	icon_state = "tobaccodust"
 	major_pot = /datum/alch_cauldron_recipe/berrypoison
 	med_pot = /datum/alch_cauldron_recipe/big_stam_poison
 	minor_pot = /datum/alch_cauldron_recipe/end_potion
 
 /obj/item/alch/tobaccodust
-	name = "westleach dust"
+	name = "tobacco dust"
 	icon_state = "tobaccodust"
 	major_pot = /datum/alch_cauldron_recipe/per_potion
 	med_pot = /datum/alch_cauldron_recipe/stamina_potion
 	minor_pot = /datum/alch_cauldron_recipe/spd_potion
 
 /obj/item/alch/earthdust
-	name = "earth essentia"
-	icon_state = "earth_runedust"
+	name = "earth rune dust"
+	//icon_state = "earthdust"
 	major_pot = /datum/alch_cauldron_recipe/con_potion
 	med_pot = /datum/alch_cauldron_recipe/end_potion
 	minor_pot = /datum/alch_cauldron_recipe/str_potion
@@ -211,20 +197,11 @@
 /obj/item/alch/ozium
 	name = "alchemical ozium"
 	desc = "Alchemical processing has left it unfit for consumption."
-	icon_state = "darkredpowder"
+	icon_state = "whitepowder"
 
 	major_pot = /datum/alch_cauldron_recipe/big_stamina_potion
 	med_pot = /datum/alch_cauldron_recipe/lck_potion
 	minor_pot = /datum/alch_cauldron_recipe/int_potion
-
-/obj/item/alch/transisdust
-	name = "transis dust"
-	desc = "A long mix of herb that product a special powder."
-	icon_state = "transisdust"
-
-	major_pot = /datum/alch_cauldron_recipe/gender_potion
-	med_pot = /datum/alch_cauldron_recipe/gender_potion
-	minor_pot = /datum/alch_cauldron_recipe/gender_potion
 
 //BEGIN THE HERBS
 
@@ -273,7 +250,7 @@
 	icon_state = "paris"
 
 	major_pot = /datum/alch_cauldron_recipe/big_stam_poison
-	med_pot = /datum/alch_cauldron_recipe/berrypoison
+	med_pot = /datum/alch_cauldron_recipe/stam_poison
 	minor_pot = /datum/alch_cauldron_recipe/stam_poison
 
 /obj/item/alch/calendula
@@ -350,16 +327,16 @@
 	structurecraft = /obj/structure/table/wood
 	verbage = "mixes"
 	craftsound = 'sound/foley/scribble.ogg'
-	skillcraft = /datum/skill/craft/alchemy
+	skillcraft = /datum/skill/misc/alchemy
 	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/alch/magicdust
-	name = "pure essentia"
+	name = "magic dust"
 	result = list(/obj/item/alch/magicdust)
 	reqs = list(/obj/item/alch/waterdust = 1, /obj/item/alch/firedust = 1,
 				/obj/item/alch/airdust = 1, /obj/item/alch/earthdust = 1)
 	structurecraft = /obj/structure/table/wood
 	verbage = "mixes"
 	craftsound = 'sound/foley/scribble.ogg'
-	skillcraft = /datum/skill/craft/alchemy
+	skillcraft = /datum/skill/misc/alchemy
 	craftdiff = 0

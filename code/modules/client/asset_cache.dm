@@ -27,45 +27,19 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 	var/last_asset_job = 0 // Last job done.
 
 //This proc sends the asset to the client, but only if it needs it.
-//This proc blocks(sleeps)
-/proc/send_asset(client/client, asset_name)
+//This proc blocks(sleeps) unless verify is set to false
+/proc/send_asset(client/client, asset_name, verify = TRUE)
 	if(!istype(client))
 		if(ismob(client))
 			var/mob/M = client
 			if(M.client)
-				client = M.client 
+				client = M.client
+
 			else
-				return FALSE //no client, no care
+				return 0
+
 		else
-			return FALSE     //only mobs have clients
-
-	if(!send_asset_internal(client, asset_name))
-		return FALSE
-	client.sending |= asset_name
-	var/job = client.browse_queue_flush()
-	if(!isnull(job) && client) // if job is null we runtimed somehow
-		client.sending -= asset_name
-		client.cache |= asset_name
-		client.completed_asset_jobs -= job
-
-//This proc doesn't
-/proc/send_asset_async(client/client, asset_name)
-	if(!istype(client))    // Don't really want to do this here; needs to be refactored
-		if(ismob(client))  //duplicate check in above proc
-			var/mob/M = client
-			if(M.client)
-				client = M.client 
-			else
-				return FALSE //no client, no care
-		else
-			return FALSE     //only mobs have clients
-
-	if(!send_asset_internal(client, asset_name))
-		return FALSE
-	client.cache += asset_name
-	return TRUE
-
-/proc/send_asset_internal(client/client, asset_name)
+			return 0
 
 	if(client.cache.Find(asset_name) || client.sending.Find(asset_name))
 		return 0

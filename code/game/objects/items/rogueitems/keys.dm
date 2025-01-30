@@ -16,9 +16,6 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 	resistance_flags = FIRE_PROOF
 
-	grid_height = 32
-	grid_width = 32
-
 /obj/item/roguekey/Initialize()
 	. = ..()
 	if(lockid)
@@ -44,9 +41,6 @@
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH|ITEM_SLOT_NECK
 	destroy_sound = 'sound/items/pickbreak.ogg'
 	resistance_flags = FIRE_PROOF
-
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/roguekey/lord
 	name = "master key"
@@ -145,7 +139,7 @@
 	lockid = "shop"
 
 /obj/item/roguekey/townie // For use in round-start available houses in town. Do not use default lockID.
-	name = "town dwelling key"
+	name = "Town Dwelling Key"
 	desc = "The key of some townie's home. Hope it's not lost."
 	icon_state ="brownkey"
 	lockid = "townie"
@@ -225,48 +219,11 @@
 	icon_state = "brownkey"
 	lockid = "roomvi"
 
-/obj/item/roguekey/roomvii
-	name = "room VII key"
-	desc = "The key to the seventh room."
+/obj/item/roguekey/roomhunt
+	name = "room HUNT key"
+	desc = "This is the HUNT key!"
 	icon_state = "brownkey"
-	lockid = "roomvii"
-
-
-/obj/item/roguekey/roomviii
-	name = "room VIII key"
-	desc = "The key to the eight room."
-	icon_state = "brownkey"
-	lockid = "roomviii"
-
-/obj/item/roguekey/fancyroomi
-	name = "luxury room I key"
-	desc = "The key to the first luxury room."
-	icon_state = "hornkey"
-	lockid = "fancyi"
-
-/obj/item/roguekey/fancyroomii
-	name = "luxury room II key"
-	desc = "The key to the second luxury room."
-	icon_state = "hornkey"
-	lockid = "fancyii"
-
-/obj/item/roguekey/fancyroomiii
-	name = "luxury room III key"
-	desc = "The key to the third luxury room."
-	icon_state = "hornkey"
-	lockid = "fancyiii"
-
-/obj/item/roguekey/fancyroomiv
-	name = "luxury room IV key"
-	desc = "The key to the fourth luxury room."
-	icon_state = "hornkey"
-	lockid = "fancyiv"
-
-/obj/item/roguekey/fancyroomv
-	name = "luxury room V key"
-	desc = "The key to the fifth luxury room."
-	icon_state = "hornkey"
-	lockid = "fancyv"
+	lockid = "roomhunt"
 
 //vampire mansion//
 /obj/item/roguekey/vampire
@@ -413,6 +370,42 @@
 	icon_state = "eyekey"
 	lockid = "porta"
 
+//Dun Manor house keys
+/obj/item/roguekey/houses
+	name = ""
+	icon_state = ""
+	lockid = ""
+
+/obj/item/roguekey/houses/house1
+	name = "house i key"
+	icon_state = "brownkey"
+	lockid = "house1"
+
+/obj/item/roguekey/houses/house2
+	name = "house ii key"
+	icon_state = "brownkey"
+	lockid = "house2"
+
+/obj/item/roguekey/houses/house3
+	name = "house iii key"
+	icon_state = "brownkey"
+	lockid = "house3"
+
+/obj/item/roguekey/houses/house4
+	name = "house iv key"
+	icon_state = "brownkey"
+	lockid = "house4"
+
+/obj/item/roguekey/houses/house5
+	name = "house v key"
+	icon_state = "brownkey"
+	lockid = "house5"
+
+/obj/item/roguekey/houses/house6
+	name = "house vi key"
+	icon_state = "brownkey"
+	lockid = "house6"
+
 //Apartment and shop keys
 /obj/item/roguekey/apartments
 	name = ""
@@ -468,6 +461,11 @@
 	name = "stable ii key"
 	icon_state = "brownkey"
 	lockid = "stable2"
+
+/obj/item/roguekey/apartments/stable3
+	name = "stable iii key"
+	icon_state = "brownkey"
+	lockid = "stable3"
 
 //custom key
 /obj/item/roguekey/custom

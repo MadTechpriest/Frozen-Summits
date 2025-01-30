@@ -42,23 +42,21 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 
-	head = /obj/item/clothing/head/roguetown/articap
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
+	head = /obj/item/clothing/head/roguetown/hatfur
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/hatblu
+//	armor = /obj/item/clothing/suit/roguetown/armor/workervest
 	cloak = /obj/item/clothing/cloak/apron/waist/brown
-	gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves/blacksmith
-	pants = /obj/item/clothing/under/roguetown/trou/artipants
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
+	pants = /obj/item/clothing/under/roguetown/trou
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+	armor = /obj/item/clothing/suit/roguetown/armor/leather
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/belt/rogue/pouch/ammo
 	beltl = /obj/item/gun/ballistic/arquebus_pistol
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(
-						/obj/item/rogueweapon/hammer/claw = 1,
-						/obj/item/lockpickring/mundane = 1,
-						/obj/item/clothing/cloak/apron/blacksmith = 1
-						)
+	backpack_contents = list(/obj/item/rogueweapon/hammer/claw, /obj/item/roguekey/artificer, /obj/item/storage/belt/rogue/pouch/coins/poor	 = 1)
 	H.change_stat("strength", 1)
 	H.change_stat("intelligence", 2)
 	H.change_stat("endurance", 1)

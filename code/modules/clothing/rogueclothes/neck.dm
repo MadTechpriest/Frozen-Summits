@@ -199,8 +199,6 @@
 	sellprice = 10
 	experimental_onhip = TRUE
 	anvilrepair = /datum/skill/craft/armorsmithing
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/clothing/neck/roguetown/psicross/astrata
 	name = "amulet of the sun"

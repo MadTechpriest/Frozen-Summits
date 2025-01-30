@@ -123,6 +123,3 @@
 /obj/item/seeds/sugarcane
 	seed_identity = "sugarcane seeds"
 	plant_def_type = /datum/plant_def/sugarcane
-/obj/item/seeds/poppy
-	seed_identity = "poppy seeds"
-	plant_def_type = /datum/plant_def/poppy

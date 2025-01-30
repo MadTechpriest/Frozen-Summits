@@ -166,12 +166,4 @@
 	produce_type = /obj/item/reagent_containers/food/snacks/grown/sugarcane
 	produce_amount_min = 3
 	produce_amount_max = 4
-/datum/plant_def/poppy
-	name = "poppies"
-	icon_state = "poppy"
-	produce_type = /obj/item/reagent_containers/food/snacks/grown/rogue/poppy
-	produce_amount_min = 1
-	produce_amount_max = 2
-	maturation_nutrition = 30
-	water_drain_rate = 1 / (2 MINUTES)
 

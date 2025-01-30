@@ -5,39 +5,34 @@
 	var/list/output_items = list() //List of paths for new items that should be created, [path = chance to be created]
 
 /datum/alch_cauldron_recipe/disease_cure
-	recipe_name = "Disease Cure"
+	recipe_name = "Rotbane"
 	smells_like = "purity"
 	output_reagents = list(/datum/reagent/medicine/diseasecure = 81)
 
 /datum/alch_cauldron_recipe/antidote
-	recipe_name = "Antidote"
+	recipe_name = "Malicebane"
 	smells_like = "wet moss"
 	output_reagents = list(/datum/reagent/medicine/antidote = 81)
 
 /datum/alch_cauldron_recipe/berrypoison
-	recipe_name = "Poison"
+	recipe_name = "Liquid Malice"
 	smells_like = "death"
 	output_reagents = list(/datum/reagent/berrypoison = 81)
 
 /datum/alch_cauldron_recipe/doompoison
-	recipe_name = "Strong Poison"
+	recipe_name = "Liquid Doom"
 	smells_like = "doom"
 	output_reagents = list(/datum/reagent/berrypoison = 81,/datum/reagent/additive = 81)
 
 /datum/alch_cauldron_recipe/stam_poison
-	recipe_name = "Stamina Poison"
+	recipe_name = "Liquid Malice"
 	smells_like = "a slow breeze"
 	output_reagents = list(/datum/reagent/stampoison = 81)
 
 /datum/alch_cauldron_recipe/big_stam_poison
-	recipe_name = "Strong Stamina Poison"
+	recipe_name = "Liquid Doom"
 	smells_like = "stagnant air"
 	output_reagents = list(/datum/reagent/stampoison = 81,/datum/reagent/additive = 81)
-
-/datum/alch_cauldron_recipe/gender_potion
-	recipe_name = "Gender Potion"
-	smells_like = "living beings"
-	output_reagents = list(/datum/reagent/medicine/gender_potion = 9)
 
 //Healing potions
 /datum/alch_cauldron_recipe/health_potion

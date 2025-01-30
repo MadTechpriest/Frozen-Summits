@@ -105,6 +105,17 @@
 			//if(GLOB.noble_positions.Find(J.title) || GLOB.garrison_positions.Find(J.title))
 				. += span_greentext("<b>[m1] an agent of the court!</b>")
 		
+		if(has_flaw(/datum/charflaw/addiction/lovefiend) && user.has_flaw(/datum/charflaw/addiction/lovefiend))
+			. += span_aiprivradio("[m1] as lovesick as I.")
+		
+		if(has_flaw(/datum/charflaw/addiction/junkie) && user.has_flaw(/datum/charflaw/addiction/junkie))
+			. += span_deadsay("[m1] carrying the same dust marks on their nose as I.")
+
+		if(has_flaw(/datum/charflaw/addiction/smoker) && user.has_flaw(/datum/charflaw/addiction/smoker))
+			. += span_suppradio("[m1] enveloped by the familiar, faint stench of smoke. I know it well.")
+
+		if(has_flaw(/datum/charflaw/addiction/alcoholic) && user.has_flaw(/datum/charflaw/addiction/alcoholic))
+			. += span_syndradio("[m1] struggling to hide the hangover, and the stench of spirits. We're alike.")
 
 		var/commie_text
 		if(mind)
@@ -131,31 +142,17 @@
 		else if(HAS_TRAIT(src, TRAIT_DEPRAVED) && HAS_TRAIT(user, TRAIT_DEPRAVED))
 			. += span_notice("Debased!")
 
-
-		if(user != src && !HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
-			if(has_flaw(/datum/charflaw/addiction/lovefiend) && user.has_flaw(/datum/charflaw/addiction/lovefiend))
-				. += span_aiprivradio("[m1] as lovesick as I.")
-			
-			if(has_flaw(/datum/charflaw/addiction/junkie) && user.has_flaw(/datum/charflaw/addiction/junkie))
-				. += span_deadsay("[m1] carrying the same dust marks on their nose as I.")
-
-			if(has_flaw(/datum/charflaw/addiction/smoker) && user.has_flaw(/datum/charflaw/addiction/smoker))
-				. += span_suppradio("[m1] enveloped by the familiar, faint stench of smoke. I know it well.")
-
-			if(has_flaw(/datum/charflaw/addiction/alcoholic) && user.has_flaw(/datum/charflaw/addiction/alcoholic))
-				. += span_syndradio("[m1] struggling to hide the hangover, and the stench of spirits. We're alike.")
-
-			if(has_flaw(/datum/charflaw/paranoid) && user.has_flaw(/datum/charflaw/paranoid))
-				if(ishuman(user))
-					var/mob/living/carbon/human/H = user
-					if(dna.species.name == H.dna.species.name)
-						. += span_nicegreen("[m1] privy to the dangers of all these strangers around us. He is just as afraid as I am.")
-					else
-						. += span_nicegreen("[m1] one of the good ones. He is just as afraid as I am.")
-			if(has_flaw(/datum/charflaw/masochist) && user.has_flaw(/datum/charflaw/addiction/sadist))
-				. += span_secradio("[m1] marked by scars inflicted for pleasure. A delectable target for my urges.")
-			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
-				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
+		if(has_flaw(/datum/charflaw/paranoid) && user.has_flaw(/datum/charflaw/paranoid))
+			if(ishuman(user))
+				var/mob/living/carbon/human/H = user
+				if(dna.species.name == H.dna.species.name)
+					. += span_nicegreen("[m1] privy to the dangers of all these strangers around us. Just like me.")
+				else
+					. += span_nicegreen("[m1] one of the good ones. He hates other faces as much as I.")
+		if(has_flaw(/datum/charflaw/masochist) && user.has_flaw(/datum/charflaw/addiction/sadist))
+			. += span_secradio("[m1] marked by scars inflicted for pleasure. A delectable target for my urges.")
+		if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
+			. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
 
 
 	if(leprosy == 1)
@@ -503,7 +500,7 @@
 		var/mob/living/L = user
 		var/final_str = STASTR
 		if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
-			final_str = L.STASTR - rand(1,2)
+			final_str = 5
 		var/strength_diff = final_str - L.STASTR
 		switch(strength_diff)
 			if(5 to INFINITY)

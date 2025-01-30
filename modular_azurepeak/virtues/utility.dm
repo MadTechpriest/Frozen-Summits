@@ -60,6 +60,7 @@
 		"Book" = /obj/item/book/rogue/playerbook
 	)
 
+
 /datum/virtue/utility/deathless
 	name = "Vampiric Prowess"
 	desc = "Some fell dark magick has rendered me inwardly unliving - I do not hunger, and I do not breathe, i do not tire, i do not feel pain, almost perfected. All holy magic harms me. But i am more powerful. Very much more powerful than other vampires."
@@ -106,6 +107,16 @@
 	eyes.lighting_alpha = min(eyes.lighting_alpha, LIGHTING_PLANE_ALPHA_NOCVISION)
 	recipient.update_sight()
 */
+/datum/virtue/utility/learned
+	name = "Learned"
+	desc = "I am surprisingly well-read for someone of my station, and have no issue with literacy or numbers."
+	added_skills = list(/datum/skill/misc/reading = 3)
+	added_stashed_items = list(
+		"Quill" = /obj/item/natural/feather,
+		"Scroll" = /obj/item/paper/scroll,
+		"Book" = /obj/item/book/rogue/playerbook
+	)
+
 /datum/virtue/utility/performer
 	name = "Performer"
 	desc = "Music, artistry and the act of showmanship carried me through life. I've hidden a favorite instrument of mine, know how to please anyone I touch, and how to crack the eggs of hecklers."

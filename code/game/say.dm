@@ -195,9 +195,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	return output
 
 /proc/say_test(text)
-	if(copytext(text, length(text) - 1) == "!!")
-		return "3"
-	var/ending = copytext(text, length(text))
+	var/ending = copytext_char(text, length_char(text))
 	if (ending == "?")
 		return "1"
 	if (ending == "!")

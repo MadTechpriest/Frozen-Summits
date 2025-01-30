@@ -15,8 +15,6 @@
 	wdefense = 5
 	ingsize = 3
 	improvised = TRUE
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/cooking/pan/examine(mob/user)
 	. = ..()

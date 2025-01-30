@@ -134,9 +134,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 
-	grid_width = 64
-	grid_height = 32
-
 /obj/item/clothing/gloves/roguetown/grenzelgloves
 	name = "mercenary gloves"
 	desc = ""
@@ -159,7 +156,7 @@
 //---------------- BLACKSTEEL ---------------------
 
 /obj/item/clothing/gloves/roguetown/blacksteel/plategloves
-	name = "blacksteel plate gauntlets"
+	name = "Blacksteel Plate Gauntlets"
 	desc = "A set of plate gauntlets forged of blacksteel."
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'

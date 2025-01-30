@@ -10,10 +10,6 @@
 	var/list/looty = list()
 	var/herbtype
 
-/obj/structure/flora/roguegrass/herb/Initialize()
-	. = ..()
-	desc = "An herb. This one looks like [name]."
-
 /obj/structure/flora/roguegrass/herb/update_icon()
 	return
 
@@ -32,11 +28,11 @@
 				if(B)
 					B = new B(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					user.visible_message("<span class='notice'>[user] finds [B] in [src].</span>")
 					return
-			user.visible_message(span_notice("[user] searches through [src]."))
+			user.visible_message("<span class='warning'>[user] searches through [src].</span>")
 			if(!looty.len)
-				to_chat(user, span_warning("Picked clean; but looks healthy. I should try again later."))
+				to_chat(user, "<span class='warning'>Picked clean;but looks healthy. I should try later.</span>")
 
 /obj/structure/flora/roguegrass/herb/proc/loot_replenish()
 	if(herbtype)

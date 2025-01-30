@@ -173,10 +173,7 @@
 /obj/item/roguecoin/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/roguecoin))
 		var/obj/item/roguecoin/G = I
-		if(item_flags & IN_STORAGE)
-			merge(G, user)
-		else
-			G.merge(src, user)
+		merge(G, user)
 		return
 	return ..()
 

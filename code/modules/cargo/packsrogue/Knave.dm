@@ -55,27 +55,21 @@
 	contains = list(/obj/item/rogueweapon/huntingknife/idagger/steel)
 
 
-/datum/supply_pack/rogue/Knave/parrydag
+/datum/supply_pack/rogue/Knave/leather/parrydag
 	name = "Parry Dagger"
 	cost = 20
 	contains = list(/obj/item/rogueweapon/huntingknife/idagger/steel/parrying)
 
 
-/datum/supply_pack/rogue/Knave/Navaja
+/datum/supply_pack/rogue/Knave/leather/Navaja
 	name = "Navaja"
 	cost = 20
 	contains = list(/obj/item/rogueweapon/huntingknife/idagger/navaja)
 
-/datum/supply_pack/rogue/Knave/elfdagger
+/datum/supply_pack/rogue/Knave/leather/elfdagger
 	name = "Elven Dagger"
 	cost = 40
 	contains = list(/obj/item/rogueweapon/huntingknife/idagger/silver/elvish)
-
-
-/datum/supply_pack/rogue/Knave/steeltossblades
-	name = "Steel Tossblade Belt"
-	cost = 20
-	contains = list(/obj/item/storage/belt/rogue/leather/knifebelt/black/steel)
 
 
 /datum/supply_pack/rogue/Knave/crossbow
