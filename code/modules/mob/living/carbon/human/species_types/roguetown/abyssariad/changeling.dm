@@ -31,7 +31,13 @@
 
 	skin_tone_wording = "Championage Branch"
 
-	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
+	species_traits = list(
+		MUTCOLORS,
+		EYECOLOR,
+		LIPS,
+		HAIR,
+	)
+
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = 1
 	possible_ages = ALL_AGES_LIST //Abyssariads are Immortal. However, if they become stray from Abyssor - they suffer severe dementia, and after some decades, become Dais.
@@ -164,6 +170,7 @@
 /datum/species/abyssariad/changeling/check_roundstart_eligible()
 	return TRUE
 
+
 /datum/species/abyssariad/changeling/get_skin_list()
 	return sortList(list(
 		"Oathbound Muqian" = SKIN_COLOR_OATHBOUND_MUQIAN,
@@ -177,7 +184,6 @@
 		"Warpcaster Linyou" = SKIN_COLOR_WARPCASTER_LINYOU,
 		"Warpcaster Dustwalker" = SKIN_COLOR_WARPCASTER_DUSTWALKER,
 	))
-
 
 /datum/species/abyssariad/changeling/get_hairc_list()
 	return sortList(list(
@@ -230,3 +236,41 @@
 
 /datum/species/abyssariad/changeling/random_surname()
 	return " [pick(world.file2list("strings/rt/names/abyssariad/abyssnorlast.txt"))]"
+
+
+/datum/species/anthromorph/get_random_features()
+	var/list/returned = MANDATORY_FEATURE_LIST
+	var/main_color
+	var/second_color
+	var/third_color
+	var/random = rand(1,6)
+	switch(random)
+		if(1)
+			main_color = "FFFFFF"
+			second_color = "333333"
+			third_color = "333333"
+		if(2)
+			main_color = "FFFFDD"
+			second_color = "DD6611"
+			third_color = "AA5522"
+		if(3)
+			main_color = "DD6611"
+			second_color = "FFFFFF"
+			third_color = "DD6611"
+		if(4)
+			main_color = "CCCCCC"
+			second_color = "FFFFFF"
+			third_color = "FFFFFF"
+		if(5)
+			main_color = "AA5522"
+			second_color = "CC8833"
+			third_color = "FFFFFF"
+		if(6)
+			main_color = "FFFFDD"
+			second_color = "FFEECC"
+			third_color = "FFDDBB"
+	returned["mcolor"] = main_color
+	returned["mcolor2"] = second_color
+	returned["mcolor3"] = third_color
+	return returned
+
