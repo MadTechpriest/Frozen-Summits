@@ -25,8 +25,8 @@
 	sellprice = 18
 
 /obj/item/natural/head/volf
-	name = "volf head"
-	desc = "the head of a fearsome volf."
+	name = "wolf skull"
+	desc = "the skull of a fearsome wolf."
 	icon_state = "volfhead"
 	layer = 3.1
 
