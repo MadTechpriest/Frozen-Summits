@@ -188,8 +188,7 @@
 	var/obj/item/ingot/hingot = null
 	var/hott = FALSE
 	smeltresult = /obj/item/ingot/iron
-	grid_width = 32
-	grid_height = 64
+
 
 /obj/item/rogueweapon/tongs/examine(mob/user)
 	. = ..()
