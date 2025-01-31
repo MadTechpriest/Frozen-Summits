@@ -11,7 +11,6 @@
 	icon_living = "morph"
 	icon_dead = "morph_dead"
 	speed = 2
-	butcher_results = list(/obj/item/reagent_containers/powder/mana = 1)
 	a_intent = INTENT_HARM
 	stop_automated_movement = 1
 	status_flags = CANPUSH
