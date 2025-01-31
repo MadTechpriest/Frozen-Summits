@@ -100,6 +100,7 @@ Slimecrossing Armor
 	name = "Sunes Peace"
 	desc = "A flower of gentle petals, associated with Sune. Usually adorned as a headress or laid at graves as a symbol of love or peace."
 	icon = 'icons/roguetown/items/produce.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	icon_state = "peaceflower"
 	item_state = "peaceflower"
 	slot_flags = ITEM_SLOT_HEAD
