@@ -17,7 +17,6 @@
 	sewrepair = TRUE
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 
-
 /obj/item/clothing/suit/roguetown/shirt/dress_strapped
 	name = "dress"
 	desc = "Fancy dress."
@@ -27,3 +26,34 @@
 	body_parts_covered = CHEST|ARMS|VITALS
 	sewrepair = TRUE
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
+
+//................ Briar Thorns ............... //	- Dendor Briar
+/obj/item/clothing/head/roguetown/padded/briarthorns
+	name = "briar thorns"
+	desc = "The pain it causes perhaps can distract from the whispers of a mad God overpowering your sanity..."
+	icon_state = "briarthorns"
+
+/obj/item/clothing/head/roguetown/padded/briarthorns/pickup(mob/living/user)
+	. = ..()
+	to_chat(user, span_warning ("The thorns prick me."))
+	user.adjustBruteLoss(4)
+
+/obj/item/clothing/head/roguetown/nyle
+	name = "jewel of nyle"
+	icon_state = "nile"
+	body_parts_covered = null
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = null
+	sellprice = 100
+	resistance_flags = FIRE_PROOF
+	anvilrepair = /datum/skill/craft/armorsmithing
+
+/obj/item/clothing/head/roguetown/nyle/consortcrown
+	name = "consort crown"
+	icon_state = "consortcrown"
+	sellprice = 100
+
+/obj/item/clothing/head/roguetown/circlet
+	name = "golden circlet"
+	icon_state = "goldcirclet"
+	sellprice = 50
