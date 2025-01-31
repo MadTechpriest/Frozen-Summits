@@ -396,10 +396,11 @@
 	icon_state = "bandageroll2"
 	amount = 3
 	firefuel = 60 MINUTES
+
 /datum/crafting_recipe/roguetown/alchemy/alchmort
 	name = "alchemical mortar"
 	tools = list()
 	result = list(/obj/item/mortar = 1)
-	reqs = list(/obj/item/natural/stone = 3, /obj/item/rogueore/iron = 1)
+	reqs = list(/obj/item/natural/stone = 3)
 	verbage_simple = "fabricate"
 	verbage = "fabricates"
