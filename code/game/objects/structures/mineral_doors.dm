@@ -1072,3 +1072,13 @@
 /obj/structure/mineral_door/wood/towner/woodcutter
 	resident_advclass = /datum/advclass/woodcutter
 	lockid = "towner_woodcutter"
+
+
+/obj/structure/mineral_door/wood/towner/anyone
+	locked = TRUE
+	keylock = TRUE
+	grant_resident_key = TRUE
+	resident_key_type = /obj/item/roguekey/townie
+	resident_role = null
+	lockid = null //Will be randomized
+	resident_key_amount = 2
