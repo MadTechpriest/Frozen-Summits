@@ -19,6 +19,8 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/datum/admins/proc/admin_sleep,
 	/client/proc/jumptoarea,
 	/client/proc/jumptokey,
+	/client/proc/mass_direct,
+	/client/proc/local_lightsout,
 	/datum/admins/proc/checkpq,
 	/datum/admins/proc/adjustpq,
 	/client/proc/jumptomob,
@@ -113,8 +115,10 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/toggleadminhelpsound,
 	/client/proc/respawn_character,
 	/client/proc/discord_id_manipulation,
-	/datum/admins/proc/open_borgopanel,
+
 	/client/proc/ShowAllFamilies,
+	/datum/admins/proc/sleepall,
+	/datum/admins/proc/wakeall,
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/ban_panel, /client/proc/stickybanpanel, /client/proc/check_pq, /client/proc/adjust_pq, /client/proc/getcurrentlogs, /client/proc/getserverlogs))
 GLOBAL_PROTECT(admin_verbs_ban)
