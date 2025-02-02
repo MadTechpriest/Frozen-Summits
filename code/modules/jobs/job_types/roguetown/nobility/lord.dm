@@ -2,12 +2,12 @@ GLOBAL_VAR(lordsurname)
 GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/lord
-	title = "Expedition Leader"
+	title = "Consular"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 3
+	spawn_positions = 3
 	selection_color = JCOLOR_NOBLE
 	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	visuals_only_outfit = /datum/outfit/job/roguetown/lord/visuals
 
 	display_order = JDO_LORD
-	tutorial = "You are a noble man or woman, though out your own violition decided to fund a small voyage towards unknown lands to settle down a small hamlet. You are not any higher than the worker, you share your blood on the lands alongside your peers."
+	tutorial = "As a Consular, you are a advisor and leader, chosen to oversee and guide the development of a growing settlement. While you hold authority, your duty is to govern alongside your peers, ensuring stability, prosperity, and order. Your voice carries weight, but true leadership comes from collaboration and wisdom."
 	whitelist_req = FALSE
 	min_pq = 0
 	max_pq = null
@@ -29,8 +29,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	cmode_music = 'sound/music/combat_fancy.ogg'
 
 /datum/job/roguetown/exlord //just used to change the lords title
-	title = "Duke Emeritus"
-	f_title = "Duchess Emeritus"
+	title = "Ex-Consular"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -52,13 +51,13 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		SSticker.rulermob = L
 		switch(L.pronouns)
 			if(SHE_HER)
-				SSticker.rulertype = "Expedition Leader"
+				SSticker.rulertype = "Consular"
 			if(THEY_THEM_F)
-				SSticker.rulertype = "Expedition Leader"
+				SSticker.rulertype = "Consular"
 			else
-				SSticker.rulertype = "Expedition Leader"
-		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Frozen Summit.</span></span></b>")
-		if(STATION_TIME_PASSED() <= 10 MINUTES) //Late to the party? Stuck with default colors, sorry!
+				SSticker.rulertype = "Consular"
+		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is one of the [SSticker.rulertype] of Frozen Summit.</span></span></b>")
+		if(STATION_TIME_PASSED() <= 25 MINUTES) //Late to the party? Stuck with default colors, sorry!
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_color_choice)), 50)
 
 /datum/outfit/job/roguetown/lord/pre_equip(mob/living/carbon/human/H)

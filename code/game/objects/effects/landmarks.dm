@@ -139,7 +139,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/lord
-	name = "Expedition Leader"
+	name = "Consular"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/knight

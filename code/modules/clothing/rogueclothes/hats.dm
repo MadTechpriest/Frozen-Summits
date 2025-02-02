@@ -414,9 +414,9 @@
 	color = CLOTHING_RED
 
 /obj/item/clothing/head/roguetown/crown/serpcrown
-	name = "crown of frozen summit"
+	name = "circlet of frozen summit"
 	desc = ""
-	icon_state = "serpcrown"
+	icon_state = "circlet"
 	//dropshrink = 0
 	dynamic_hair_suffix = null
 	sellprice = 200
@@ -432,14 +432,14 @@
 		SSroguemachine.crown = src
 
 /obj/item/clothing/head/roguetown/crown/serpcrown/proc/anti_stall()
-	src.visible_message(span_warning("The Crown of Frozen Summit crumbles to dust, the ashes spiriting away in the direction of the Keep."))
+	src.visible_message(span_warning("The circlet of Frozen Summit crumbles to dust, the ashes spiriting away in the direction of the town."))
 	SSroguemachine.crown = null //Do not harddel.
 	qdel(src) //Anti-stall
 
 /obj/item/clothing/head/roguetown/crown/fakecrown
-	name = "fake crown"
-	desc = "You shouldn't be seeing this."
-	icon_state = "serpcrown"
+	name = "lesser circlet of frozen summit"
+	desc = ""
+	icon_state = "circlet"
 
 /obj/item/clothing/head/roguetown/crown/surplus
 	name = "crown"

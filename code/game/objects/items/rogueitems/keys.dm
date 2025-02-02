@@ -347,7 +347,7 @@
 
 /obj/item/roguekey/hand
 	name = "hand's key"
-	desc = "This regal key belongs to the Expedition Leader's Right Hand."
+	desc = "This regal key belongs to the Consular's Right Hand."
 	icon_state = "cheesekey"
 	lockid = "hand"
 

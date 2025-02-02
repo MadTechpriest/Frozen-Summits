@@ -8,7 +8,7 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "You are the consort of the Expedition Leader. Picked out by love or political interest... you now live in a desolated location with your lover, building a new hamlet."
+	tutorial = "You are the consort of the Consular. Picked out by love or political interest... you now live in a desolated location with your lover, building a new hamlet."
 
 	spells = list(/obj/effect/proc_holder/spell/self/convertrole/servant)
 	outfit = /datum/outfit/job/roguetown/lady
