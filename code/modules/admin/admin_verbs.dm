@@ -35,6 +35,7 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/amend_player_book,
 	/client/proc/pull_book_file_names,
 	/client/proc/adminwho,
+	/client/proc/admin_spread_effect,
 	// RATWOOD MODULAR START
 	/client/proc/bunker_bypass,
 	// RATWOOD MODULAR END
