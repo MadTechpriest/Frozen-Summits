@@ -74,7 +74,7 @@
 	var/datum/language_holder/other
 	if(istype(thing, /datum/language_holder))
 		other = thing
-	else if(ismovableatom(thing))
+	else if(ismovable(thing))
 		var/atom/movable/AM = thing
 		other = AM.get_language_holder()
 	else if(istype(thing, /datum/mind))
@@ -94,43 +94,12 @@
 	language_menu.ui_interact(user)
 
 /datum/language_holder/proc/get_atom()
-	if(ismovableatom(owner))
+	if(ismovable(owner))
 		. = owner
 	else if(istype(owner, /datum/mind))
 		var/datum/mind/M = owner
 		if(M.current)
 			. = M.current
-
-/datum/language_holder/alien
-	languages = list(/datum/language/xenocommon)
-
-/datum/language_holder/monkey
-	languages = list(/datum/language/monkey)
-
-/datum/language_holder/swarmer
-	languages = list(/datum/language/swarmer)
-
-/datum/language_holder/construct
-	languages = list(/datum/language/common, /datum/language/narsie)
-
-/datum/language_holder/drone
-	languages = list(/datum/language/common, /datum/language/drone, /datum/language/machine)
-	only_speaks_language = /datum/language/drone
-
-/datum/language_holder/drone/syndicate
-	only_speaks_language = null
-
-/datum/language_holder/slime
-	languages = list(/datum/language/common, /datum/language/slime)
-	only_speaks_language = /datum/language/slime
-
-/datum/language_holder/lightbringer
-	// TODO change to a lightbringer specific sign language
-	languages = list(/datum/language/slime)
-
-/datum/language_holder/synthetic
-	languages = list(/datum/language/common)
-	shadow_languages = list(/datum/language/common, /datum/language/machine, /datum/language/draconic)
 
 /datum/language_holder/empty
 	languages = list()

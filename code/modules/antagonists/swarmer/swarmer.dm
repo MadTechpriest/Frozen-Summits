@@ -58,7 +58,6 @@
 	icon = 'icons/mob/swarmer.dmi'
 	desc = ""
 	speak_emote = list("tones")
-	initial_language_holder = /datum/language_holder/swarmer
 	bubble_icon = "swarmer"
 	mob_biotypes = MOB_ROBOTIC
 	health = 40
