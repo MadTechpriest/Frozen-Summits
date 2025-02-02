@@ -46,7 +46,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Manus, Potentis, Paro!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 // Notes: Bard, Sorcerer, Warlock, Wizard
 
@@ -105,7 +105,7 @@
 	xp_gain = TRUE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Incertus, Pulcher, Imperio!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 /obj/effect/proc_holder/spell/invoked/boomingblade5e/cast(list/targets, mob/living/user)
@@ -200,7 +200,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Facio, Voco, Ferre!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 	summon_type = list(
@@ -255,7 +255,7 @@
 	xp_gain = TRUE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Vita, Mortis, Careo"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 /obj/effect/proc_holder/spell/invoked/decompose5e/cast(list/targets, mob/living/user)
@@ -332,7 +332,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "DOLOR!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 
@@ -390,8 +390,8 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
-	invocation_type = "shout" //can be none, whisper, emote and shout
+	invocation = "susurrus"
+	invocation_type = "whisper" //can be none, whisper, emote and shout
 	include_user = FALSE
 
 /obj/effect/proc_holder/spell/targeted/encodethoughts5e/cast(list/targets, mob/user)
@@ -478,7 +478,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Glacius!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	
 /obj/effect/proc_holder/spell/invoked/frostbite5e/cast(list/targets, mob/living/user)
@@ -537,7 +537,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "gladius!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	
 /obj/effect/proc_holder/spell/invoked/greenflameblade5e/cast(list/targets, mob/living/user)
@@ -593,7 +593,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Scio, Didici, Pecto"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	include_user = FALSE
 
@@ -665,13 +665,13 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "olath ilhar zud'dar dos!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	
 /obj/effect/proc_holder/spell/invoked/infestation5e/cast(list/targets, mob/living/user)
 	if(isliving(targets[1]))
 		var/mob/living/carbon/target = targets[1]
-		target.visible_message(span_warning("[target] is surrounded by a cloud of pestilent vermin!"), span_notice("You surround [target] in a cloud of pestilent vermin!"))
+		target.visible_message(span_warning("[target] is surrounded by a cloud of crawling things!"), span_notice("You surround [target] in a cloud of crawling things!"))
 		target.apply_status_effect(/datum/status_effect/buff/infestation5e/) //apply debuff
 
 /datum/status_effect/buff/infestation5e
@@ -684,7 +684,7 @@
 /datum/status_effect/buff/infestation5e/on_apply()
 	. = ..()
 	var/mob/living/target = owner
-	to_chat(owner, span_danger("I am suddenly surrounded by a cloud of bugs!"))
+	to_chat(owner, span_danger("I am suddenly surrounded by a cloud of crawling things!"))
 	target.Jitter(20)
 	target.add_overlay(rotten)
 	target.update_vision_cone()
@@ -753,7 +753,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Lux!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 	var/obj/item/item
@@ -970,7 +970,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Facio, Voco, Ferre!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	var/magic_color = "#c8daff"
 
@@ -1020,8 +1020,8 @@
 	xp_gain = TRUE
 	miracle = FALSE
 
-	invocation = ""
-	invocation_type = "shout" //can be none, whisper, emote and shout
+	invocation = "Cupio, Virtus, Licet."
+	invocation_type = "whisper" //can be none, whisper, emote and shout
 
 /obj/effect/proc_holder/spell/invoked/mending5e/cast(list/targets, mob/living/user)
 	if(istype(targets[1], /obj/item))
@@ -1072,7 +1072,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Veritas, Credo, Oculos"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	var/delay = 7
 
@@ -1144,7 +1144,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Mortis!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	
 /obj/effect/proc_holder/spell/invoked/poisonspray5e/cast(list/targets, mob/living/user)
@@ -1209,7 +1209,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Glacius!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 
@@ -1253,7 +1253,7 @@
 	xp_gain = FALSE
 	miracle = FALSE
 
-	invocation = ""
+	invocation = "Vitae!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 
 /obj/effect/proc_holder/spell/invoked/curewounds5e/cast(list/targets, mob/living/user)

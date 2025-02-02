@@ -108,9 +108,9 @@
 	"LOLTH TESTS ME!",
 	"THE SPIDER QUEEN DEMANDS FEAR!",
 	"BETRAYAL IS MY BLESSING!")
-	t1 = /obj/effect/proc_holder/spell/invoked/projectile/sickness
-	t2 = /obj/effect/proc_holder/spell/targeted/spiderconjur
-	t3 = /obj/effect/proc_holder/spell/invoked/blindness
+	t1 = /obj/effect/proc_holder/spell/targeted/spiderconjur
+	t2 = /obj/effect/proc_holder/spell/invoked/invisibility/miracle
+	t3 = /obj/effect/proc_holder/spell/invoked/infestation5e
 
 /datum/patron/inhumen/shar
 	name = "Shar"
@@ -163,8 +163,13 @@
 	confess_lines = list(
 		"THE WAVES WILL RUN RED WITH BLOOD",
 		"I SERVE DAGON AND THE DEEP ONES!",
-		"I'a! Dagon! I'a! Dagon! I'a! Dagon!"
-)
+		"I'a! Dagon! I'a! Dagon! I'a! Dagon!")
+	mob_traits = list(TRAIT_ABYSSOR_SWIM, TRAIT_SEA_DRINKER)
+	t0 = /obj/effect/proc_holder/spell/invoked/projectile/purify
+	t1 = /obj/effect/proc_holder/spell/invoked/abyssor_bends
+	t2 = /obj/effect/proc_holder/spell/invoked/abyssheal
+	t3 = /obj/effect/proc_holder/spell/invoked/call_mossback
+	t4 = /obj/effect/proc_holder/spell/invoked/icebind
 
 /datum/patron/inhumen/malar
 	name = "Malar"
