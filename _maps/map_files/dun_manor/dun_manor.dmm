@@ -3119,6 +3119,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/tavern)
+"fjd" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/rtfield)
 "fkd" = (
 /obj/structure/fluff/walldeco/innsign{
 	name = "The Dark Oak";
@@ -3232,6 +3236,14 @@
 "fwr" = (
 /obj/structure/flora/roguegrass/bush/wall,
 /turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/rtfield)
+"fxH" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga{
+	dir = 4
+	},
+/turf/open/floor/rogue/snow{
+	color = "e6f2ff"
+	},
 /area/rogue/outdoors/rtfield)
 "fyG" = (
 /obj/machinery/light/rogue/torchholder{
@@ -3624,9 +3636,9 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/rtfield)
 "gwT" = (
-/obj/structure/mineral_door/wood/deadbolt,
+/obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/rtfield)
+/area/rogue/indoors)
 "gxe" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/dirt,
@@ -3923,6 +3935,13 @@
 	dir = 1
 	},
 /turf/open/transparent/openspace,
+/area/rogue/outdoors/rtfield)
+"hre" = (
+/obj/structure/handcart{
+	icon_state = "cart-empty";
+	dir = 8
+	},
+/turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield)
 "hrK" = (
 /obj/effect/decal/cobbleedge{
@@ -4605,6 +4624,8 @@
 "jao" = (
 /obj/item/rogueweapon/pick,
 /obj/structure/rack/rogue,
+/obj/item/storage/roguebag,
+/obj/item/storage/roguebag,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
 "jaR" = (
@@ -4864,9 +4885,9 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors)
 "jLQ" = (
-/obj/structure/mineral_door/wood/donjon/stone,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/mountains)
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck,
+/turf/open/floor/rogue/snow,
+/area/rogue/outdoors/rtfield)
 "jMa" = (
 /obj/structure/fluff/railing/fence{
 	icon_state = "fence";
@@ -5124,6 +5145,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield)
+"kny" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck,
+/turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/rtfield)
 "kov" = (
 /obj/structure/fluff/railing/border{
@@ -6441,6 +6466,12 @@
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/outdoors/rtfield)
+"mZr" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga{
+	dir = 4
+	},
+/turf/open/floor/rogue/snow,
+/area/rogue/outdoors/rtfield)
 "mZU" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -7689,6 +7720,10 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors)
+"pSb" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigakid,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/rtfield)
 "pSl" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -7716,6 +7751,15 @@
 	},
 /turf/open/floor/carpet/red,
 /area/rogue/outdoors/mountains)
+"pUW" = (
+/obj/structure/flora/bush,
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga{
+	dir = 4
+	},
+/turf/open/floor/rogue/snow{
+	color = "e6f2ff"
+	},
+/area/rogue/outdoors/rtfield)
 "pVd" = (
 /obj/structure/flora/roguetree/snow{
 	icon_state = "tree8"
@@ -8096,6 +8140,10 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/woods)
+"qSS" = (
+/obj/structure/handcart,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield)
 "qUh" = (
 /obj/structure/fluff/railing/wood{
 	pixel_x = 1;
@@ -10308,10 +10356,10 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/rtfield)
 "vYN" = (
-/obj/structure/mineral_door/wood/deadbolt{
-	dir = 1
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck,
+/turf/open/floor/rogue/snow{
+	color = "e6f2ff"
 	},
-/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/rtfield)
 "vZE" = (
 /turf/open/floor/rogue/ruinedwood,
@@ -37666,8 +37714,8 @@ ymg
 fRr
 fRr
 fRr
-fRr
-fRr
+pSb
+hiR
 fRr
 ilZ
 fRr
@@ -37824,10 +37872,10 @@ fRr
 fRr
 ilZ
 fRr
+hiR
 fRr
 fRr
-fRr
-fRr
+kny
 vOy
 ilZ
 fRr
@@ -37981,12 +38029,12 @@ fRr
 fRr
 fRr
 vOy
-fRr
-fRr
+hiR
+fjd
 ilZ
-fRr
-fRr
-fRr
+hiR
+hiR
+hiR
 fRr
 ilZ
 fRr
@@ -38141,7 +38189,7 @@ fRr
 fRr
 fRr
 fRr
-fRr
+hiR
 fRr
 fRr
 fRr
@@ -38302,8 +38350,8 @@ fRr
 ilZ
 fRr
 fRr
-fRr
-fRr
+hiR
+hiR
 fRr
 ilZ
 fRr
@@ -38460,8 +38508,8 @@ fRr
 fRr
 pjk
 fRr
-fRr
-fRr
+hiR
+hiR
 fRr
 fRr
 fRr
@@ -38935,8 +38983,8 @@ fRr
 ilZ
 fRr
 fRr
-fRr
-fRr
+hiR
+hiR
 fsP
 fsP
 dPz
@@ -39090,8 +39138,8 @@ fRr
 ilZ
 fRr
 fRr
-fRr
-fRr
+hiR
+hiR
 fsP
 fsP
 fsP
@@ -40583,7 +40631,7 @@ dPz
 lnn
 lnn
 lnn
-lnn
+mZr
 lnn
 lnn
 kJH
@@ -41838,7 +41886,7 @@ dPV
 pVd
 dPV
 dPV
-dPV
+fxH
 dPV
 lnn
 lnn
@@ -42756,7 +42804,7 @@ fRr
 dPV
 lnn
 lnn
-lnn
+mZr
 dPV
 dPV
 ilZ
@@ -42778,7 +42826,7 @@ dPV
 pHC
 lnn
 dPV
-dPV
+fxH
 dPV
 dPV
 lnn
@@ -43720,7 +43768,7 @@ dPV
 dPV
 dPV
 dPV
-abb
+pUW
 lnn
 lnn
 mVe
@@ -44029,7 +44077,7 @@ lnn
 lnn
 abb
 lnn
-dPV
+fxH
 dPV
 dPV
 dPV
@@ -44322,7 +44370,7 @@ dPz
 dPV
 dPV
 dPV
-dPV
+fxH
 lnn
 lnn
 lnn
@@ -44796,7 +44844,7 @@ dPz
 dPz
 dPz
 dPV
-dPV
+fxH
 log
 fRr
 fRr
@@ -45200,7 +45248,7 @@ sLt
 mPR
 chq
 bzL
-lyQ
+hre
 soi
 ylN
 fRr
@@ -45426,7 +45474,7 @@ dPz
 dPV
 dPV
 log
-lnn
+mZr
 lnn
 fRr
 fRr
@@ -46895,7 +46943,7 @@ xIu
 teY
 teY
 fLa
-gwT
+iSL
 iSL
 aiO
 aCU
@@ -46908,7 +46956,7 @@ iSL
 iSL
 iSL
 ylN
-vYN
+iSL
 teY
 teY
 waG
@@ -47044,7 +47092,7 @@ kWL
 ylN
 kWL
 kWL
-ylN
+qSS
 kWL
 kWL
 bWh
@@ -47360,7 +47408,7 @@ lnn
 abV
 qjZ
 rDz
-rDz
+gwT
 rDz
 hHC
 abV
@@ -47935,7 +47983,7 @@ dPz
 dPz
 dPz
 dPV
-dPV
+fxH
 dPV
 lnn
 dPV
@@ -48107,7 +48155,7 @@ dPV
 lnn
 lnn
 lnn
-lnn
+mZr
 dPV
 dPV
 lnn
@@ -48117,7 +48165,7 @@ lnn
 lnn
 lnn
 dPV
-dPV
+fxH
 dPV
 lnn
 bOa
@@ -48584,7 +48632,7 @@ dPV
 lnn
 lnn
 lnn
-lnn
+mZr
 lnn
 lnn
 dPV
@@ -49345,7 +49393,7 @@ dPV
 abb
 dPV
 lnn
-dPV
+fxH
 dPV
 dPV
 dPV
@@ -49366,7 +49414,7 @@ lnn
 lnn
 lnn
 lnn
-lnn
+mZr
 lnn
 lnn
 iFR
@@ -54895,7 +54943,7 @@ lnn
 lnn
 lnn
 lnn
-lnn
+jLQ
 lnn
 bOa
 bOa
@@ -55670,11 +55718,11 @@ lnn
 dPV
 lnn
 lnn
+jLQ
 lnn
-lnn
 dPV
 dPV
-dPV
+vYN
 lnn
 lnn
 lnn
@@ -55854,7 +55902,7 @@ eUz
 lnn
 lUr
 lnn
-lnn
+jLQ
 lnn
 lnn
 lnn
@@ -56633,7 +56681,7 @@ lnn
 lnn
 lnn
 lnn
-lnn
+jLQ
 lnn
 lnn
 lnn
@@ -70917,7 +70965,7 @@ tXZ
 tXZ
 lLr
 sPC
-jLQ
+sPC
 sPC
 hxJ
 dOB
@@ -70930,7 +70978,7 @@ sPC
 sPC
 sPC
 sPC
-jLQ
+sPC
 sPC
 oNT
 tXZ
@@ -71074,7 +71122,6 @@ tXZ
 tXZ
 lLr
 sPC
-jLQ
 sPC
 sPC
 sPC
@@ -71087,7 +71134,8 @@ sPC
 sPC
 sPC
 sPC
-jLQ
+sPC
+sPC
 sPC
 oNT
 tXZ
