@@ -415,6 +415,7 @@
 				dat += defense_report(H.head, is_stupid, is_normal, is_smart, "THE HEAD I THINK. MAYBE MORE?")
 			else
 				dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+				dat += "<br>---------------------------<br>"
 			
 			dat += "<b><font size = 4; font color = '#dddada'>TORSO</b></font><br>"
 			if(H.wear_armor)
@@ -422,6 +423,7 @@
 				dat += defense_report(H.wear_armor, is_stupid, is_normal, is_smart, "THE CHEST! PROBABLY GROIN TOO?")
 			else
 				dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+				dat += "<br>---------------------------<br>"
 
 			dat += "<b><font size = 4; font color = '#dddada'>PANTS</b></font><br>"
 			if(H.wear_pants)
@@ -429,6 +431,7 @@
 				dat += defense_report(H.wear_pants, is_stupid, is_normal, is_smart, "THE IMPORTANT PARTS! LEGS AS WELL, I THINK.")
 			else
 				dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+				dat += "<br>---------------------------<br>"
 
 			//Extra stuff you can assess if you match the thresholds. (Neck, gloves, shirt and shoes)
 			if((is_normal || is_smart) && !is_stupid)
@@ -438,6 +441,7 @@
 					dat += defense_report(H.wear_neck, is_stupid, is_normal, is_smart, "I shouldn't be seeing this.")
 				else
 					dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+					dat += "<br>---------------------------<br>"
 
 				dat += "<b><font size = 4; font color = '#dddada'>GLOVES</b></font><br>"
 				if(H.gloves)
@@ -445,6 +449,7 @@
 					dat += defense_report(H.gloves, is_stupid, is_normal, is_smart, "I shouldn't be seeing this.")
 				else
 					dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+					dat += "<br>---------------------------<br>"
 
 				dat += "<b><font size = 4; font color = '#dddada'>SHIRT</b></font><br>"
 				if(H.wear_shirt)
@@ -452,13 +457,14 @@
 					dat += defense_report(H.wear_shirt, is_stupid, is_normal, is_smart, "I shouldn't be seeing this.")
 				else
 					dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
+					dat += "<br>---------------------------<br>"
 
 				dat += "<b><font size = 4; font color = '#dddada'>SHOES</b></font><br>"
 				if(H.shoes)
 					dat += capitalize("[H.shoes.name]<br>")
 					dat += defense_report(H.shoes, is_stupid, is_normal, is_smart, "I shouldn't be seeing this.")
 				else
-					dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"					
+					dat += "<font color = '#8b1616'<b>NOTHING</b></font> <br>"
 
 			
 			dat += "</td>"
@@ -516,3 +522,120 @@
 			return
 		return
 	return ..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that. - I made it worse sorry guys.
+
+//Sorry colorblind folks...
+/proc/colorgrade_rating(input, rating, elaborate = FALSE)
+	var/str
+	switch(rating)
+		if(0)
+			var/color = "#f81a1a"
+			str = elaborate ? "<font color = '[color]'>[input] (F)</font>" : "<font color = '[color]'>[input] (F)</font>"
+		if(10 to 19)
+			var/color = "#680d0d"
+			str = elaborate ? "<font color = '[color]'>[input] (D)</font>" : "<font color = '[color]'>[input] (D)</font>"
+		if(20 to 39)
+			var/color = "#753e11"
+			str = elaborate ? "<font color = '[color]'>[input] (D+)</font>" : "<font color = '[color]'>[input] (D+)</font>"
+		if(40 to 49)
+			var/color = "#c0a739"
+			str = elaborate ? "<font color = '[color]'>[input] (C)</font>" : "<font color = '[color] (C to C+)'>[input]</font>"
+		if(50 to 59)
+			var/color = "#e3e63c"
+			str = elaborate ? "<font color = '[color]'>[input] (C+)</font>" : "<font color = '[color]'>[input] (C to C+)</font>"
+		if(60 to 69)
+			var/color = "#425c33"
+			str = elaborate ? "<font color = '[color]'>[input] (B)</font>" : "<font color = '[color]'>[input] (B to B+)</font>"
+		if(70 to 79)
+			var/color = "#1a9c00"
+			str = elaborate ? "<font color = '[color]'>[input] (B+)</font>" : "<font color = '[color]'>[input] (B to B+)</font>"
+		if(80 to 89)
+			var/color = "#0fe021"
+			str = elaborate ? "<font color = '[color]'>[input] (A)</font>" : "<font color = '[color]'>[input] (A to A+)</font>"
+		if(90 to 99)
+			var/color = "#ffffff"
+			str = elaborate ? "<font color = '[color]'>[input] (A+)</font>" : "<font color = '[color]'>[input] (A to A+)</font>"
+		if(100)
+			var/color = "#339dff"
+			str = elaborate ? "<font color = '[color]'>[input] (S)</font>" : "<font color = '[color]'>[input] (S)</font>"
+		else
+			str = "[input] (Above 100 or under 0! Contact coders.)"
+	return str
+
+/proc/defense_report(var/obj/item/clothing/C, var/stupid, var/normal, var/smart, var/stupid_string)
+	var/list/str = list()
+	if(C.armor)
+		var/defense = "<u><b>ABSORPTION: </b></u><br>"
+		var/datum/armor/def_armor = C.armor
+		defense += "[colorgrade_rating("BLUNT", def_armor.blunt, smart)] | "
+		defense += "[colorgrade_rating("SLASH", def_armor.slash, smart)] | "
+		defense += "[colorgrade_rating("STAB", def_armor.stab, smart)] | "
+		defense += "[colorgrade_rating("PIERCING", def_armor.piercing, smart)] "
+		str += "[defense]<br>"
+
+	var/coverage = "<u><b>COVERS: </b></u><br>"
+	if(!stupid)
+		coverage += "<font color = '#cccccc'> | </font>"
+		for(var/zone in body_parts_covered2organ_names(C.body_parts_covered))
+			coverage += "<font color = '#cccccc'><b>[zone] | </b></font>"
+		str += "[coverage]<br>"
+	else
+		str += coverage
+		str += stupid_string
+	if(normal || smart)
+		var/list/critclasses = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_SMASH, BCLASS_PICK)
+		var/crits
+		if(C.prevent_crits || smart)
+			crits = "<b><u>PREVENTS CRITS: </u></b>"
+		if(C.prevent_crits)
+			crits += "<br>"
+			crits += "<font color = '#69a1a8'>| </font>"
+			for(var/zone in C.prevent_crits)
+				for(var/crit in critclasses)
+					if(zone == crit)
+						if(zone == BCLASS_PICK)
+							zone = "pick"		//Pick is labelled as 'Stab'
+						zone = "<font color = '#69a1a8'>[capitalize(zone)] | </font>"
+						crits += zone
+						LAZYREMOVE(critclasses, crit)
+						continue
+		if(smart)
+			crits += "<br>"
+			crits += "<font color = '#a35252'>| </font>"
+			for(var/crit in critclasses)
+				if(crit == BCLASS_PICK)
+					crit = "pick"		//Pick is labelled as 'Stab', this prevents confusion
+				crit = "<font color = '#a35252'>[capitalize(crit)] | </font>"
+				crits += crit
+
+		str += crits
+	str += "<br>---------------------------<br>"
+	return str
+
+/proc/skilldiff_report(var/input)
+	switch (input)
+		if(-6)
+			return "<font color = '#ff4ad2'>I know nothing. They -- everything.</font>"
+		if(-5)
+			return "<font color = '#eb0000'<i>I stand no chance against them.</i></font>"
+		if(-4)
+			return "<font color = '#c53c3c'<i>I am inferior.</i></font>"
+		if(-3)
+			return "<font color = '#db8484'<i>I am notably worse.</i></font>"
+		if(-2)
+			return "<font color = '#e4a1a1'<i>I am worse.</i></font>"
+		if(-1)
+			return "<font color = '#f8d3d3'<i>I am slightly worse.</i></font>"
+		if(0)
+			return "We are equal."
+		if(1)
+			return "<font color = '#3f6343'> I am slightly better.</font>"
+		if(2)
+			return "<font color = '#49944f'> I am better.</font>"
+		if(3)
+			return "<font color = '#44db51'> I am notably better.</font>"
+		if(4)
+			return"<font color = '#62b4be'> I am superior.</font>"
+		if(5)
+			return "<font color = '#2bdcfc'> They have no chance in this field.</font>"
+		if(6)
+			return "<font color = '#ff4ad2'> They know nothing. A whelp.</font>"
