@@ -1,8 +1,6 @@
-//Rain - goes down
-/particles/weather/rain
-	icon = 'icons/effects/particles/generic_particles.dmi'
-	icon_state             = "snow"
-	color                  = "#b2eded"
+/particles/weather/blood_rain
+	icon_state             = "drop"
+	color                  = "#ff0000"
 	position               = generator("box", list(-500,-256,0), list(400,500,0))
 	grow			       = list(-0.01,-0.01)
 	gravity                = list(0, -10, 0.5)
@@ -15,15 +13,15 @@
 	wind                   = 2
 	spin                   = 0 // explicitly set spin to 0 - there is a bug that seems to carry generators over from old particle effects
 
-/datum/particle_weather/rain_gentle
-	name = "Hail"
+
+/datum/particle_weather/blood_rain_gentle
+	name = "Rain"
 	desc = "Gentle Rain, la la description."
-	particleEffectType = /particles/weather/rain
+	particleEffectType = /particles/weather/blood_rain
 
 	scale_vol_with_severity = TRUE
-	weather_sounds = list(/datum/looping_sound/snow)
+	weather_sounds = list(/datum/looping_sound/rain)
 	indoor_weather_sounds = list(/datum/looping_sound/indoor_rain)
-	weather_messages = list("The hail pricks your skin.", "The storm is really picking up!")
 
 	minSeverity = 1
 	maxSeverity = 15
@@ -31,36 +29,30 @@
 	severitySteps = 5
 	immunity_type = TRAIT_RAINSTORM_IMMUNE
 	probability = 1
-	target_trait = PARTICLEWEATHER_SNOW
+	target_trait = PARTICLEWEATHER_BLOODRAIN
 
-//Makes you a little chilly
-/datum/particle_weather/rain_gentle/weather_act(mob/living/L)
-	L.adjust_bodytemperature(-rand(5,10))
+/datum/particle_weather/blood_rain_gentle/weather_act(mob/living/L)
 	L.adjust_fire_stacks(-100)
 	L.SoakMob(FULL_BODY)
-	L.apply_status_effect(/datum/status_effect/buff/frostbite5e)
 
-/datum/particle_weather/rain_storm
-	name = "Rail Storm"
-	desc = "Snow Storm"
-	particleEffectType = /particles/weather/rain
+/datum/particle_weather/blood_rain_storm
+	name = "Rain"
+	desc = "Gentle Rain, la la description."
+	particleEffectType = /particles/weather/blood_rain
 
 	scale_vol_with_severity = TRUE
-	weather_sounds = list(/datum/looping_sound/snow)
+	weather_sounds = list(/datum/looping_sound/storm)
 	indoor_weather_sounds = list(/datum/looping_sound/indoor_rain)
-	weather_messages = list("The hail hurts a little.", "The storm is really picking up!")
 
 	minSeverity = 4
 	maxSeverity = 100
 	maxSeverityChange = 50
 	severitySteps = 50
-	immunity_type = TRAIT_SNOWSTORM_IMMUNE
+	immunity_type = TRAIT_RAINSTORM_IMMUNE
 	probability = 1
-	target_trait = PARTICLEWEATHER_SNOW
+	target_trait = PARTICLEWEATHER_BLOODRAIN
 
 //Makes you a bit chilly
-/datum/particle_weather/rain_storm/weather_act(mob/living/L)
-	L.adjust_bodytemperature(-rand(5,10))
+/datum/particle_weather/blood_rain_storm/weather_act(mob/living/L)
 	L.adjust_fire_stacks(-100)
 	L.SoakMob(FULL_BODY)
-	L.apply_status_effect(/datum/status_effect/buff/frostbite5e)

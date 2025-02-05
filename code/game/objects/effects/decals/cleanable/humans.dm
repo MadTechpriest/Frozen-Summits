@@ -31,24 +31,8 @@
 	var/wash_precent = 0
 	COOLDOWN_DECLARE(wash_cooldown)
 
-/obj/effect/decal/cleanable/blood/attack_hand(mob/living/user)
-	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		to_chat(H, "<span class='notice'>I get my hands bloody.</span>")
-		H.bloody_hands++
-		H.update_inv_gloves()
-
-/obj/effect/decal/cleanable/blood/weather_act_on(weather_trait, severity)
-	if(weather_trait != PARTICLEWEATHER_RAIN || !COOLDOWN_FINISHED(src, wash_cooldown))
-		return
-	wash_precent += min(10, severity / 4)
-	alpha = 255 *((100 - wash_precent) * 0.01)
-	if(wash_precent >= 100)
-		qdel(src)
-	COOLDOWN_START(src, wash_cooldown, 15 SECONDS)
-
-/obj/effect/decal/cleanable/blood/Initialize(mapload, list/datum/disease/diseases)
+/obj/effect/decal/cleanable/blood/Initialize(mapload)
+	GLOB.weather_act_upon_list += src
 	. = ..()
 	if(. == INITIALIZE_HINT_QDEL)
 		return .
@@ -73,10 +57,16 @@
 		C.color = initial(color)
 
 /obj/effect/decal/cleanable/blood/Destroy()
+	GLOB.weather_act_upon_list -= src
 	deltimer(blood_timer)
 	blood_timer = null
 	GLOB.weather_act_upon_list -= src
 	return ..()
+
+/obj/effect/decal/cleanable/blood/weather_act_on(weather_trait, severity)
+	if(weather_trait != PARTICLEWEATHER_RAIN)
+		return
+	qdel(src)
 
 /obj/effect/decal/cleanable/blood/old
 	name = "dried blood"
