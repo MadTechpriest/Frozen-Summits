@@ -45,9 +45,12 @@
 			target.cursed_freak_out()
 			return FALSE
 		//this if chain is stupid, replace with variables on /datum/patron when possible?
+
 		switch(user.patron.type)
+
 			if(/datum/patron/old_god)
 				target.visible_message(span_info("A strange stirring feeling pours from [target]!"), span_notice("Sentimental thoughts drive away my pains!"))
+
 			if(/datum/patron/divine/astrata)
 				target.visible_message(span_info("A wreath of gentle light passes over [target]!"), span_notice("I'm bathed in holy light!"))
 				// during the day, heal 1 more (basic as fuck)
@@ -55,11 +58,13 @@
 					conditional_buff = TRUE
 					situational_bonus = 2
 				// Day is 1/4th as long as night. Noc priests get a bonus for four times as long and during peak conflict hours, thus Astratans should have more powerful heals
+
 			if(/datum/patron/divine/noc)
 				target.visible_message(span_info("A shroud of soft moonlight falls upon [target]!"), span_notice("I'm shrouded in gentle moonlight!"))
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
 				if (GLOB.tod == "night")
 					conditional_buff = TRUE
+
 			if(/datum/patron/divine/dendor)
 				target.visible_message(span_info("A rush of primal energy spirals about [target]!"), span_notice("I'm infused with primal energies!"))
 				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
@@ -73,12 +78,14 @@
 				// Healing before the oaken avatar of Silvanus in the Druid Grove (exceptionally rare otherwise) supercharges their healing
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
+
 			if(/datum/patron/divine/abyssor)
 				target.visible_message(span_info("A mist of salt-scented vapour settles on [target]!"), span_notice("I'm invigorated by healing vapours!"))
 				// if our target is standing in water, heal a flat amount extra
 				if (istype(get_turf(target), /turf/open/water))
 					conditional_buff = TRUE
 					situational_bonus = 1.5
+
 			if(/datum/patron/divine/ravox)
 				target.visible_message(span_info("An air of righteous defiance rises near [target]!"), span_notice("I'm filled with an urge to fight on!"))
 				situational_bonus = 0
@@ -86,6 +93,7 @@
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
 					situational_bonus = min(situational_bonus + 0.1, 2)
 				conditional_buff = TRUE
+
 			if(/datum/patron/divine/necra)
 				target.visible_message(span_info("A sense of quiet respite radiates from [target]!"), span_notice("I feel Deaths's gaze turn from me for now!"))
 				if (iscarbon(target))
@@ -94,17 +102,20 @@
 					if (C.health <= (C.maxHealth * 0.25))
 						conditional_buff = TRUE
 						situational_bonus = 2.5
+
 			if(/datum/patron/divine/xylix)
 				target.visible_message(span_info("A fugue seems to manifest briefly across [target]!"), span_notice("My wounds vanish as if they had never been there! "))
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if (prob(50))
 					conditional_buff = TRUE
 					situational_bonus = rand(1, 2.5)
+
 			if(/datum/patron/divine/pestra)
 				target.visible_message(span_info("An aura of clinical care encompasses [target]!"), span_notice("I'm sewn back together by sacred medicine!"))
 				// pestra always heals a little more toxin damage and restores a bit more blood
 				target.adjustToxLoss(-situational_bonus)
 				target.blood_volume += BLOOD_VOLUME_SURVIVE/2
+
 			if(/datum/patron/divine/malum)
 				target.visible_message("<span class='info'>A tempering heat is discharged out of [target]!</span>", "<span class='notice'>I feel the heat of a forge soothing my pains!</span>")
 				var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)
@@ -115,6 +126,7 @@
 						situational_bonus = min(situational_bonus + 0.5, 2.5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
+
 			if(/datum/patron/divine/eora)
 				target.visible_message("<span class='info'>An emanance of love blossoms around [target]!</span>", "<span class='notice'>I'm filled with the restorative warmth of love!</span>")
 				// if they're wearing an eoran bud (or are a pacifist), pretty much double the healing. if we're also wearing a bud at any point or a pacifist from any other source, apply another +15 bonus
@@ -125,6 +137,7 @@
 				if (HAS_TRAIT(user, TRAIT_PACIFISM))
 					conditional_buff = TRUE
 					situational_bonus += 1.5
+
 			if(/datum/patron/inhumen/zizo)
 				target.visible_message(span_info("Vital energies are sapped towards [target]!"), span_notice("The life around me pales as I am restored!"))
 				// set up a ritual pile of bones (or just cast near a stack of bones whatever) around us for massive bonuses, cap at 50 for 75 healing total (wowie)
@@ -136,6 +149,7 @@
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
 					situational_bonus = min(situational_bonus, 5)
+
 			if(/datum/patron/inhumen/graggar)
 				target.visible_message(span_info("Foul fumes billow outward as [target] is restored!"), span_notice("A noxious scent burns my nostrils, but I feel better!"))
 				// if you've got lingering toxin damage, you get healed more, but your bonus healing doesn't affect toxin
@@ -144,12 +158,14 @@
 					conditional_buff = TRUE
 					situational_bonus = 2.5
 					target.adjustToxLoss(situational_bonus) // remember we do a global toxloss adjust down below so this is okay
+
 			if(/datum/patron/inhumen/matthios)
 				target.visible_message(span_info("A wreath of... strange light passes over [target]?"), span_notice("I'm bathed in a... strange holy light?"))
 				// COMRADES! WE MUST BAND TOGETHER!
 				if (HAS_TRAIT(target, TRAIT_COMMIE))
 					conditional_buff = TRUE
 					situational_bonus = 2.5
+
 			if(/datum/patron/inhumen/baotha)
 				target.visible_message(span_info("Hedonistic impulses and emotions throb all about from [target]."), span_notice("An intoxicating rush of narcotic delight wipes away my pains!"))
 				// i wanted to do something with pain here but it doesn't seem like pain is actually parameterized anywhere so... better necra it is - if they're below 50% health, they get 25 extra healing
@@ -158,6 +174,7 @@
 					if (C.health <= (C.maxHealth * 0.5))
 						conditional_buff = TRUE
 						situational_bonus = 2.5
+
 			if(/datum/patron/godless)
 				target.visible_message(span_info("Without any particular cause or reason, [target] is healed!"), span_notice("My wounds close without cause."))
 
