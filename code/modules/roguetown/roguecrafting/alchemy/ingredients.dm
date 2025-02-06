@@ -97,11 +97,25 @@
 	med_pot = /datum/alch_cauldron_recipe/big_mana_potion
 	minor_pot = /datum/alch_cauldron_recipe/per_potion
 
+/obj/item/alch/rocksalt
+	name = "rock salt"
+	icon_state = "whitepowder"
+	major_pot = /datum/alch_cauldron_recipe/end_potion
+	med_pot = /datum/alch_cauldron_recipe/disease_cure
+	minor_pot = /datum/alch_cauldron_recipe/big_stamina_potion
+
 /obj/item/alch/coaldust
 	name = "coal dust"
 	icon_state = "coaldust"
 	major_pot = /datum/alch_cauldron_recipe/antidote
 	med_pot = /datum/alch_cauldron_recipe/end_potion
+	minor_pot = /datum/alch_cauldron_recipe/str_potion
+
+/obj/item/alch/copperdust
+	name = "copper dust"
+	icon_state = "copperdust"
+	major_pot = /datum/alch_cauldron_recipe/health_potion
+	med_pot = /datum/alch_cauldron_recipe/spd_potion
 	minor_pot = /datum/alch_cauldron_recipe/str_potion
 
 /obj/item/alch/silverdust
@@ -225,6 +239,71 @@
 	major_pot = /datum/alch_cauldron_recipe/gender_potion
 	med_pot = /datum/alch_cauldron_recipe/gender_potion
 	minor_pot = /datum/alch_cauldron_recipe/gender_potion
+
+//BEGIN THE GEMS
+
+/obj/item/alch/gred
+	name = "ruby dust"
+	desc = "A vibrant red powder, crushed finely."
+	icon_state = "rubydust"
+
+	major_pot = /datum/alch_cauldron_recipe/per_potion
+	med_pot = /datum/alch_cauldron_recipe/str_potion
+	minor_pot = /datum/alch_cauldron_recipe/big_health_potion
+
+/obj/item/alch/ggreen
+	name = "emerald dust"
+	desc = "A vibrant green powder, crushed finely."
+	icon_state = "emeralddust"
+
+	major_pot = /datum/alch_cauldron_recipe/con_potion
+	med_pot = /datum/alch_cauldron_recipe/lck_potion
+	minor_pot = /datum/alch_cauldron_recipe/big_health_potion
+
+/obj/item/alch/gblue
+	name = "quartz dust"
+	desc = "A vibrant pale blue-ish powder, crushed finely."
+	icon_state = "quartzdust"
+
+	major_pot = /datum/alch_cauldron_recipe/disease_cure
+	med_pot = /datum/alch_cauldron_recipe/antidote
+	minor_pot = /datum/alch_cauldron_recipe/int_potion
+
+/obj/item/alch/gyellow
+	name = "topaz dust"
+	desc = "A vibrant yellow powder, crushed finely."
+	icon_state = "topazdust"
+
+	major_pot = /datum/alch_cauldron_recipe/lck_potion
+	med_pot = /datum/alch_cauldron_recipe/big_health_potion
+	minor_pot = /datum/alch_cauldron_recipe/con_potion
+
+/obj/item/alch/gviolet
+	name = "sapphire dust"
+	desc = "A vibrant blue powder, crushed finely."
+	icon_state = "sapphiredust"
+
+	major_pot = /datum/alch_cauldron_recipe/int_potion
+	med_pot = /datum/alch_cauldron_recipe/con_potion
+	minor_pot = /datum/alch_cauldron_recipe/lck_potion
+
+/obj/item/alch/gamethyst
+	name = "amethyst dust"
+	desc = "A vibrant purple powder, crushed finely."
+	icon_state = "amethystdust"
+
+	major_pot = /datum/alch_cauldron_recipe/mana_potion
+	med_pot = /datum/alch_cauldron_recipe/int_potion
+	minor_pot = /datum/alch_cauldron_recipe/health_potion
+
+/obj/item/alch/gdiamond
+	name = "diamond dust"
+	desc = "A vibrant clear powder, crushed finely."
+	icon_state = "diamonddust"
+
+	major_pot = /datum/alch_cauldron_recipe/str_potion
+	med_pot = /datum/alch_cauldron_recipe/lck_potion
+	minor_pot = /datum/alch_cauldron_recipe/end_potion
 
 //BEGIN THE HERBS
 

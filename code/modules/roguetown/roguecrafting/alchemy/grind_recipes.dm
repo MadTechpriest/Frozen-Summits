@@ -4,6 +4,21 @@
 	var/list/valid_outputs = list() //List of [Itempath = amnt?1] to be created always
 	var/list/bonus_chance_outputs = list() //List of [Itempath = chance/100] to create sometimes.
 
+/datum/alch_grind_recipe/meat //More chance at extra Sinew
+	valid_input = /obj/item/reagent_containers/food/snacks/rogue/meat/steak
+	valid_outputs = list(/obj/item/alch/sinew = 1)
+	bonus_chance_outputs = list(/obj/item/alch/sinew = 50,/obj/item/alch/viscera = 25)
+
+/datum/alch_grind_recipe/chickencutlet //More chance at extra Viscera
+	valid_input = /obj/item/reagent_containers/food/snacks/rogue/meat/poultry/cutlet
+	valid_outputs = list(/obj/item/alch/sinew = 1)
+	bonus_chance_outputs = list(/obj/item/alch/sinew = 25,/obj/item/alch/viscera = 50)
+
+/datum/alch_grind_recipe/fishmince //Chance at intact tail bone
+	valid_input = /obj/item/reagent_containers/food/snacks/rogue/meat/mince/fish
+	valid_outputs = list(/obj/item/alch/viscera = 1)
+	bonus_chance_outputs = list(/obj/item/alch/sinew = 25,/obj/item/alch/bone = 50)
+
 /datum/alch_grind_recipe/sinew
 	valid_input = /obj/item/alch/sinew
 	valid_outputs = list(/obj/item/alch/viscera = 1)
@@ -36,10 +51,15 @@
 	bonus_chance_outputs = list(/obj/item/alch/runedust = 33)
 
 //Objects -> dusts
-/datum/alch_grind_recipe/crow
+/datum/alch_grind_recipe/crow //Dunno who was high enough to make a wild animal only give airdust when grinded, but I fixed it. - Blue
 	valid_input = /obj/item/reagent_containers/food/snacks/crow
-	valid_outputs = list(/obj/item/alch/airdust = 1)
-	bonus_chance_outputs = list(/obj/item/alch/airdust = 33)
+	valid_outputs = list(/obj/item/alch/viscera = 1)
+	bonus_chance_outputs = list(/obj/item/alch/airdust = 33,/obj/item/alch/sinew = 25)
+
+/datum/alch_grind_recipe/nbone
+	valid_input = /obj/item/natural/bone
+	valid_outputs = list( /obj/item/alch/bonemeal = 2)
+	bonus_chance_outputs = list(/obj/item/alch/bonemeal = 50)
 
 /datum/alch_grind_recipe/bone
 	valid_input = /obj/item/alch/bone
@@ -119,10 +139,20 @@
 	valid_outputs = list(/obj/item/alch/irondust = 1)
 	bonus_chance_outputs = list(/obj/item/alch/irondust = 33)
 
+/datum/alch_grind_recipe/copper_ore
+	valid_input = /obj/item/rogueore/copper
+	valid_outputs = list(/obj/item/alch/copperdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/copperdust = 33)
+
 /datum/alch_grind_recipe/coal_ore
 	valid_input = /obj/item/rogueore/coal
 	valid_outputs = list(/obj/item/alch/coaldust = 1)
 	bonus_chance_outputs = list(/obj/item/alch/coaldust = 33)
+
+/datum/alch_grind_recipe/nrock
+	valid_input = /obj/item/natural/stone
+	valid_outputs = list(/obj/item/alch/rocksalt = 1)
+	bonus_chance_outputs = list(/obj/item/alch/rocksalt = 20)
 
 /datum/alch_grind_recipe/gold_bar
 	valid_input = /obj/item/ingot/gold
@@ -138,6 +168,43 @@
 	valid_input = /obj/item/ingot/iron
 	valid_outputs = list(/obj/item/alch/irondust = 1)
 	bonus_chance_outputs = list(/obj/item/alch/irondust = 33)
+
+//Gems -> Powder
+
+/datum/alch_grind_recipe/ruby
+	valid_input = /obj/item/roguegem
+	valid_outputs = list(/obj/item/alch/gred = 1,/obj/item/alch/firedust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gred = 50,/obj/item/alch/firedust = 25)
+
+/datum/alch_grind_recipe/emerald
+	valid_input = /obj/item/roguegem/green
+	valid_outputs = list(/obj/item/alch/ggreen = 1,/obj/item/alch/earthdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/ggreen = 50,/obj/item/alch/earthdust = 25)
+
+/datum/alch_grind_recipe/quartz
+	valid_input = /obj/item/roguegem/blue
+	valid_outputs = list(/obj/item/alch/gblue = 1,/obj/item/alch/magicdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gblue = 50,/obj/item/alch/magicdust = 25)
+
+/datum/alch_grind_recipe/topaz
+	valid_input = /obj/item/roguegem/yellow
+	valid_outputs = list(/obj/item/alch/gyellow = 1,/obj/item/alch/airdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gyellow = 50,/obj/item/alch/airdust = 25)
+
+/datum/alch_grind_recipe/sapphire
+	valid_input = /obj/item/roguegem/violet
+	valid_outputs = list(/obj/item/alch/gviolet = 1,/obj/item/alch/waterdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gviolet = 50,/obj/item/alch/waterdust = 25)
+
+/datum/alch_grind_recipe/amethyst
+	valid_input = /obj/item/roguegem/amethyst
+	valid_outputs = list(/obj/item/alch/gamethyst = 1,/obj/item/alch/magicdust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gamethyst = 50,/obj/item/alch/transisdust = 25)
+
+/datum/alch_grind_recipe/diamond
+	valid_input = /obj/item/roguegem/diamond
+	valid_outputs = list(/obj/item/alch/gdiamond = 1,/obj/item/alch/feaudust = 1)
+	bonus_chance_outputs = list(/obj/item/alch/gdiamond = 50,/obj/item/alch/feaudust = 25)
 
 //Herb -> Herbseed
 /datum/alch_grind_recipe/atropa_seed
