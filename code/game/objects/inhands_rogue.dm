@@ -1,6 +1,6 @@
 /obj/item
 	/// A lazylist to store inhands data.
-	sellprice = 5
+	sellprice = 5 // Default to 0 (unset)
 	var/list/onprop
 	var/d_type = "blunt"
 //#ifdef TESTSERVER
@@ -13,6 +13,7 @@
 //#else
 //	var/force_reupdate_inhand = FALSE
 //#endif
+
 
 // Initalize addon for the var for custom inhands 32x32.
 /obj/item/Initialize()

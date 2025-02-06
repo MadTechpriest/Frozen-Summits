@@ -361,6 +361,7 @@
 	name = "archery bracers (x2){fl}"
 	result = list(/obj/item/clothing/wrists/roguetown/bracers/leather/khudagach,
 			/obj/item/clothing/wrists/roguetown/bracers/leather/khudagach)
+	reqs = list(/obj/item/natural/hide = 2)
 
 /datum/crafting_recipe/roguetown/leather/furtobi
 	name = "leather pants {fl}"
