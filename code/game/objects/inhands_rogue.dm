@@ -1,6 +1,6 @@
 /obj/item
 	/// A lazylist to store inhands data.
-	sellprice = 10
+	sellprice = 5
 	var/list/onprop
 	var/d_type = "blunt"
 //#ifdef TESTSERVER

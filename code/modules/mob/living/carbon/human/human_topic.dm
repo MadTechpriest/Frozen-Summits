@@ -362,7 +362,7 @@
 		if(!ishuman(src))
 			return
 		var/mob/living/carbon/human/H = src
-		var/mob/user = usr
+		var/mob/living/user = usr
 		user.visible_message("[user] begins assessing [src].")
 		if(do_mob(user, src, (40 - (user.STAINT - 10) - (user.STAPER - 10) - user.mind?.get_skill_level(/datum/skill/misc/reading)), double_progress = TRUE))
 			var/is_guarded = HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS)	//Will scramble Stats and prevent skills from being shown
@@ -566,7 +566,6 @@
 		defense += "[colorgrade_rating("BLUNT", def_armor.blunt, smart)] | "
 		defense += "[colorgrade_rating("SLASH", def_armor.slash, smart)] | "
 		defense += "[colorgrade_rating("STAB", def_armor.stab, smart)] | "
-		defense += "[colorgrade_rating("PIERCING", def_armor.piercing, smart)] "
 		str += "[defense]<br>"
 
 	var/coverage = "<u><b>COVERS: </b></u><br>"
@@ -636,5 +635,3 @@
 			return "<font color = '#2bdcfc'> They have no chance in this field.</font>"
 		if(6)
 			return "<font color = '#ff4ad2'> They know nothing. A whelp.</font>"
-
-	return ..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that.
