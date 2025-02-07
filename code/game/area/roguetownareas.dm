@@ -182,6 +182,24 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = 'sound/ambience/citynight.ogg'
 	converted_type = /area/rogue/indoors/shelter/rtfield
 
+/area/rogue/outdoors/crags
+	name = "crags"
+	icon_state = "rtfield"
+	soundenv = 19
+	ambush_times = list("night")
+	ambush_types = list(
+				/turf/open/floor/rogue/dirt,
+				/turf/open/floor/rogue/grass)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 30,
+				/mob/living/carbon/human/species/skeleton/npc/ambush = 50)
+	first_time_text = "The Mountainous Crags"
+	droning_sound = 'sound/ambience/d&d_mountain_01.ogg'
+	droning_sound_dusk = 'sound/ambience/d&d_mountain_02.ogg'
+	droning_sound_night = 'sound/ambience/d&d_mountain_01.ogg'
+	converted_type = /area/rogue/indoors/shelter/rtfield
+
+
 /area/rogue/indoors/shelter/rtfield
 	icon_state = "rtfield"
 	droning_sound = 'sound/ambience/cityday.ogg'

@@ -98,7 +98,7 @@
 /datum/quirk/nosey
 	name = "(Flavor/Combat) Nosey"
 	desc = "I can grab people by their nose!"
-	value = 3
+	value = 4
 
 /datum/quirk/nosey/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -126,7 +126,7 @@
 /datum/quirk/good_trainer
 	name = "(Weapons/Skills) Good Trainer"
 	desc = "I am good at training people in combat, if they parry my attacks or attack me with their desired weapon they will learn faster than others."
-	value = 0
+	value = 4
 
 /datum/quirk/good_trainer/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -164,7 +164,7 @@
 /datum/quirk/immune_eletricity
 	name = "(Virtue) Shock Immunity"
 	desc = "Due to my blood heritage, fey magic, or elemental prowess, i am immune to a degree to shocks."
-	value = 15
+	value = 10
 
 /datum/quirk/immune_eletricity/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -185,7 +185,7 @@
 /datum/quirk/pugilist
 	name = "(Combat) Pugilist"
 	desc = "I am good at punching people."
-	value = 2
+	value = 3
 
 /datum/quirk/pugilist/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder

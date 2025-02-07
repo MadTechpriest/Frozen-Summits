@@ -157,6 +157,12 @@
 		if (prob(10))
 			owner.adjustToxLoss(0.02)
 
+/obj/item/organ/eyes/night_vision/zombie/red
+	name = "undead eyes"
+	desc = ""
+	eye_color ="#cc2929"
+
+
 /obj/item/organ/eyes/night_vision/werewolf
 	name = "moonlight eyes"
 	desc = ""

@@ -124,21 +124,28 @@
 
 
 
+/datum/quirk/undeadeyes_red
+	name = "(Organs) Cursed Eyes (Red Eyes)"
+	desc = "I can easily see in the dark with my undead eyes."
+	value = 4
+
+/datum/quirk/undeadeyes_red/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/organ/eyes/eyes = H.getorganslot(ORGAN_SLOT_EYES)
+	if(eyes)
+		eyes.Remove(H,1)
+		QDEL_NULL(eyes)
+	eyes = new /obj/item/organ/eyes/night_vision/zombie/red
+	eyes.Insert(H)
+	ADD_TRAIT(H, TRAIT_NOCSIGHT, TRAIT_GENERIC)
+
 
 
 
 
 
 //-----------------------------------
-/datum/quirk/thickskin
-	name = "(Combat) Tough"
-	desc = "I feel it. Thick Skin. Dense Flesh. Durable Bones. I'm a punch-taking machine."
-	value = 3
 
-/datum/quirk/thickskin/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	ADD_TRAIT(H, TRAIT_BREADY, TRAIT_GENERIC)
-	H.change_stat("constitution", 2)
 
 /datum/quirk/curseofcain
 	name = "(Virtue) Flawed Immortality"
@@ -154,7 +161,7 @@
 /datum/quirk/deadened
 	name = "(Virtue) Deadened"
 	desc = "Ever since <b>it</b> happened, I've never been able to feel anything. Inside or out."
-	value = 2
+	value = 0
 
 /datum/quirk/deadened/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -191,7 +198,7 @@
 /datum/quirk/duelist
 	name = "(Weapons/Skills) Sword Training"
 	desc = "I sword training and stashed a short sword."
-	value = 2
+	value = 1
 
 /datum/quirk/duelist/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -201,7 +208,7 @@
 /datum/quirk/fence
 	name = "(Weapons/Skills) Fencer"
 	desc = "I have trained in agile sword fighting. I dodge more easily and have stashed my rapier nearby"
-	value = 4
+	value = 3
 
 /datum/quirk/fence/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -212,7 +219,7 @@
 /datum/quirk/training2
 	name = "(Weapons/Skills) Mace Training"
 	desc = "I have mace training and stashed a mace."
-	value = 2
+	value = 1
 
 /datum/quirk/training2/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -222,7 +229,7 @@
 /datum/quirk/training4
 	name = "(Weapons/Skills) Polearms Training"
 	desc = "I have polearm training and stashed a spear."
-	value = 2
+	value = 1
 
 /datum/quirk/training4/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -232,7 +239,7 @@
 /datum/quirk/training5
 	name = "(Weapons/Skills) Knife Training"
 	desc = "I have knife training and stashed a dagger."
-	value = 2
+	value = 1
 
 /datum/quirk/training5/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -242,7 +249,7 @@
 /datum/quirk/training6
 	name = "(Weapons/Skills) Axe Training"
 	desc = "I have axe training, including woodchopping. and stashed a hatchet"
-	value = 2
+	value = 1
 
 /datum/quirk/training6/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -263,13 +270,13 @@
 
 /datum/quirk/training9
 	name = "(Weapons/Skills) Unarmed Training"
-	desc = "I have journeyman unarmed training and stashed a katar."
+	desc = "I have unarmed training and stashed a katar."
 	value = 2
 
 /datum/quirk/training9/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.mind.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 3, TRUE)
-	H.mind.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 3, TRUE)
+	H.mind.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 2, TRUE)
+	H.mind.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 2, TRUE)
 	H.mind.special_items["Katar"] = /obj/item/rogueweapon/katar
 
 /datum/quirk/greenthumb
@@ -304,7 +311,7 @@
 /datum/quirk/training10/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.mind.adjust_skillrank_up_to(/datum/skill/combat/bows, 3, TRUE)
-	H.mind.special_items["Bow"] = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow
+	H.mind.special_items["Bow"] = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 	H.mind.special_items["Quiver"] = /obj/item/quiver/arrows
 
 /datum/quirk/mule
@@ -342,7 +349,7 @@
 /datum/quirk/pineapple
 	name = "(Weapons/Skills)No safeword."
 	desc = "I enjoy whipping people until they squirm and whine, I am skilled at using whips, and have a hidden one somewhere."
-	value = 4
+	value = 3
 
 /datum/quirk/pineapple/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -372,7 +379,7 @@
 /datum/quirk/thief
 	name = "(Skills) Thief"
 	desc = "Life's not easy around here, but I've made mine a little easier by taking things of others. I am a great at picking pockets."
-	value = 3
+	value = 2
 
 /datum/quirk/thief/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -381,7 +388,7 @@
 /datum/quirk/languagesavant
 	name = "(Language) Polyglot"
 	desc = "I have always picked up on languages easily."
-	value = 3
+	value = 4
 
 /datum/quirk/languagesavant/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -438,7 +445,7 @@
 /datum/quirk/mastersmith
 	name = "(Skills) Practiced Smith"
 	desc = "I am a metalworker by trade, and I have the tools for my practice stashed away." //play a proper smith if you want starting smith gear.
-	value = 1 // Armor-making. Weapon-making. Everyone wants the gamer gear.
+	value = 3 // Armor-making. Weapon-making. Everyone wants the gamer gear.
 
 /datum/quirk/mastersmith/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -487,7 +494,7 @@
 /datum/quirk/gourmand
 	name = "(Virtue) Gourmand"
 	desc = "I can eat even the most spoiled, raw, or toxic food and water as if they were delicacies. I'm even immune to the berry poison some folk like to coat their arrows with."
-	value = 3
+	value = 2
 
 /datum/quirk/gourmand/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -507,11 +514,25 @@
 	H.transform = H.transform.Translate(0, (1.1))
 	H.update_transform()
 
+datum/quirk/backproblems_2
+	name = "(Virtue) Giant (Extra)"
+	desc = "I've always been called a giant (atleast among my kin). I am valued for my stature, but, this world made for smaller folk has forced me to move cautiously."
+	value = 0
+
+/datum/quirk/backproblems_2/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.change_stat("strength", 3)
+	H.change_stat("constitution", 2)
+	H.change_stat("speed", -2)
+	H.transform = H.transform.Scale(1.25, 1.25)
+	H.transform = H.transform.Translate(0, (1.1))
+	H.update_transform()
+
 //negative
 /datum/quirk/nimrod
 	name = "(Flaw) Nimrod"
 	desc = "In the past I learned slower than my peers, and I tend to be clumsy."
-	value = -7
+	value = -8
 
 /datum/quirk/nimrod/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -521,7 +542,7 @@
 /datum/quirk/nopouch
 	name = "(Flaw) No Pouch"
 	desc = "I lost my pouch recently, I'm without a zenny.."
-	value = -4
+	value = -5
 
 /datum/quirk/nopouch/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -537,7 +558,7 @@
 /datum/quirk/hussite
 	name = "(Flaw) Cursed"
 	desc = "You are unabled to be healed by faithfuls due to a curse from a demon, fae or other entity, and people know you are cursed."
-	value = -8
+	value = -10
 
 /datum/quirk/hussite/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -546,7 +567,7 @@
 /datum/quirk/bounty
 	name = "(Flaw) Hunted Man"
 	desc = "Someone put a bounty on my head!"
-	value = -4
+	value = -8
 
 /datum/quirk/bounty/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -586,7 +607,7 @@
 /datum/quirk/outlaw
 	name = "(Flaw) Known Outlaw"
 	desc = "Whether for crimes I did or was accused of, I have been declared an outlaw!"
-	value = -4
+	value = -8
 
 /datum/quirk/outlaw/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -605,7 +626,7 @@
 /datum/quirk/unlucky
 	name = "(Flaw) Unlucky"
 	desc = "Ever since you knocked over that glass vase, you just feel... off"
-	value = -6
+	value = -8
 
 /datum/quirk/unlucky/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -633,7 +654,7 @@
 /datum/quirk/wild_night
 	name = "(Flaw) Wild Night"
 	desc = "I don't remember what I did last night, and now I'm lost!"
-	value = -4
+	value = -8
 
 /datum/quirk/wild_night/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -836,19 +857,29 @@
 	H.mind.special_items["Heirloom Magical Book"] = /obj/item/book/granter/spellbook
 
 
-/datum/quirk/cleric
-	name = "(Spells) Clerical Potential"
-	desc = "One of the gods favor you and has given you holy potential. (Do not pick this if you join a role with faith power, it is buggy.)"
+/datum/quirk/paladin
+	name = "(Faith) Paladin Potential"
+	desc = "One of the gods favor you and has given you holy potential of a paladin, you have a special ability if you are from the main non-evil pantheon. (Do not pick this if you join a role with faith power, it is buggy.)"
 	value = 3
 
-/datum/quirk/cleric/on_spawn()
+/datum/quirk/paladin/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	H.mind.adjust_skillrank_up_to((/datum/skill/magic/holy), 2, TRUE)
 	C.grant_spells_templar(H)
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
 
+/datum/quirk/novitae
+	name = "(Faith) Neophyte of the Faith"
+	desc = "One of the gods favor you and has given you holy potential of a neophyte, you are not as skilled as other people. (Do not pick this if you join a role with faith power or the other quirk. It is buggy)"
+	value = 1
 
+/datum/quirk/novitae/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/devotion/C = new /datum/devotion(H, H.patron)
+	H.mind.adjust_skillrank_up_to((/datum/skill/magic/holy), 1, TRUE)
+	C.grant_spells_churchling(H)
+	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
 
 
 
