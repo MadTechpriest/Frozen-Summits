@@ -385,7 +385,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	H.mind.adjust_skillrank_up_to(/datum/skill/misc/stealing, 5, TRUE)
 
-/datum/quirk/languagesavant
+/*/datum/quirk/languagesavant
 	name = "(Language) Polyglot"
 	desc = "I have always picked up on languages easily."
 	value = 4
@@ -397,7 +397,7 @@
 	H.grant_language(/datum/language/hellspeak)
 	H.grant_language(/datum/language/celestial)
 	H.grant_language(/datum/language/orcish)
-	H.grant_language(/datum/language/draconic)
+	H.grant_language(/datum/language/draconic)*/
 
 /datum/quirk/civilizedbarbarian
 	name = "(Combat) Tavern Brawler"
@@ -738,6 +738,24 @@ datum/quirk/backproblems_2
 	H.grant_language(/datum/language/canilunzt)
 
 
+/datum/quirk/orcishtalker
+	name = "(Language) Knows Orcish"
+	desc = "I learned to speak orcish in my time here."
+	value = 1
+
+/datum/quirk/orcishtalker/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/orcish)
+
+/datum/quirk/dwarvishtalker
+	name = "(Language) Knows Dwarvish"
+	desc = "I learned to speak dwarvish in my time here."
+	value = 1
+
+/datum/quirk/dwarvishtalker/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/dwarvish)
+
 /datum/quirk/selfaware
 	name = "(Virtue) Self-Aware"
 	desc = "I know the extent of my wounds to a terrifying scale."
@@ -937,7 +955,14 @@ datum/quirk/backproblems_2
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/hellspeak)
 
+/datum/quirk/celestialtalker
+	name = "(Language) Knows Celestial"
+	desc = "I learned to speak celestial in my time here."
+	value = 1
 
+/datum/quirk/celestialtalker/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/celestial)
 
 /datum/quirk/draconicspeaker
 	name = "(Language) Knows Draconic"
