@@ -131,7 +131,6 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 	name = "rousman"
 	id = "rousman"
 	species_traits = list(NO_UNDERWEAR,NOEYESPRITES)
-	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE, TRAIT_EASYDISMEMBER, TRAIT_CRITICAL_WEAKNESS, TRAIT_NASTY_EATER, TRAIT_LEECHIMMUNE, TRAIT_INHUMENCAMP)
 	no_equip = list(SLOT_SHIRT, SLOT_WEAR_MASK, SLOT_GLOVES, SLOT_SHOES, SLOT_PANTS, SLOT_S_STORE)
 	nojumpsuit = 1
 	sexes = 1
@@ -275,10 +274,6 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 			if(!B.rotted)
 				B.rotted = TRUE
 				should_update = TRUE
-			if(B.rotted && amount < 16 MINUTES)
-				var/turf/open/T = C.loc
-				if(istype(T))
-					T.pollute_turf(/datum/pollutant/rot, 10)
 	if(should_update)
 		if(amount > 20 MINUTES)
 			C.update_body()
@@ -295,12 +290,12 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 
 /datum/outfit/job/roguetown/npc/rousman/ambush/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.TOTALSTR = rand(6, 10)
-	H.TOTALPER = rand(6, 10)
-	H.TOTALINT = rand(2, 5)
-	H.TOTALCON = rand(4, 8)
-	H.TOTALEND = rand(7, 10)
-	H.TOTALSPD = rand(10, 15)
+	H.STASTR = rand(6, 10)
+	H.STAPER = rand(6, 10)
+	H.STAINT = rand(2, 5)
+	H.STACON = rand(4, 8)
+	H.STAEND = rand(7, 10)
+	H.STASPD = rand(10, 15)
 
 	var/loadout = rand(1,4)
 	switch(loadout)
@@ -328,11 +323,6 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 		if(1) //Sword and Shield
 			r_hand = /obj/item/rogueweapon/sword/iron
 			l_hand = /obj/item/rogueweapon/shield/wood
-		if(2) //Daggers
-			r_hand = /obj/item/rogueweapon/knife/copper
-			l_hand = /obj/item/rogueweapon/knife/copper
-		if(3) //Spear
-			r_hand = /obj/item/rogueweapon/polearm/spear
 		if(4) //Flail
 			r_hand = /obj/item/rogueweapon/flail
 		if(5) //Mace
