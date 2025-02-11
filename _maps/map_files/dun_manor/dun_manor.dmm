@@ -2439,6 +2439,13 @@
 /obj/structure/far_travel,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
+"dck" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = 15
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "dcW" = (
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church)
@@ -3195,6 +3202,13 @@
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
+"ezY" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_y = -2
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "eAz" = (
 /obj/structure/roguerock,
 /turf/open/water/river{
@@ -3440,6 +3454,12 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/outdoors/town)
+"fjK" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "fkd" = (
 /obj/structure/fluff/walldeco/innsign{
 	name = "The Dark Oak";
@@ -4970,6 +4990,10 @@
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/rtfield)
+"iAl" = (
+/obj/structure/bars/grille,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/town)
 "iAU" = (
 /obj/structure/fluff/railing/border{
 	icon_state = "border";
@@ -5164,7 +5188,8 @@
 "iSJ" = (
 /obj/structure/mineral_door/wood/donjon{
 	name = "Flints House";
-	lockid = "flints"
+	lockid = "flints";
+	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
@@ -5669,6 +5694,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
+"jUz" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_x = -19
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave)
 "jVy" = (
 /obj/structure/stairs{
 	icon_state = "stairs";
@@ -8043,6 +8075,12 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/town)
+"oIR" = (
+/obj/structure/bars/pipe{
+	dir = 10
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "oJU" = (
 /obj/structure/mineral_door/wood/towner/blacksmith,
 /turf/open/floor/rogue/herringbone,
@@ -9541,6 +9579,13 @@
 	color = "e6f2ff"
 	},
 /area/rogue/outdoors/town)
+"rwz" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "rwQ" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/snow{
@@ -10216,6 +10261,13 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
+"sAf" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_y = 15
+	},
+/turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
 "sBl" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -12490,7 +12542,8 @@
 /area/rogue/indoors/town/tavern)
 "wVM" = (
 /obj/structure/mineral_door/wood/donjon{
-	lockid = "flints"
+	lockid = "flints";
+	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
@@ -22881,15 +22934,15 @@ hWI
 hWI
 hWI
 sbR
-bYv
+iAl
 qgB
 iax
 iax
 iax
 vZE
-bYv
+iAl
 aCh
-sbR
+ona
 xXW
 hWI
 hWI
@@ -23038,15 +23091,15 @@ hWI
 hWI
 xXW
 lfj
-bYv
-bYv
+fjK
+oIR
 bYv
 hvn
 iax
 uHY
-bYv
-sbR
-sbR
+ezY
+jUz
+ona
 hWI
 hWI
 hWI
@@ -23196,12 +23249,12 @@ lfj
 lfj
 vDe
 hWI
+rwz
 bYv
-bYv
-bYv
-bYv
-bYv
-bYv
+sAf
+sAf
+sAf
+dck
 lWi
 sbR
 hWI
