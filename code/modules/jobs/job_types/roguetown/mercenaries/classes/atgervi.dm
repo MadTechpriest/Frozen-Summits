@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 /*/datum/advclass/mercenary/atgervi
 	name = "Skjaldborgar"
 	tutorial = "When your axe cracks and your shield splinters, Tempus weighs your heart. Did you fight with honor? Did you scorn cowardice? If so, your soul will march eternal in the Asgard- legion of the worthy dead, where battle is worship and every scar a prayer."
+=======
+/datum/advclass/mercenary/atgervi
+	name = "Illuskan Mercenaries"
+	tutorial = "Illuskan was the name usually given to humans who lived in the Sword Coast North. They dwell from harsh places like Uthgardt, Luskan or Icewind Dale. They were also known as Northlanders."
+>>>>>>> Stashed changes
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/atgervi
@@ -21,7 +27,7 @@
 	switch(classchoice)
 		if("Varangian")
 			H.set_blindness(0)
-			to_chat(H, span_warning("You are a Varangian of the Gronn Highlands. Warrior-Traders whose exploits into the Zybantine Empire will be forever remembered by historians."))
+			to_chat(H, span_warning("You are a Varangian. Your ancestors once came to the swordcoast to raid and trade. You are an axe for hire. Fighting for gold is almost as good as fighting for fame. And this is a good place to earn both!"))
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
@@ -60,7 +66,7 @@
 			H.cmode_music = 'sound/music/combat_vagarian.ogg'
 		if("Shaman")
 			H.set_blindness(0)
-			to_chat(H, span_warning("You are a Shaman of the Northern Empty. Savage combatants who commune with their gods through gut-wrenching violence, rather than idle prayer."))
+			to_chat(H, span_warning("You are a Shaman of the primal north. A savage leader who calls upon nature spirits for aid or guidance. "))
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
@@ -96,8 +102,13 @@
 */
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/atgervi
+<<<<<<< Updated upstream
 	name = "vagarian hauberk"
 	desc = "The pride of the mercenaries a well crafted blend of chain and leather into a dense protective coat."
+=======
+	name = "Illuskan hauberk"
+	desc = "The pride of the Illuskan mercenaries a well crafted blend of chain and leather into a dense protective coat."
+>>>>>>> Stashed changes
 	icon_state = "atgervi_raider_mail"
 	item_state = "atgervi_raider_mail"
 
