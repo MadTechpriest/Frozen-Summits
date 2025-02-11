@@ -2054,9 +2054,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "cpp" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "cqq" = (
@@ -3862,9 +3860,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town/tavern)
 "gaK" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "gbn" = (
@@ -3930,9 +3926,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "gjv" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town)
 "gjU" = (
@@ -5184,9 +5178,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "iTK" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town)
 "iUi" = (
@@ -7947,9 +7939,7 @@
 	},
 /area/rogue/outdoors/mountains)
 "owU" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
 "oyy" = (
@@ -12008,9 +11998,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church)
 "wio" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/town)
 "wiu" = (
@@ -13018,9 +13006,7 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "ydd" = (
-/obj/structure/mineral_door/wood/towner/anyone{
-	name = "Brightfang House"
-	},
+/obj/structure/mineral_door/wood/towner/anyone,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
 "ydI" = (
